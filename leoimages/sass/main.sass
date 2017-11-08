@@ -3,8 +3,152 @@
 @import "base"
 @import "vars"
 
-
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	 
+*
+	box-sizing: border-box
+body
+	background-color: $white
+	height: 100%
+	width: 100%
+	margin: 0 auto
+.container-fluid
+	padding-right: 0px
+	padding-left: 25px
 	
+
+.fotorama__error .fotorama__img, .fotorama__loaded .fotorama__img
+	opacity: 1
+	z-index: 0
+.top
+	opacity: 1
+	background-color: $accent
+	height: 50px
+	vertical-align: middle
+	
+.fotorama
+	.fotorama1508757839127
+	width: 100%
+	
+.fotorama__stage.fotorama__pointer
+	height: 600px
+
+.fotorama__nav
+	&-wrap
+		position: absolute
+		bottom: 30px
+	
+.logo
+	margin-left: 120px
+	img
+		margin-bottom: 10px
+	span
+		color: white
+		font-family: "Myriad Pro"
+		font-size: 27px
+		font-weight: 400
+		text-transform: uppercase
+
+.menu
+	margin-right: 10%
+	height: 20px
+.search
+	position: absolute
+	top: 45%
+	left: 20%
+	h2
+		color: white
+		font-family: "Myriad Pro"
+		font-size: 27px
+		font-weight: 400
+		// text-align: center
+	input
+		width: 390px
+		height: 43px
+		border: none
+		&::placeholder
+			color: #afafaf
+			font-family: "Myriad Pro"
+			font-size: 21px
+			font-weight: 400
+			padding-left: 10px
+	button
+		background-color: transparent
+		border: none
+		&:hover
+			cursor: pointer
+
+.logo
+	width: 50%
+	float: left
+
+// #my-header
+// 	max-height: 480px
+
+// hamburger
+.hamburger
+	padding-top: 15px
+	z-index: 5
+	
+	.hamburger-box
+		width: 34px
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before // three spans
+			border-radius: 0
+			width: 34px
+			height: 2px
+			background-color: $white
+			&:hover
+				color: $accent
+				cursor: pointer
+
+html.mm-opened
+	overflow-y: scroll		
+.mm-panels > .mm-panel.mm-hasnavbar// No scroll
+	right: -18px
+.mm-listview>li:not(.mm-divider):after// No border after a
+	display: none
+.mm-menu.mm-theme-black .mm-listview>li.mm-selected>a:not(.mm-next), .mm-menu.mm-theme-black .mm-listview>li.mm-selected>span
+ background-color: transparent
+ 
+	
+.mm-menu.mm-theme-black
+	background-color: $accent
+.mm-menu.mm-theme-black .mm-navbar a, .mm-menu.mm-theme-black .mm-navbar > *
+	color: $white
+	font-size: 30px
+
+.mm-listview 
+	> li
+		> a
+			transition: color .25s ease
+			font-size: 20px
+			padding: 
+			 	left: 15%
+			 	top: 10px
+			&:hover
+				color: darken($accent,20%)
+				&::before
+					color: darken($accent,20%)
+			&::before
+				content: '\f219'
+				font-family: fontawesome
+				margin-right: 8px
+				color: $white
+				transition: color .25s ease
+		&.active
+			background-color: darken($accent,20%)
+			&>a
+				color: $orange
+				&:hover
+					color: darken($orange,10%)
+				&::before
+					color: $orange
+		
+
 // Register
 .register
 	min-height: 110px
