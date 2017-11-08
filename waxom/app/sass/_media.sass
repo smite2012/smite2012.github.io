@@ -1,0 +1,392 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width:1200px)
+	
+	.navbar-nav
+		padding-left: 0
+	// .navigation
+	// 	margin-left: 5%
+	.collapse .navbar-collapse
+		width: 600px!important
+	.navbar-nav .mr-auto
+		margin-right: 10px!important	
+	// .search
+	// 	position: absolute
+	// 	top: 27px
+	// 	right: 0px
+	// .slogan 
+ //    padding-top: 20%
+ //    padding-left: 30%
+	// .slogan_wrapper
+	// 	height: 70%
+	.slogan h2
+		font-size: 30px
+	.slogan h1
+		font-size: 45px
+
+
+ 
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width:992px)
+	.navigation
+		width: 85%
+		.col-12
+			padding-left: 0
+	// .navbar
+	// 	justify-content: flex-start
+	.logo
+		// flex-grow: 5
+		margin: 0 auto
+	// .search
+	// 	top: 40px
+	// 	right: 0px
+	.navbar-toggler
+		// position: absolute
+		// margin-top: 15px
+	.navbar-light .navbar-toggler
+		border-color: $white
+		margin-top: 12px
+	// .navbar .logo
+	// 	width: 70%
+	// 	padding-left: 160px
+	// 	img	
+	// 		padding-left: 0px
+	.navbar-light .navbar-toggler-icon
+		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+	.navbar-brand
+		display: none
+	.nav-item
+		width: 20%
+	.video_presentation
+		padding-top: 0
+	.slogan 
+    // padding-top: 20%
+    // padding-left: 24%
+	// .slogan_wrapper
+	// 	height: 60%
+	.slogan h2
+		font-size: 24px
+	.slogan h1
+		font-size: 35px
+	.services .services_block
+		margin-bottom: 30px
+	.Waxom_is_realization_of_your_ideas
+		margin-top: 20px
+		p
+			padding-right: 10px
+
+	.video_presentation .video_presentation_announcement
+		left: 25%
+	.video_presentation .video_presentation_announcement .circle
+		margin-bottom: 5px
+	.services_block
+		margin-right: 15px
+	.textboxes button
+		// margin-top: 60px
+		// margin-right: 20px
+		// padding: 5px 5px
+		// font-size: 13px
+	.nav-link
+		padding: 0.3rem 1rem
+/* Small Devices, Tablets */
+@media only screen and (max-width:768px)
+	// .navigation_wrapper
+	// 	width: 55%
+	.navbar-nav
+		// background-color: $white
+		.nav-item
+			width: 100%
+			background-color: $brown
+			border-bottom: 1px solid $white
+			.current
+				background-color: $accent
+				color: $white!important
+				&:hover
+					background-color: $accent
+					color: $white!important
+			.nav-link
+				padding-left: 10px
+			&:hover
+				color: darken($accent,10%)
+	.dribbble_widget
+		margin: 0 auto
+		img
+			float: none
+	.slogan
+		// padding-left: 15%
+	// .slogan_wrapper
+	// 	height: 40%
+	.slogan h2
+		font-size: 15px
+	.slogan h1
+		font-size: 20px
+	.slogan p
+		font-size: 14px
+	.slogan button
+		width: 130px
+		height: 40px
+	.nav-link
+		padding: 0.1rem 1rem
+	// .navbar .logo
+	// 	width: 70%
+	// 	padding-left: 18%
+	// .search
+	// 	right: 40px
+	.video_presentation .video_presentation_announcement
+		left: 10%
+		top: 5%
+	.video_presentation .video_presentation_announcement .circle
+		margin-left: 43%
+	.excellent_for_mobile_devices 
+		h2
+			font-size: 18px
+			padding-left: 10px
+		p
+			font-size: 12px
+			padding-left: 10px
+		ul
+			padding-top: 0
+			margin-bottom: 0
+			li
+				font-size: 13px
+	.recent_posts
+
+		.recent_post 
+			span
+				font-size: 16px
+			p
+				font-size: 14px
+				.day
+					width: 45px
+					height: 30px
+					font-size: 20px
+				.month
+					width: 45px
+					height: 20px
+
+
+		
+@media only screen and (max-width:550px)
+	// .slogan_wrapper
+	// 	height: 33%
+	// .navigation_wrapper
+	// 	width: 57%
+	.slogan
+		// padding-left: 10%
+	.slogan h2
+		font-size: 13px
+	.slogan h1
+		font-size: 17px
+	.slogan p
+		font-size: 12px
+	.slogan button
+		width: 120px
+		height: 40px
+	.post_hover
+		background-color: #362f2d
+		text-align: center
+		img
+			margin: 0 auto
+	// .nav-link
+	// 	padding: 0.5px 1rem
+	// 	font-size: 14px
+	// 	color: #000!important
+	// .nav-item
+	// 	padding-left: 5px
+	// 	background-color: #eee
+	// 	opacity: 0.9
+	.video_presentation .video_presentation_announcement
+		left: 10%
+		top: 0
+	.counters
+		h2
+			font-size: 30px
+			padding-bottom: 0 
+		.counter
+			padding-top: 10px
+	.video_presentation .video_presentation_announcement .video_presentation_text 
+		h3
+			font-size: 25px
+		p
+			font-size: 12px
+	.latest_projects_posts .post
+		padding-left: 0
+	.textboxes 
+		h2
+			font-size: 25px
+		button
+			font-size: 10px
+	footer
+		padding-top: 10px
+/* Extra Small Devices, Phones */
+@media only screen and (max-width:480px)
+	.navbar-light .navbar-toggler
+		// margin-top: 0
+	// .navbar .logo 
+	// 	width: 63%
+	// 	padding-left: 7px
+		img
+			padding-top: 0
+			width: 35%
+	// .navbar-toggler
+	// 	padding: 0
+	// .search
+	// 	top: 15px
+	// 	right: 0
+	// .slogan_wrapper
+	// 	height: 35%
+	.slogan
+		// padding-left: 15%
+	.slogan h2
+		font-size: 10px
+		display: none
+	.slogan h1
+		font-size: 14px
+	.slogan p
+		font-size: 8px
+	.slogan button
+		width: 100px
+		height: 30px
+		font-size: 12px
+	.nav-link
+		padding: 1px 1rem
+		font-size: 16px
+		// color: #000!important
+	.nav-item
+		// padding-left: 5px
+		// background-color: #eee
+		// opacity: 0.9
+	.services
+		padding-top: 0
+		h4
+			padding-bottom: 0
+		.services_block .fa
+			padding-bottom: 0
+	.Waxom_is_realization_of_your_ideas 
+		h2
+			font-size: 21px
+		p
+			font-size: 13px
+			padding-right: 10px
+			padding-bottom: 0px
+	.textboxes 
+		h2
+			padding-top: 5px
+			font-size: 20px
+		p
+			font-size: 15px
+			padding-bottom: 0
+		.col-3
+			padding-left: 0
+	.latest_projects
+		padding-top: 10px
+		p
+			font-size: 14px
+	.video_presentation .video_presentation_announcement .video_presentation_text 
+		h3
+			font-size: 20px
+			margin-bottom: 0
+		p
+			font-size: 9px
+			margin-bottom: 0
+		span
+			font-size: 10px
+	.excellent_for_mobile_devices
+		padding: 10px 
+	.recent_posts
+		padding-top: 10px
+	button.btn-top
+		bottom: 10px
+		right: 10px
+		padding: 5px 10px
+		
+/* Custom, iPhone Retina */
+@media only screen and (max-width:320px)
+	/**/
+	// .navbar .logo
+	// 	padding-left: 13%
+	// 	img
+	// 		width: 35%
+	// .search
+	// 	right: 5px
+	// .slogan_wrapper
+	// 	height: 25%
+	.slogan
+		// padding-left: 15%
+	.slogan h2
+		display: none
+	.slogan h1
+		padding-top: 10px
+		font-size: 12px
+	.slogan p
+		font-size: 8px
+		width: 90%
+		margin-bottom: 5px
+	.slogan button
+		width: 90px
+		height: 30px
+		font-size: 10px
+	.video_presentation .video_presentation_announcement .video_presentation_text 
+		left: 13%
+		h3
+			font-size: 18px
+			margin-bottom: 0
+		p
+			font-size: 7px
+			margin-bottom: 0
+		span
+			font-size: 8px
+	.excellent_for_mobile_devices
+		h2,p,li
+			padding: 0px 15px
+	.Waxom_is_realization_of_your_ideas
+	h2
+		font-size: 19px
+	.recent_posts
+		padding-top: 10px
+		p
+			padding: 0px 15px
+/*==========  Mobile First  ==========*/
+
+// /* Custom, iPhone Retina */
+// @media only screen and (min-width:320px)
+// 	/**/
+// 	.slogan_wrapper
+// 		height: 33%	
+
+// /* Extra Small Devices, Phones */
+// @media only screen and (min-width:480px)
+// 	/**/
+// 	.slogan_wrapper
+// 		height: 44%
+
+// /* Small Devices, Tablets */
+// @media only screen and (min-width:768px)
+// 	/**/
+// 	.slogan_wrapper
+// 		height: 50%	
+
+
+
+/* Medium Devices, Desktops */
+// @media  (orientation: landscape) 
+// 	/**/
+// 	.slogan_wrapper
+// 		height: 100%	
+// @media  (orientation: portrait) 
+// 	/**/
+// 	.slogan_wrapper
+// 		height: 40%
+
+// @media only landscape and (min-width:992px) 
+// 	/**/
+// 	.slogan_wrapper
+// 		height: 50%	
+// /* Large Devices, Wide Screens */
+// @media only screen and (min-width:1200px)
+// 	/**/
+	
