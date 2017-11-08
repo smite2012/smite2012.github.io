@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "RobotoRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Monserrat";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Monserrat/Monserrat.eot?#iefix") format("embedded-opentype"), url("../fonts/Monserrat/Monserrat.woff") format("woff"), url("../fonts/Monserrat/Monserrat.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Raleway/Raleway.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway.woff") format("woff"), url("../fonts/Raleway/Raleway.ttf") format("truetype"); }

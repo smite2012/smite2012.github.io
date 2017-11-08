@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700");
 @font-face {
   font-family: "RobotoRegular";
   font-style: normal;
@@ -14,7 +15,7 @@
   font-family: "Raleway";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Raleway/Raleway.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway.woff") format("woff"), url("../fonts/Raleway/Raleway.ttf") format("truetype"); }
+  src: url("../fonts/Raleway/RalewayBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/RalewayBold.woff") format("woff"), url("../fonts/Raleway/RalewayBold.ttf") format("truetype"); }
 
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
