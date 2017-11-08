@@ -1,0 +1,22 @@
+.tw, .fb, .in{
+	background: url(sprites.png) no-repeat;
+}
+
+.tw{
+	background-position: -5px -5px ;
+	width: 37px;
+	height: 37px;
+}
+
+.fb{
+	background-position: -55px -5px ;
+	width: 37px;
+	height: 37px;
+}
+
+.in{
+	background-position: -105px -5px ;
+	width: 37px;
+	height: 37px;
+}
+
