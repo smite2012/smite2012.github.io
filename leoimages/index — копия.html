@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Leo images</title>
+	<meta name="description" content="CSS Grid Real Example">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+	<link rel="stylesheet" href="css/main.css">
+	
+
+</head>
+
+<body>
+	<!-- Preloader -->
+<div class="preloader">
+<div class="pulse"></div>
+</div>
+<div id="my-page">
+	<div id="my-header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+
+					<div class="top">
+						<div class="logo">
+							<img src="img/Instagram.png" alt="">
+							<span>Leo images</span>
+						</div>
+						<div class="menu float-right">
+								<a href="#my-menu" class="hamburger hamburger--spring js-hamburger">
+									<span class="hamburger-box">
+										<span class="hamburger-inner">
+										</span>
+									</span>
+								</a>
+							</div>
+					</div><!-- top -->
+
+					<div class="fotorama"
+					     data-nav="thumbs"
+					     data-autoplay="true">
+					  <a href="img/9.jpg"><img src="img/9_thumb.jpg"></a>
+					  <a href="img/4.jpg"><img src="img/4_thumb.jpg"></a>
+					  <a href="img/6.jpg"><img src="img/6_thumb.jpg"></a>
+					  <a href="img/3.jpg"><img src="img/3_thumb.jpg"></a>			
+					</div>
+
+
+					<div class="search">
+						<h2>Photos, illustrations by <br> creatives all over the world.</h2>
+						<input type="search" placeholder="People walking">
+						<button type="submit"><img src="img/Shape 7.png" alt=""></button>
+					</div>
+
+				</div><!-- col 12 -->
+			</div><!-- Row -->
+				<section class="register">
+					<div class="row justify-content-center">
+						<div class="col-12">
+							<h2>Create a free account now</h2>
+							<!-- Button trigger modal -->
+							<button type="button" class="register_button btn btn-primary mybutton" data-toggle="modal" data-target="#exampleModal">Register now</button>
+						</div>
+					</div>
+				</section>
+				<section class="aboutus">
+					<div class="row">
+					<div class="col-12 col-md-4 col-lg-4">
+						<img src="img/5.jpg" alt="">
+					</div>
+					<div class="col-12 col-md-8 col-lg-8" >
+					<button onclick="accFunction('what')" class="aboutus_button">
+					What We Do</button>
+
+					<div id="what" class="mycontainer show">
+					  <h3>We Do It All</h3>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<button onclick="accFunction('who')" class="aboutus_button">
+					Who We Are</button>
+					<div id="who" class="mycontainer hide">
+					  <h3>We Are Acme</h3>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint.</p>
+					</div>
+					<button onclick="accFunction('where')" class="aboutus_button">
+					Where Are We</button>
+					<div id="where" class="mycontainer hide">
+					  <h3>We Are Everywhere</h3>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.</p>
+					</div>
+
+					</div>
+					</div>
+				</section>
+				
+			<!-- FEATURES -->
+	<section id="features">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-12">
+					<h2>Core Features</h2>
+					<p>What`s Included</p>
+
+					<!-- ICON ROW 1 -->
+					<div class="row">
+						
+						<div class="col-sm-12  col-md-4 col-lg-4">
+							<div class="corefeatures">
+							<i class="fa fa-dashboard"></i><br>
+							<h4>Fully Optimized</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+						</div>
+						<div class="col-sm-12  col-md-4 col-lg-4 ">
+							<div class="corefeatures">
+							<i class="fa fa-question-circle-o"></i><br>
+							<h4>Free Support</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+						</div>
+						<div class="col-sm-12  col-md-4 col-lg-4">
+							<div class="corefeatures">
+							<i class="fa fa-rocket"></i><br>
+							<h4>Free Upgrades</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+						</div>
+					</div><!-- ICON ROW 1 -->
+
+					<!-- ICON ROW 2 -->
+					<div class="row center-xs center-sm center-md center-lg">
+						<div class="col-sm-12  col-md-4 col-lg-4">
+							<div class="corefeatures">
+							<i class="fa fa-line-chart"></i><br>
+							<h4>UpTime Guarantee</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+						</div>
+						<div class="col-sm-12  col-md-4 col-lg-4">
+							<div class="corefeatures">
+							<i class="fa fa-users"></i><br>
+							<h4>Multi-User</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+						</div>
+						<div class="col-sm-12  col-md-4 col-lg-4">
+							<div class="corefeatures">
+							<i class="fa fa-plug"></i><br>
+							<h4>Plug & Play</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</div>
+						</div>
+					</div><!-- ICON ROW 2 -->
+
+				</div>
+			</div>
+		</div>
+	</section>
+				<section class="category">
+					<div class="row">
+						<div class="col-12">
+							<span class="browse">BROWSE BY CATEGORY </span>
+						</div>
+					</div>
+					<div class="row hrefs center-xs center-sm center-md center-lg">
+						<div class="col-md-2"></div>
+						<div class="col-12 col-sm-4 col-md-3">
+							<a href="#">Abstract<br></a>
+							<a href="#">Animals/Wildlife<br></a>
+							<a href="#">The Arts<br></a>
+							<a href="#">Backgrounds/Textures<br></a>
+							<a href="#">Beauty/Fashion<br></a>
+							<a href="#">Buildings/Landmarks<br></a>
+						</div>
+						<div class="col-12 col-sm-4 col-md-3">
+							<a href="#">Business/Finance <br></a>
+							<a href="#">Celebrities<br></a>
+							<a href="#">Editorial<br></a>
+							<a href="#">Education<br></a>
+							<a href="#">Food and Drink<br></a>
+							<a href="#">Healthcare/Medical<br></a>
+						</div>
+						<div class="col-12 col-sm-4 col-md-3">
+							<a href="#">Holidays<br></a>
+							<a href="#">Illustrations/Clip-Art<br></a>
+							<a href="#">Industrial<br></a>
+							<a href="#">Interious<br></a>
+							<a href="#">Micellaneous<br></a>
+							<a href="#">Model Released Only<br></a>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+				</section>
+				<div id="my-footer">
+      	<span>Copyright © 2017</span>
+
+      </div><!-- Footer -->
+		</div><!-- Container fluid -->
+	</div><!-- My header -->
+    
+      <div id="my-content">
+      	<!-- Menu -->
+				<nav id="my-menu">
+					<ul>
+						<li class="active"><a href="#">Diamond</a></li>
+						<li><a href="#">Diamond</a></li>
+						<li><a href="#">Diamond</a></li>
+						<li><a href="#">Diamond</a></li>
+						<li><a href="#">Diamond</a></li>
+					</ul>
+				</nav>
+      </div><!-- My content -->
+
+      <button class="btn-top" title="Go to top">Up</button>
+ </div> <!-- My page -->
+
+
+
+	
+<script>
+		// accFunction
+function accFunction(id) {
+			    var x = document.getElementById(id);
+			    if (x.className.indexOf("show") == -1) {
+			        x.className += " show";
+			    } else { 
+			        x.className = x.className.replace(" show", "");
+			    }
+			}	
+</script>
+	
+<!-- Modal -->
+		<div class="modal_background">
+		    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalLabel">Registration form</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			      <form>
+			      	<div class="form-group">
+					    <label class="col-form-label" for="formGroupExampleInput">User Name</label>
+					    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name">
+					  </div>
+						  <div class="form-group">
+						    <label for="exampleInputEmail1">Email address</label>
+						    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+						    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputPassword1">Password</label>
+						    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						  </div>
+						  <button type="submit" class="btn btn-primary">Submit</button>
+						</form>
+			      </div>
+			      
+			    </div>
+			  </div>
+			</div>
+		</div>
+	
+<script src="libs/bootstrap/js/popper.min.js"></script>
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+<script src="js/scripts.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>
