@@ -1,214 +1,148 @@
-@import "fonts"
-@import "libs"
-@import "base"
 @import "vars"
 
-
-
-// Register
-.register
-	min-height: 110px
-	// line-height: 110px
-	background-color: $white
-	text-align: center
-	border-bottom: 2px solid gray
-	vertical-align: middle
-	h2
-		color: #8b8b8b;
-		font-family: "Myriad Pro"
-		font-size: 37px;
-		font-weight: 400;
-		display: inline-block
-		margin-right: 20px
-	button
-		width: 256px
-		height: 62px
-		background-color: #8fcddc
-		border: none
-	.register_button
-		color: $white
-		font-family: "Myriad Pro"
-		font-size: 37px
-		font-weight: 400
-		&:hover
-			transition: all .25s ease
-			cursor: pointer
-// aboutus
-.aboutus
-	background-color: $white
-	border-bottom: 2px solid gray
-	padding: 10px 0px
-	img
-		width: 100%
-		background-size: cover
-		margin-left: 10px
-.hide
-	display: none!important
-.show
-	display: block!important
-	transition: all .25s ease
-
-.aboutus_button
+.img-responsive
 	display: block
-	width: 99%
-	background-color: $accent
-	border: none
-	margin-bottom: 5px
-	&:hover
-	 background-color: #0069d9
-	 transition: all .25s ease
-	 cursor: pointer
-.mycontainer
-	padding: 0.01em 16px
-
-// Core Features
-#features
+	max-width: 100%
+	height: auto
+	 
+*
+	box-sizing: border-box
+body
 	background-color: $white
-	padding-top: 15px
-	text-align: center
-	border-bottom: 2px solid gray
-	.fa
-	 	font-size: 50px
-	 	color: $accent
-	.corefeatures
-		border-radius: 15px
-		&:hover
-			background-color: darken($accent,10%)
-			transition: all .600s ease-in
-			.fa
-				font-size: 60px
-				darken($accent,10%)
-			h4
-				font-size: 30px		
-			p
-				font-size: 15px	
+	height: 100%
+	width: 100%
+	margin: 0 auto
+.container-fluid
+	padding-right: 0px
+	padding-left: 25px
 	
-// category
-.category
-	min-height: 280px
-	background-color: $white
-	text-align: center
 
-	.row
-		.col-12
-			margin: 15px 0px
-	.browse
-		color: #636363
-		font-family: "Myriad Pro"
-		font-size: 23px
-		font-weight: 400
-		text-transform: uppercase
-	a
-		opacity: 0.55
-		color: #636363
-		font-family: "Myriad Pro"
-		font-size: 15px
-		font-weight: 400
+.fotorama__error .fotorama__img, .fotorama__loaded .fotorama__img
+	opacity: 1
+	z-index: 0
+.top
+	opacity: 1
+	background-color: $accent
+	height: 50px
+	vertical-align: middle
+	
+.fotorama
+	.fotorama1508757839127
+	width: 100%
+	
+.fotorama__stage.fotorama__pointer
+	height: 600px
 
-.hrefs
-	padding-bottom: 65px
-	text-align: left
-	margin: auto 0
-// footer
-#my-footer
-	background-color: #484242
-	min-height: 50px
-	line-height: 50px
-	text-align: center
-
+.fotorama__nav
+	&-wrap
+		position: absolute
+		bottom: 30px
+	
+.logo
+	margin-left: 120px
+	img
+		margin-bottom: 10px
 	span
-		opacity: 0.5
-		opacity: 0.5
 		color: white
 		font-family: "Myriad Pro"
-		font-size: 17px
+		font-size: 27px
 		font-weight: 400
+		text-transform: uppercase
 
-// Back to top
-button.btn-top
+.menu
+	margin-right: 10%
+	height: 20px
+.search
+	position: absolute
+	top: 45%
+	left: 20%
+	h2
+		color: white
+		font-family: "Myriad Pro"
+		font-size: 27px
+		font-weight: 400
+		// text-align: center
+	input
+		width: 390px
+		height: 43px
+		border: none
+		&::placeholder
+			color: #afafaf
+			font-family: "Myriad Pro"
+			font-size: 21px
+			font-weight: 400
+			padding-left: 10px
+	button
+		background-color: transparent
+		border: none
+		&:hover
+			cursor: pointer
+
+.logo
+	width: 50%
+	float: left
+
+// #my-header
+// 	max-height: 480px
+
+// hamburger
+.hamburger
+	padding-top: 15px
+	z-index: 5
+	
+	.hamburger-box
+		width: 34px
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before // three spans
+			border-radius: 0
+			width: 34px
+			height: 2px
+			background-color: $white
+			&:hover
+				color: $accent
+				cursor: pointer
+
+html.mm-opened
+	overflow-y: scroll		
+.mm-panels > .mm-panel.mm-hasnavbar// No scroll
+	right: -18px
+.mm-listview>li:not(.mm-divider):after// No border after a
 	display: none
-	position: fixed
-	bottom: 20px
-	right: 50px
-	z-index: 2
-	border: none
-	outline: none
+.mm-menu.mm-theme-black .mm-listview>li.mm-selected>a:not(.mm-next), .mm-menu.mm-theme-black .mm-listview>li.mm-selected>span
+ background-color: transparent
+ 
+	
+.mm-menu.mm-theme-black
 	background-color: $accent
+.mm-menu.mm-theme-black .mm-navbar a, .mm-menu.mm-theme-black .mm-navbar > *
 	color: $white
-	cursor: pointer
-	padding: 10px 30px
-	border-radius: 10px
-
-	&:hover
-		background-color: darken($accent,10%)
-// modal
-.modal.show .modal-dialog
-	z-index: 10
-.modal-header
-	background-color: $accent
-.modal-title
 	font-size: 30px
-#exampleModalLabel
-	margin-left: 20%
-.modal-backdrop
-	opacity: 0.5
-	z-index: 0
-.btn-primary
-	background-color: $accent
-	border: none
-	&:hover
-		cursor: pointer
-		background-color: darken($accent,10%)
-.close
-	&:hover
-		cursor: pointer
-// Preloader
-@mixin opacity($opacity)
-	opacity: $opacity / 100
-	filter: alpha(opacity=$opacity)
 
-.preloader
-	position: fixed
-	width: 100%
-	height: 100%
-	top: 0
-	left: 0
-	bottom: 0
-	top: 0
-	z-index: 10000
-	background-color: $accent
+.mm-listview 
+	> li
+		> a
+			transition: color .25s ease
+			font-size: 20px
+			padding: 
+			 	left: 15%
+			 	top: 10px
+			&:hover
+				color: darken($accent,20%)
+				&::before
+					color: darken($accent,20%)
+			&::before
+				content: '\f219'
+				font-family: fontawesome
+				margin-right: 8px
+				color: $white
+				transition: color .25s ease
+		&.active
+			background-color: darken($accent,20%)
+			&>a
+				color: $orange
+				&:hover
+					color: darken($orange,10%)
+				&::before
+					color: $orange
 
-	.pulse
-		position: relative
-		left: 50%
-		top: 50vh
-		margin:
-			left: -40px
-			right: -40px
-		&::before, &::after
-			content: ''
-			border: 5px solid $white
-			width: 80px
-			height: 80px
-			border-radius: 500px
-			position: absolute
-		&::before
-			animation: pulse-outer .8s ease-in infinite
-		&::after
-			animation: pulse-inner .8s linear infinite
-@keyframes pulse-outer
-	0%
-		@include opacity(100)
-	50%
-		@include opacity(50)
-	100%
-		@include opacity(0)
-
-@keyframes pulse-inner
-	0%
-		@include opacity(0)
-		transform: scale(0)
-	100%
-		@include opacity(100)
-		transform: scale(1)
 @import "media" // Всегда в конце
