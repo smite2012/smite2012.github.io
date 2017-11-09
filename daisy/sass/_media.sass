@@ -1,0 +1,404 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width:1200px)
+	.heading 
+			padding-bottom: 100px
+	#fullpage, #what_can_you_receive, #expand, #we_do, #mk, #advertising , #portfolio ,#our_team, #testimonials, .map_footer 
+		min-height: 100vh
+/* Medium Devices, Desktops */
+@media only screen and (max-width:992px)
+	.clients
+		font-size: 46px
+	h1
+		font-size: 46px
+	.clients_in_your_business .line, .clients_in_your_business .line2
+		width: 75px
+	.clients_in_your_business .line2
+		margin-left: 0
+	#portfolio .portfolio_navigation ul li
+		padding-right: 10px
+	#portfolio .portfolio_navigation ul span
+		padding-right: 10px
+	.mail,#portfolio .portfolio_photos .mountain_bikes
+		margin-bottom: 10px
+	.daily_hex
+		padding-top: 0
+		span
+			top: 0
+		.address
+			top: 55px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width:768px)
+	.clients
+		font-size: 32px
+	h1
+		font-size: 32px
+	.clients_in_your_business .line, .clients_in_your_business .line2
+		width: 44px
+		margin-top: 29%
+	.clients_in_your_business .line2
+		margin-left: -13px
+	.clients_in_your_business .line
+		margin-left: 14px
+	h2
+		font-size: 19px
+	#top
+		margin-bottom: 20px
+	// #what_can_you_receive .heading h2, #what_can_you_receive .heading span
+	// 	font-size: 25px
+	// #what_can_you_receive .heading h2
+	// 	margin-bottom: 0
+	hr
+		margin: 0
+	#what_can_you_receive 
+		.heading 
+			padding-bottom: 0
+			p
+				font-size: 17px
+	.hex_wrapper
+		padding:
+			bottom: 50px
+			top: 10px
+	.hexagon2
+		bottom: 30px
+	.testimonials_human
+		text-align: left
+	.scroll
+		left: 45%
+		bottom: 12%
+		.scroll2
+			left: 30px
+	#our_team, #portfolio, #testimonials
+		.scroll
+			left: 5%
+@media only screen and (max-width:576px)
+	#we_do .more_details, #mk .more_details, #advertising .more_details
+		float: none
+		margin-bottom: 10px	
+	.heading
+		padding-bottom: 0
+		
+	#we_do, #advertising, #mk, #portfolio
+		img
+			margin: auto
+			max-width: 80%
+	#we_do .heading, #mk .heading
+		width: auto
+	#portfolio .portfolio_photos .mountain_bikes, #portfolio .portfolio_photos .art, #portfolio .portfolio_photos .bus, #portfolio .portfolio_photos .mail, #portfolio .portfolio_photos .newspaper, #portfolio .portfolio_photos .cars
+		height: 100px
+	#portfolio .portfolio_photos .mountain_bikes 
+		background-position: 50% 43%
+	#portfolio .portfolio_photos .cars
+		background-position: 50% 66%
+	#our_team .wrapper
+		padding-top: 0px
+	#our_team .our_team_heading_wrapper
+		margin-bottom: 10px
+	#our_team .human h2
+		margin: 0
+		font-size: 24px
+	#our_team .human h3 
+		margin-bottom: 5px
+	#our_team .our_team_heading_wrapper h2, #our_team .our_team_heading_wrapper span
+		margin-bottom: 0
+	#our_team .human img
+		height: 150px
+	#our_team
+		.scroll2
+			left: 75%
+	#testimonials .wrapper .carousel-item p
+		font-size: 13px
+		text-align: left
+/* Extra Small Devices, Phones */
+@media only screen and (max-width:480px)
+	#fullpage, #what_can_you_receive, #expand, #we_do, #mk, #advertising , #portfolio ,#our_team, #testimonials, .map_footer 
+		height: 90vh
+	.clients
+		font-size: 23px
+	h1
+		font-size: 23px
+	.clients_in_your_business .line, .clients_in_your_business .line2
+		width: 20px
+		margin-top: 29%
+	.clients_in_your_business .line2
+		margin-left: -7px
+	.clients_in_your_business .line
+		margin-left: 17px
+	#we_do, #mk
+		.wrapper
+			align-items: unset
+	#we_do .heading h2, #mk .heading h2
+		font-size: 22px
+		margin-bottom: 10px
+		padding-bottom: 10px
+	#we_do .we_do_heading, #mk .we_do_heading
+		font-size: 22px
+		margin-bottom: 10px
+	#we_do p, #mk p
+		margin-bottom: 10px
+		text-align: justify
+	#mk img
+		margin-top: 30px
+	#portfolio 
+		.wrapper
+			padding-top: 0
+		h2 
+			margin-bottom: 5px
+			padding-bottom: 0px
+			font-size: 20px
+	.clients_in_your_business 
+		.i_want_clients
+			width: 150px
+			height: 50px
+			font-size: 21px
+	#portfolio 
+		.landing_page	
+			margin-top: 10px
+		.portfolio_navigation 
+			min-height: 40px
+			ul 
+				margin-bottom: 0px
+				span
+					padding-right: 4px 
+				li
+					padding-right: 4px 
+					a
+						font-size: 14px
+	#portfolio .portfolio_photos .mountain_bikes .fa-plus, #portfolio .portfolio_photos .art .fa-plus, #portfolio .portfolio_photos .bus .fa-plus, #portfolio .portfolio_photos .mail .fa-plus, #portfolio .portfolio_photos .newspaper .fa-plus, #portfolio .portfolio_photos .cars .fa-plus
+		font-size: 40px
+	#portfolio .portfolio_photos .mountain_bikes span, #portfolio .portfolio_photos .art span, #portfolio .portfolio_photos .bus span, #portfolio .portfolio_photos .mail span, #portfolio .portfolio_photos .newspaper span, #portfolio .portfolio_photos .cars span
+		font-size: 20px
+	#portfolio .portfolio_photos .art:hover .fa-plus, #portfolio .portfolio_photos .bus:hover .fa-plus, #portfolio .portfolio_photos .mail:hover .fa-plus, #portfolio .portfolio_photos .newspaper:hover .fa-plus
+		left: 50%
+	#portfolio .portfolio_photos .mountain_bikes:hover span, #portfolio .portfolio_photos .art:hover span, #portfolio .portfolio_photos .bus:hover span, #portfolio .portfolio_photos .mail:hover span, #portfolio .portfolio_photos .newspaper:hover span, #portfolio .portfolio_photos .cars:hover span
+		left: 10%
+	#portfolio .portfolio_photos .mountain_bikes, #portfolio .portfolio_photos .art, #portfolio .portfolio_photos .bus, #portfolio .portfolio_photos .mail, #portfolio .portfolio_photos .newspaper, #portfolio .portfolio_photos .cars
+		height: 80px
+	#advertising .wrapper
+		padding-top: 20px
+		align-items: unset
+	#expand
+		.i_want_clients
+			width: 100px
+			height: 50px
+			font-size: 21px
+	#what_can_you_receive 
+		.heading 
+			margin: 0
+			width: auto
+			h2 
+				margin-bottom: 0
+			p
+				font-size: 14px
+				padding: 0px 11px
+
+	#advertising
+		p 
+			text-align: justify
+			margin-bottom: 10px
+		.we_do_heading
+			margin-top: 20px
+	.hexagon2
+		bottom: 30px
+	hr
+		margin: 0
+	.heading_hex .hex_wrapper
+		margin-bottom: 20px
+	.heading_hex
+		margin-top: 20px
+	.hex
+		font-size: 16px
+	.heading_hex .hex_wrapper p
+		font-size: 14px
+		padding: 0 10px
+	
+		
+	#our_team 
+		.our_team_heading_wrapper
+			 h2
+			 	font-size: 20px
+			 	span
+			 		font-size: 20px
+		.human 
+			h2 
+				font-size: 20px
+			h3
+				font-size: 12px
+			span
+				font-size: 20px
+			img
+				height: 100px
+	.hex_wrapper
+		padding-bottom: 10px
+	#testimonials .wrapper .carousel-item p
+		font-size: 11px
+		text-align: justify
+	#testimonials 
+		.wrapper 
+			.carousel-item 
+				h3 
+					font-size: 24px
+					span
+						font-size: 24px
+			p 
+				margin-left: 5px
+	.btn-top
+		bottom: 10px
+		right: 10px
+		padding: 10px 20px
+	.VBebike
+		background-position: -140px 0px!important
+		width: 400px!important
+	.map_footer footer .wrapper
+		height: 105px
+	#top
+		margin-bottom: 0
+	.daily_hex
+		padding-top: 0
+	.daily_hex 
+		span
+			top: -20px
+		.address
+			top: 20px
+	.scroll
+		left: 45%
+		bottom: 10%
+/* Custom, iPhone Retina */
+@media only screen and (max-width:320px)
+	#fullpage, #what_can_you_receive, #expand, #we_do, #mk, #advertising , #portfolio ,#our_team, #testimonials, .map_footer 
+		min-height: 100vh
+	.clients
+		font-size: 27px
+	h1
+		font-size: 27px
+	.clients_in_your_business .line, .clients_in_your_business .line2
+		width: 44px
+		margin-top: 29%
+	.clients_in_your_business .line2
+		margin-left: -52px
+	.clients_in_your_business .line
+		margin-left: 40px
+	h2
+		font-size: 16px
+	.clients_in_your_business 
+		.i_want_clients
+			width: 150px
+			height: 50px
+			font-size: 21px
+	#testimonials .wrapper .carousel-item p
+		font-size: 9px
+		text-align: left
+		margin-bottom: 0
+	#testimonials .wrapper .carousel-item h3, #testimonials .wrapper .carousel-item span
+		font-size: 20px
+	#testimonials .wrapper .carousel-item h3
+		span
+			font-size: 20px
+	#what_can_you_receive 
+		.heading 
+			margin: 0
+			width: auto
+			h2 
+				margin-bottom: 0
+				font-size: 16px
+			span
+				font-size: 16px
+			p
+				font-size: 12px
+				padding: 0px 11px
+		.heading_hex 
+			.hex_wrapper 
+				padding-top: 21px
+				p
+					font-size: 12px
+	#we_do p, #mk p, #advertising p
+		padding: 0 1px
+		margin-right: 20px
+	#our_team .our_team_heading_wrapper h2, #our_team .our_team_heading_wrapper span
+		font-size: 16px
+	#our_team 
+		.human 
+			h2
+				font-size: 16px
+			span
+				font-size: 16px
+	#testimonials .wrapper .carousel-item p
+		padding: 0 5px
+	.map_footer footer .wrapper
+		height: 150px
+	.VBebike
+		background-position: -180px 0px !important;
+	.scroll
+		left: 45%
+		bottom: 1%
+	#our_team 
+		.scroll
+			left: 10%
+	#testimonials
+		.scroll
+			left: 5%
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width:320px)
+	/**/
+		
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width:480px)
+	/**/
+	
+@media only screen and (min-width:576px)
+	/**/
+	#what_can_you_receive
+		.col-sm-6
+			max-width: 49%
+
+/* Small Devices, Tablets */
+@media only screen and (min-width:768px)
+	/**/
+	#what_can_you_receive
+		.col-md-6
+			max-width: 49%
+
+
+
+/* Medium Devices, Desktops */
+@media  (orientation: landscape) 
+	/**/
+	
+@media  (orientation: portrait) 
+	/**/
+	
+
+@media only screen and (min-width:992px) 
+	/**/
+	#what_can_you_receive
+		.col-lg-3
+			max-width: 24%
+/* Large Devices, Wide Screens */
+@media only screen and (min-width:1200px)
+	#what_can_you_receive
+		.col-xl-3
+			max-width: 24%
+	.heading_hex
+		margin-top: 100px
+	.hex_wrapper	
+    margin-bottom: 100px
+	#fullpage, #what_can_you_receive, #expand, #we_do, #mk, #advertising , #portfolio ,#our_team, #testimonials, .map_footer 
+		min-height: 100vh
+	// .daily_hex
+	// 	padding-top: 0
+	// span
+	// 	top: 0
+	// .address
+	// 	top: 55px
+
+	
+			
+	
