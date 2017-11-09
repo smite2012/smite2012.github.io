@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
 
@@ -9,9 +9,11 @@
 	<meta name="description" content="CSS Grid Real Example">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
-	<link rel="stylesheet" href="css/main.css">
+	<!-- <link  href="libs/fotorama/fotorama.css" rel="stylesheet"> -->
+	<!-- <link rel="stylesheet" href="libs/fotorama/fotorama.css"> -->
 	
+	<link rel="stylesheet" href="css/main.min.css">
+	<style>.img-responsive{display:block;max-width:100%;height:auto}*{-webkit-box-sizing:border-box;box-sizing:border-box}body{background-color:#fff;height:100%;width:100%;margin:0 auto}.container-fluid{padding-right:0;padding-left:25px}.fotorama__error .fotorama__img,.fotorama__loaded .fotorama__img{opacity:1;z-index:0}.top{opacity:1;background-color:#9bd7e5;height:50px;vertical-align:middle}.fotorama{width:100%}.fotorama__stage.fotorama__pointer{height:600px}.fotorama__nav-wrap{position:absolute;bottom:30px}.logo{margin-left:120px}.logo img{margin-bottom:10px}.logo span{color:#fff;font-family:"Myriad Pro";font-size:27px;font-weight:400;text-transform:uppercase}.menu{margin-right:10%;height:20px}.search{position:absolute;top:45%;left:20%}.search h2{color:#fff;font-family:"Myriad Pro";font-size:27px;font-weight:400}.search input{width:390px;height:43px;border:none}.search input::-webkit-input-placeholder{color:#afafaf;font-family:"Myriad Pro";font-size:21px;font-weight:400;padding-left:10px}.search input::-moz-placeholder{color:#afafaf;font-family:"Myriad Pro";font-size:21px;font-weight:400;padding-left:10px}.search input:-ms-input-placeholder{color:#afafaf;font-family:"Myriad Pro";font-size:21px;font-weight:400;padding-left:10px}.search input::-ms-input-placeholder{color:#afafaf;font-family:"Myriad Pro";font-size:21px;font-weight:400;padding-left:10px}.search input::placeholder{color:#afafaf;font-family:"Myriad Pro";font-size:21px;font-weight:400;padding-left:10px}.search button{background-color:transparent;border:none}.search button:hover{cursor:pointer}.logo{width:50%;float:left}.hamburger{padding-top:15px;z-index:5}.hamburger .hamburger-box{width:34px}.hamburger-inner,.hamburger-inner::after,.hamburger-inner::before{-webkit-border-radius:0;border-radius:0;width:34px;height:2px;background-color:#fff}.hamburger-inner::after:hover,.hamburger-inner::before:hover,.hamburger-inner:hover{color:#9bd7e5;cursor:pointer}html.mm-opened{overflow-y:scroll}.mm-panels>.mm-panel.mm-hasnavbar{right:-18px}.mm-listview>li:not(.mm-divider):after{display:none}.mm-menu.mm-theme-black .mm-listview>li.mm-selected>a:not(.mm-next),.mm-menu.mm-theme-black .mm-listview>li.mm-selected>span{background-color:transparent}.mm-menu.mm-theme-black{background-color:#9bd7e5}.mm-menu.mm-theme-black .mm-navbar a,.mm-menu.mm-theme-black .mm-navbar>*{color:#fff;font-size:30px}.mm-listview>li>a{-webkit-transition:color .25s ease;-o-transition:color .25s ease;transition:color .25s ease;font-size:20px;padding-left:15%;padding-top:10px}.mm-listview>li>a:hover{color:#4ab7d0}.mm-listview>li>a:hover::before{color:#4ab7d0}.mm-listview>li>a::before{content:'\f219';font-family:fontawesome;margin-right:8px;color:#fff;-webkit-transition:color .25s ease;-o-transition:color .25s ease;transition:color .25s ease}.mm-listview>li.active{background-color:#4ab7d0}.mm-listview>li.active>a{color:#f4a70a}.mm-listview>li.active>a:hover{color:#c38508}.mm-listview>li.active>a::before{color:#f4a70a}</style>
 
 </head>
 
@@ -28,7 +30,7 @@
 
 					<div class="top">
 						<div class="logo">
-							<img src="img/Instagram.png" alt="">
+							<img src="img/Instagram.png" alt="Instagram">
 							<span>Leo images</span>
 						</div>
 						<div class="menu float-right">
@@ -44,17 +46,17 @@
 					<div class="fotorama"
 					     data-nav="thumbs"
 					     data-autoplay="true">
-					  <a href="img/9.jpg"><img src="img/9_thumb.jpg"></a>
-					  <a href="img/4.jpg"><img src="img/4_thumb.jpg"></a>
-					  <a href="img/6.jpg"><img src="img/6_thumb.jpg"></a>
-					  <a href="img/3.jpg"><img src="img/3_thumb.jpg"></a>			
+					  <a href="img/9.jpg"><img src="img/9_thumb.jpg" alt="Workspace"></a>
+					  <a href="img/4.jpg"><img src="img/4_thumb.jpg" alt="Workspace"></a>
+					  <a href="img/6.jpg"><img src="img/6_thumb.jpg" alt="Workspace"></a>
+					  <a href="img/3.jpg"><img src="img/3_thumb.jpg" alt="Workspace"></a>			
 					</div>
 
 
 					<div class="search">
 						<h2>Photos, illustrations by <br> creatives all over the world.</h2>
 						<input type="search" placeholder="People walking">
-						<button type="submit"><img src="img/Shape 7.png" alt=""></button>
+						<button type="submit"><img src="img/Shape 7.png" alt="Search"></button>
 					</div>
 
 				</div><!-- col 12 -->
@@ -269,11 +271,12 @@ function accFunction(id) {
 			</div>
 		</div>
 	
-<script src="libs/bootstrap/js/popper.min.js"></script>
+<!-- <script src="libs/bootstrap/js/popper.min.js"></script>
 <script src="libs/jquery/dist/jquery.min.js"></script>
-<script src="libs/bootstrap/js/bootstrap.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+<script src="libs/bootstrap/js/bootstrap.js"></script> -->
 <script src="js/scripts.min.js"></script>
-<script src="js/common.js"></script>
+<!-- <script src="libs/fotorama/fotorama.js"></script> --> 
+
+<!-- <script src="js/common.js"></script> -->
 </body>
 </html>
