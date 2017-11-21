@@ -19,10 +19,12 @@
 				<div class="col-md-4 col-md-push-4 animation_1">
 					<h3>Фото</h3>
 					<div class="person">
+						<?php if ( has_post_thumbnail() ) : ?>
 							<a class="popup" href="<?php
 										$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
 										echo $large_image_url[0];
 										?>"><?php the_post_thumbnail(array(220, 220)); ?></a>
+						<?php endif; ?>
 					</div>
 				</div>
 				<div class="col-md-4 col-md-pull-4 animation_2">
@@ -42,7 +44,7 @@
 														<?php
 														$idObj = get_category_by_slug('socials');
 														$id = $idObj->term_id;?>
-														<?php if ( have_posts() ) : query_posts('cat=3');
+														<?php if ( have_posts() ) : query_posts('cat=' . $id);
 														while (have_posts()) : the_post(); 	?>
 
 																<li><a href="<?php echo get_post_meta($post->ID, 'soc_url', true); ?>" target="_blank" title="<?php the_title(); ?>"><i class="fa <?php echo get_post_meta($post->ID, 'fonts_awesome', true); ?> ?>"></i></a></li>													
@@ -67,7 +69,9 @@
 				echo get_cat_name($id);
 				?></h2>
 		<div class="s_descr_wrap">
-			<div class="s_descr"><?php echo category_description(4); ?></div>
+			<div class="s_descr"><?php
+					echo category_description($id);
+					?></div>
 		</div>
 	</div>
 	<div class="section_content">
@@ -81,7 +85,7 @@
 								echo get_cat_name($id); ?></h3>
 						<div class="resume_icon"><i class="icon-basic-case"></i></div>
 	
-						<?php if ( have_posts() ) : query_posts('cat=5');
+						<?php if ( have_posts() ) : query_posts('cat=' . $id);
 						while (have_posts()) : the_post(); 	?>
 
 						<div class="resume_item">
@@ -101,7 +105,7 @@
 								echo get_cat_name($id) ?></h3>
 						<div class="resume_icon"><i class="icon-basic-book-pen"></i></div>						
 
-						<?php if ( have_posts() ) : query_posts('cat=6');
+						<?php if ( have_posts() ) : query_posts('cat=' . $id);
 						while (have_posts()) : the_post(); 	?>
 
 						<div class="resume_item">
@@ -127,7 +131,9 @@
 				echo get_cat_name($id);
 				?></h2>
 		<div class="s_descr_wrap">
-			<div class="s_descr"><?php echo category_description(7); ?></div>
+			<div class="s_descr"><?php
+					echo category_description($id);
+					?></div>
 		</div>
 	</div>
 	<div class="section_content">
@@ -188,9 +194,15 @@
 
 <section id="contacts" class="s_contacts bg_light">
 	<div class="section_header">
-		<h2><?php echo get_cat_name(11); ?></h2>
+		<h2><?php
+				$idObj = get_category_by_slug('s_contacts');
+				$id = $idObj->term_id;
+				echo get_cat_name($id);
+				?></h2>
 		<div class="s_descr_wrap">
-			<div class="s_descr"><?php echo category_description(11); ?></div>
+			<div class="s_descr"><?php
+					echo category_description($id);
+					?></div>
 		</div>
 	</div>
 	<div class="section_content">
