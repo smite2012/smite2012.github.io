@@ -8242,7 +8242,7 @@ section.top {
     font-size: 18px;
     font-weight: 300; }
   .contact_wrapper .telephone {
-    font-size: 23px;
+    font-size: 21px;
     font-weight: 800; }
 
 .gauger_wrapper {
@@ -8642,7 +8642,7 @@ footer {
     position: relative; }
   .backet_wrap_green_bucket_sails {
     position: absolute;
-    left: 50px;
+    left: 50px!important;
     top: -5px; }
   .green_bg .bucket_green .backet_wrap_green .backet_wrap_green_bucket_wrapper .backet_wrap_green_bucket .backet_wrap_green_bucket_sails .backet_wrap_green_bucket_sails_span {
     font-size: 16px; }
