@@ -1,0 +1,651 @@
+@import "libs"
+@import "vars"
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	 
+*
+	box-sizing: border-box
+// * 
+//   background: #000 !important
+//   color: #0f0 !important
+//   outline: solid #f00 1px !important
+
+html
+	height: 2000px
+	width: 100%
+	overflow-x: hidden
+	background-color: $white
+	margin: 0
+	padding: 0
+body 
+	background: url(../img/bg_middle.png)
+	height: 100%
+	overflow-x: hidden
+	margin: 0
+	padding: 0
+	width: 100%
+header
+	display: flex
+	align-items: center
+ul
+	margin-bottom: 0
+.col-sm-8, .col-md-8, .col-lg-8, .col-xl-8
+	flex: 0 0 59.666667%
+.col-sm-12, .col-md-12, .col-lg-12, .col-xl-12
+	margin: 0
+	padding: 0
+
+.col-sm-2, .col-md-2, .col-lg-2, .col-xl-2
+	flex: 0 0 19.666667%
+	padding: 0
+	margin: 0
+	// padding-left: 30px
+.col-sm-10, .col-md-10, .col-lg-10, .col-xl-10
+	padding: 0
+.col-sm-10, .col-md-10, .col-lg-10, .col-xl-10
+	flex: 0 0 65.333333%
+.container-fluid
+	padding: 0
+.jcsa
+	justify-content: space-evenly
+.slider .row , .about_company .row, .footer_bg .row
+	margin: 0
+button:focus
+	outline: none
+.toggle_mnu
+	width: 40px
+	height: 40px
+	z-index: 100
+	border: none
+	margin-left: 30px
+	background-color: transparent
+	border: none
+	&:hover
+		cursor: pointer
+	span
+		display: block
+.sandwich 
+	width: 40px
+	height: 40px
+	margin: auto
+	z-index: 200
+	&:focus
+		outline: none
+
+	.sw-topper
+		position: relative
+		top: 0
+		width: 40px
+		height: 5px
+		background: rgb(255, 255, 255)
+		border: none
+		border-radius: 4px 4px 4px 4px
+		transition: transform 0.5s, top 0.2s
+		display: block
+			
+	.sw-bottom
+		position: relative
+		width: 40px
+		height: 5px
+		top: 10px 
+		background: rgb(255, 255, 255)
+		border: none
+		border-radius: 4px 4px 4px 4px
+		transition: transform 0.5s, top 0.2s
+		transition-delay: 0.2s, 0s
+	.sw-footer
+		position: relative
+		width: 40px
+		height: 5px
+		top: 20px 
+		background: rgb(255, 255, 255)
+		border: none
+		border-radius: 4px 4px 4px 4px
+		transition: all 0.5s
+		transition-delay: 0.1s
+.sandwich.activee
+	width: 45px
+	height: 40px
+	margin-top: 2px
+	.sw-topper
+		top: 13px
+		transform: rotate(-45deg)
+	&:hover
+		cursor: pointer
+	&:focus
+		border: 3px solid $accent
+
+	.sw-bottom
+		top: 8px
+		transform: rotate(45deg)
+	.sw-footer
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+
+.top_mnu
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.85)
+	z-index: 50
+	right: 0
+	top: 0
+	display: none
+	ul,
+	li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	ul
+		margin-top: 180px
+		text-align: center
+		position: absolute
+		left: 30%
+		li
+		a
+			color: #fff
+			display: block
+			text-transform: uppercase
+			font-size: 12px
+			opacity: 1
+			position: relative
+			height: 60px
+			outline: none
+			span
+				display: block
+				position: relative
+				top: -40px
+				left: 0
+				height: 100%
+			
+#wrapper
+		margin: 0 auto
+		width: 80%
+.container_all
+	min-width: 100%
+	background-color: $accent
+	box-shadow: 0 5px 5px rgba(16, 16, 15, 0.5)
+	#wrapper
+		width: 80%
+		margin: 0 auto
+section.top
+	min-height: 45px
+		
+.menu
+	display: flex
+	align-items: center
+
+.sails_container2
+	height: 40px
+	width: 87%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: flex-end
+
+
+	.sails2
+		width: 135px
+		height: 80%
+		margin-right: 22px
+	.basket
+		img
+			float: left
+			margin-right: 5px
+		.buck_wrap
+			width: 135px
+			height: 24px
+			margin-right: 20px
+			.product
+				clear: right
+			.product, .amount
+				height: 50%
+				span 
+					color: white
+					font-family: HelveticaNeueThin
+					font-size: 12px
+					font-weight: 300
+.language
+	.ru
+		margin-right: 5px
+	.ru, .ua
+		width: 50%
+		width: 30px
+		height: 30px
+		background-color: rgba(0, 0, 0, 0.3)
+		vertical-align: middle
+		box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 2px 5px black
+		padding-left: 5px
+		span
+			font-family: HelveticaNeue
+			font-size: 18px
+			font-weight: 300
+			vertical-align: -webkit-baseline-middle
+			vertical-align: -moz-baseline-middle
+			vertical-align: -o-baseline-middle
+	.ru
+		float: left
+		color: #fff
+	.ua
+		float: right
+		margin-right: 20px
+
+.search_wrap
+	position: relative
+	input
+		width: 270px
+		height: 30px
+		background-color: rgba(0, 0, 0, 0.3)
+		box-shadow: 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 2px 5px black
+		border: none
+		padding-top: 10px
+		&::placeholder 
+			color: #ff3f3e
+			font-family: HelveticaNeue
+			font-size: 24px
+			font-weight: 300
+			padding-left: 10px 
+
+	button
+		background-color: transparent
+		border: none
+		position: absolute
+		top: 0px
+		left: 235px
+		width: 30px
+		height: 30px
+
+.green_bg
+	background: url(../img/bg_top.png) no-repeat
+	min-height: 460px
+	background-position: -10px -410px
+	min-width: 100%
+	#wrapper
+		width: 100%
+	.col-sm-2, .col-md-2, .col-lg-2, .col-xl-2
+		padding-left: 0
+	.log
+		margin-top: 20px
+		.login, .register
+			span
+				text-shadow: 0 1px 1px rgba(1, 1, 1, 0.5)
+				color: $white
+				font-family: HelveticaNeueThin
+				
+		.register
+			margin-bottom: 10px
+			span
+				font-size: 13px
+				text-decoration: underline
+	.soc
+		width: 220px
+	.soc, .tw, .vk ,.fb ,.rss ,.google
+		display: inline-block
+		img
+			float: left
+	.bucket_green
+		width: 180px
+		height: 67px
+		padding-top: 10px
+		background-color: $accent
+		border-radius: 2px
+		box-shadow: 0 2px 5px rgba(1, 1, 1, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.29)
+		background-image: linear-gradient(to top, rgba(176, 39, 39, 0.29) 0%, rgba(222, 54, 53, 0.29) 100%)
+		margin-top: 10px
+		.backet_wrap_green
+			margin-left: 5px
+			.bucket3
+				display: inline-block
+				float: left
+				margin-right: 25px
+			.backet_wrap_green_bucket_wrapper
+				.backet_wrap_green_bucket
+					position: relative
+					.backet_wrap_green_bucket_sails
+						position: absolute
+						top: -15px
+						left: 70px
+						.backet_wrap_green_bucket_sails_span
+							text-shadow: 0 1px 1px rgba(1, 1, 1, 0.5)
+							color: $white
+							font-family: HelveticaNeue
+							font-size: 20px
+							font-weight: 700
+					.product, .amount
+						.backet_wrap_green_bucket_sails_product
+							color: $white
+							font-family: HelveticaNeueThin
+							font-size: 12px
+							line-height: 14px
+							font-weight: 300
+						.backet_wrap_green_bucket_sails_number
+							color: $white
+							font-family: HelveticaNeue
+							font-size: 12px
+							line-height: 14px
+							font-weight: 700
+.logo_wrapper
+	width: 90%
+	margin: 0 auto
+	padding-top: 25px
+	text-align: center
+	.nakitel
+		text-shadow: 0.5px 0.9px 1px rgba(255, 255, 255, 1)
+		color: #608b30
+		font-family: HelveticaNeueBold
+		font-size: 48px
+		font-weight: 600
+		text-transform: uppercase
+.contact_wrapper
+	text-shadow: 0 1px 1px rgba(1, 1, 1, 0.5)
+	color: $white
+	font-family: HelveticaNeueThin
+	margin-right: 50px
+	width: 192px
+	margin-top: 25px
+	text-align: center
+	div
+		span
+			font-size: 18px
+			font-weight: 300
+	.telephone
+		font-size: 23px
+		font-weight: 800
+
+.gauger_wrapper
+	text-shadow: 0 1px 1px rgba(1, 1, 1, 0.3)
+	color: $white
+	font-family: HelveticaNeue
+	font-weight: 700
+	.call_gauger
+		width: 190px
+		background-color: #de3635
+		background-image: linear-gradient(to top, rgba(176, 39, 39, 0.29) 0%, rgba(222, 54, 53, 0.29) 100%)
+		border-radius: 3px
+		box-shadow: 0 2px 5px rgba(1, 1, 1, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.29)
+		text-align: center
+		margin-top: 5px
+		.call_gauger_call
+			font-size: 37px
+		.call_gauger_gauger
+			font-size: 26px
+#wrapper
+	position: relative
+	width: 80%
+	margin: 0 auto	
+	.doors
+		position: absolute
+		top: -200px
+		z-index: 1
+
+		.row
+			justify-content: center
+		.jcsp			
+			justify-content: space-between
+					
+.doors_item
+	position: relative
+	margin-right: 5%
+	img
+		display: block
+		margin: 0 auto
+	.inner_door
+		position: relative
+		top: 0
+		
+	.doors_name, .doors_name_1, .doors_name_2
+		text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+		color: #608b30
+		font-family: 'HelveticaNeue'
+		font-weight: 400
+		text-align: center
+		.doors_name_1
+			font-size: 55px
+		.doors_name_2
+			font-size: 20px
+
+.bg_middle
+	min-width: 100%
+	position: absolute
+	right: 0
+	left: 0
+	background: url(../img/bg_middle.png)
+	.wrapper
+		width: 80%
+		margin: 0 auto	
+	.slider
+		margin-top: 250px
+		max-height: 370px
+				
+		.slideshow-container
+			max-width: 1000px
+			position: relative
+			margin: auto
+
+		.prev, .next
+			cursor: pointer
+			position: absolute
+			top: 50%
+			width: auto
+			margin-top: -22px
+			padding: 16px
+			color: #fff
+			font-weight: bold
+			font-size: 18px
+			transition: 0.6s ease
+			border-radius: 0 3px 3px 0
+
+.next
+	right: 0
+	border-radius: 3px 0 0 3px
+
+.prev:hover, .next:hover
+	background-color: rgba(0,0,0,0.8)
+
+
+.dot
+	cursor: pointer
+	height: 13px
+	width: 13px
+	margin: 0 2px
+	background-color: #bbb
+	border-radius: 50%
+	display: inline-block
+	transition: background-color 0.6s ease
+
+
+.dots
+	position: absolute
+	top: -20px
+	left: 40%
+.active, dot:hover
+	background-color: $accent
+
+.fade
+	animation-name: fade
+	animation-duration: 5s
+
+@keyframes fade
+	from 
+		opacity: .4
+	to
+		opacity: 1
+
+.about_company
+	position: relative
+	margin-top: 100px
+	min-width: 100%
+	z-index: 5
+	.jcsp
+		justify-content: space-between
+	.contact_wrapper
+		color: #333
+		margin-bottom: 0
+		margin-top: 0
+		.telephone
+			font-size: 24px
+		div
+			span
+				font-size: 18px
+				font-weight: 100
+	.gauger_wrapper
+	text-shadow: 0 1px 1px rgba(1, 1, 1, 0.3)
+	color: $white
+	font-family: HelveticaNeue
+	font-weight: 700
+	.call_gauger
+		height: 55px
+		text-align: center
+		.call_gauger_call
+			padding-top: 5px
+			font-size: 30px
+			line-height: 1px
+			vertical-align: middle
+			.call_gauger_gauger
+				font-size: 20px
+	.banner_wrapper
+		display: flex
+		align-items: center
+		margin-bottom: 45px
+		.banner
+			text-shadow: 0 1px 2px rgba(16, 16, 15, 0.5)
+			color: #000
+			font-family: BebasNeueBold
+			font-weight: 400
+			text-transform: uppercase
+			div
+				.banner1
+					vertical-align: middle
+					line-height: 42px
+					font-size: 42px
+					span
+						font-size: 48px
+						
+	.col-sm-9, .col-md-9, .col-lg-9, .col-xl-9
+		flex: 0 0 65%
+	p
+		text-indent: 1.5em
+		text-align: left
+		font-size: 1em
+	.company_wrapper
+		width: 50%
+		margin: 0 auto
+		text-align: center
+		.company
+			text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75)
+			color: #608b30
+			font-family: BebasNeueBold
+			font-size: 48px
+			font-weight: 400
+	nav
+		ul 
+			list-style-type: none
+			padding-left: 0
+			li
+				width: 170px				
+				a
+					
+					font-family: HelveticaNeue
+					font-size: 20px
+					font-weight: 400
+					text-transform: uppercase
+					color: #060		
+				.nav_active
+					color: #c00
+	.company_text
+		max-width: 770px
+		max-height: 855px
+		overflow-y: scroll
+		background:  url(/img/bg_text.png) 0 0 no-repeat
+		margin: auto
+		p 
+			color: #333
+			font-family: HelveticaNeue
+			font-size: 18px
+			font-weight: 300
+			padding-left: 25px
+			padding-right: 5px
+			&:first-child
+				margin-top: 35px
+	.banner_wrapper
+		min-height: 120px
+		min-width: 170px
+		background: url(../img/баннер.png) no-repeat
+		margin-top: 50px
+		margin-left: 15px
+		padding-left: 7%
+		.banner
+			text-shadow: 0 1px 2px rgba(16, 16, 15, 0.5)
+			color: $white
+			font-family: BebasNeueBold
+			font-weight: 400
+			text-transform: uppercase
+
+			.banner1
+				span
+					font-size: 42px
+										
+			.banner2
+				span
+					font-size: 48px
+footer
+	min-width: 100%
+	min-height: 320px
+	background: url(/img/bg_bot.png)
+	background: url(../img/bg_top.png) no-repeat
+	transform: rotate(180deg)
+	background-position: -0px -550px	
+	position: absolute
+	bottom: -200px
+	z-index: 4
+	
+	
+	.footer_bg
+		transform: rotate(180deg)
+		position: absolute
+		width: 100%
+		height: 45px
+		background: url(/img/nav_bg.png)
+		margin-top: 20px
+		#wrapper
+			width: 75%
+	.footer_nav
+		height: 45px
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+			
+		.footer_nalitel
+			width: 125px
+		.footer_ul
+		 width: 100%
+		 float: right
+		 ul
+		 	list-style-type: none
+		 	float: right
+		 	li 
+		 		display: inline-block	
+		 		margin-right: 25px	 		
+		 		a
+		 			color: $white
+					font-family: HelveticaNeue
+					font-size: 18px
+					font-weight: 400
+					text-decoration: none
+	.footer_nalitel
+		color: $white
+		font-family: HelveticaNeue
+		font-size: 18px
+		font-weight: 400
+
+
+
+@import "media" // Всегда в конце
