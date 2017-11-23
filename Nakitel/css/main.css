@@ -8197,7 +8197,7 @@ section.top {
         .green_bg .bucket_green .backet_wrap_green .backet_wrap_green_bucket_wrapper .backet_wrap_green_bucket .backet_wrap_green_bucket_sails {
           position: absolute;
           top: -15px;
-          left: 70px; }
+          left: 70px!important; }
           .green_bg .bucket_green .backet_wrap_green .backet_wrap_green_bucket_wrapper .backet_wrap_green_bucket .backet_wrap_green_bucket_sails .backet_wrap_green_bucket_sails_span {
             text-shadow: 0 1px 1px rgba(1, 1, 1, 0.5);
             color: #fff;
