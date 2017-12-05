@@ -409,46 +409,49 @@ body, html
 	.logo_img
 		width: 95px
 		margin: 0 auto
-	.logo_text
-		width: 215px
-		margin: 0 auto
-		text-align: center
-		// color: rgba(0,0,0,0.6)
-		// text-shadow: 2px 2px 3px rgba(255,255,255,0.1)
-		font-family: "HelveticaNeue", sans-serif
-		font-size: 48px
-		font-weight: 500
-		text-transform: uppercase
-		position: relative
-		position: relative
-	
-		h1
-			position: relative
+	.logo_text_wrap
+		width: 100%
+		margin: auto
+		.logo_text
+			width: 215px
+			margin: 0 auto
+			text-align: center
+			// color: rgba(0,0,0,0.6)
+			// text-shadow: 2px 2px 3px rgba(255,255,255,0.1)
+			font-family: "HelveticaNeue", sans-serif
 			font-size: 48px
 			font-weight: 500
-			text-align: center
-			margin: 0
-			font-family: "HelveticaNeue", sans-serif
-			// background-color: #fff
-			text-shadow: 1px 1px 1px rgba(96,139,48,1), 0px -0.5px 1px rgba(0,0,0,0.5)
-			div
-				background-position: center top
-				background: linear-gradient(to bottom right,transparent 50% , #000 ), url(../img/bg_top_mask.png) no-repeat
-				-webkit-background-clip: text
-				-webkit-text-fill-color: transparent
-				position: absolute
-				width: 100%
-				font-family: "HelveticaNeue", sans-serif
+			text-transform: uppercase
+			position: relative
+			position: relative
+		
+			h1
+				position: relative
 				font-size: 48px
-				// text-shadow: -1px -1px 0 rgba(0,0,0,0.1)
-				
-				     
-			&::after
-				text-shadow: 1px 0.9px 1px rgba(255,255,255,0.4)
-				color: transparent
-				
-		#hello::after
-			content: 'nakitel'
+				font-weight: 500
+				text-align: center
+				margin: 0
+				font-family: "HelveticaNeue", sans-serif
+				// background-color: #fff
+				text-shadow: 1px 1px 1px rgba(96,139,48,1), 0px -0.5px 1px rgba(0,0,0,0.5)
+				div
+					background-position: center top
+					background: linear-gradient(to bottom right,transparent 50% , #000 ), url(../img/bg_top_mask.png) no-repeat
+					-webkit-background-clip: text
+					-webkit-text-fill-color: transparent
+					position: absolute
+					width: 100%
+					font-family: "HelveticaNeue", sans-serif
+					font-size: 48px
+					// text-shadow: -1px -1px 0 rgba(0,0,0,0.1)
+					
+					     
+				&::after
+					text-shadow: 1px 0.9px 1px rgba(255,255,255,0.4)
+					color: transparent
+					
+			#hello::after
+				content: 'nakitel'
 			
 
 
