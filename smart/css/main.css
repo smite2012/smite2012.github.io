@@ -4693,6 +4693,8 @@ header {
     height: 60px;
     max-width: 1170px;
     margin: auto;
+    position: relative;
+    z-index: 10;
     padding: 0 15px;
     display: -webkit-flex;
     display: -moz-flex;
