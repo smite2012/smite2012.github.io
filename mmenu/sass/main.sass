@@ -1,0 +1,68 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	 
+body
+	background-color: grey
+	height: 100%
+	width: 100%
+	
+
+.hamburger
+	position: absolute
+	left: 0
+	
+
+	.hamburger-box
+		width: 34px
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before // three spans
+			border-radius: 0
+			width: 34px
+			height: 2px
+			background-color: #fff
+			&:hover
+				color: $accent
+				cursor: pointer
+
+html.mm-opened
+	overflow-y: scroll		
+.mm-panels > .mm-panel.mm-hasnavbar// No scroll
+	right: -18px
+.mm-listview>li:not(.mm-divider):after// No border after a
+	display: none
+.mm-menu.mm-theme-black .mm-listview>li.mm-selected>a:not(.mm-next), .mm-menu.mm-theme-black .mm-listview>li.mm-selected>span
+ background-color: transparent
+ color: $accent
+	
+
+
+
+.mm-listview 
+	> li
+		> a
+			transition: color .25s ease
+			padding: 
+			 	left: 15%
+			 	top: 10px
+			&:hover
+				color: $accent
+				&::before
+					color: $accent
+			&::before
+				content: '\f219'
+				font-family: fontawesome
+				margin-right: 8px
+				color: #fff
+				transition: color .25s ease
+		&.active
+			&>a
+				color: $accent
+
+@import "media" // Всегда в конце
