@@ -1,3 +1,8 @@
+// preloader
+$(window).on('load', function () {
+	$('.preloader').delay(1000).fadeOut('slow');
+})
+
 $(document).ready(function(){
 
   $(".owl-carousel").owlCarousel({
@@ -66,3 +71,18 @@ $(".popup").magnificPopup({type:"image"});
 
 $(".main_menu nav ul a").mPageScroll2id();
 
+
+
+// back to top button
+var $btnTop = $(".btn-top")
+$(window).on("scroll", function(){
+	if ($(window).scrollTop() >= 20){
+		$btnTop.fadeIn();
+	}else{
+		$btnTop.fadeOut();
+	}
+});
+// back to top button click
+$btnTop.on("click", function(){
+	$("html,body").animate({scrollTop:0},900)
+});
