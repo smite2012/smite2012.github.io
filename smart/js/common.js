@@ -39,7 +39,7 @@ $(".toggle_mnu").click(function() {
 	});
 
 $(".main_text_wrapper").animated("fadeInUp", "fadeOutDown");
-$(".email_wrapper").animated("fadeInUp", "fadeOutDown");
+// $(".email_wrapper").animated("fadeInUp", "fadeOutDown");
 // $(".wp_header").animated("fadeInUp", "fadeOutDown");
 // $(".swp_text").animated("fadeInUp", "fadeOutDown");
 // $(".tck_text").animated("fadeInUp", "fadeOutDown");
