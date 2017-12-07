@@ -24,7 +24,7 @@ $(document).ready(function(){
         
       },
       // breakpoint from 480 up
-      576 : {
+      768 : {
           items : 2,             
       },
 		}
