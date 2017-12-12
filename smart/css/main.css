@@ -4856,6 +4856,8 @@ header .row {
 
 .main_text_wrapper {
   width: 100%;
+  position: relative;
+  z-index: 2;
   margin: auto; }
   .main_text_wrapper .main_text {
     width: 90%;
@@ -4879,6 +4881,19 @@ header .row {
         font-size: 16px;
         font-weight: 400; }
 
+.mask::after {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(top, white, rgba(255, 255, 255, 0));
+  background: -o-linear-gradient(top, white, rgba(255, 255, 255, 0));
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0));
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 200px;
+  bottom: 250px;
+  width: 100%; }
+
 .email_wrapper {
   width: 372px;
   height: 388px;
@@ -4887,7 +4902,9 @@ header .row {
           border-radius: 2px;
   -webkit-box-shadow: 0 0 57px rgba(20, 20, 21, 0.2);
           box-shadow: 0 0 57px rgba(20, 20, 21, 0.2);
-  margin: 100px auto 0; }
+  margin-top: 100px;
+  position: relative;
+  z-index: 3; }
   .email_wrapper .email_div {
     width: 41%;
     height: 25px;
