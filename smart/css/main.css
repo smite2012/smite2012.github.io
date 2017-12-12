@@ -5785,6 +5785,7 @@ footer {
       footer .wrapper .button_wrapper button {
         width: 240px;
         height: 57px;
+        margin: auto;
         background-color: #fdfdfd;
         border: 1px solid rgba(1, 2, 2, 0.07);
         -webkit-border-radius: 27px;
