@@ -1,0 +1,1479 @@
+@import "fonts"
+@import "libs"
+// @import "base"
+@import "vars"
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+	margin: auto
+	 
+*
+	box-sizing: border-box
+button
+	&:focus
+		outline: none
+	// * 
+//   background: #000 !important
+//   color: #0f0 !important
+//   outline: solid #f00 1px !important
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto, .row ,.container
+	padding: 0
+html, body
+	background-color: whitesmoke
+	height: 100%
+	width: 100%
+	margin: 0 auto
+	overflow-x: hidden
+
+.row
+	margin: 0
+	position: relative
+.wrapper
+	max-width: 1920px
+	// height: 100%
+	margin: 0 auto
+	
+.cotainer
+	width: 100%
+	max-width: 1170px
+	// height: 100%
+	margin: 0 auto
+
+.top_wrapper
+	min-height: 75px
+	width: 100%
+	// background-color: white
+	// box-shadow: 0 0 24px rgba(0, 0, 0, 0.25)
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	.top
+		height: 30px
+		width: 100%
+		// background-color: green
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		.logo_wrapper
+			// height: 30px
+			width: 100px	
+			// background-color: red
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			.logo
+				.alexis
+					font-family: $Wisdom
+					font-size: 35px
+					color: $p
+					.a
+						color: $orange
+
+.menu_hide
+	height: 30px
+	width: 100%
+	display: inline-block
+	.menu
+		float: right 
+		// background: #eee
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		.wrapper_nav  
+			position: relative
+
+.nav_wrapper
+	width: 100%
+	height: 30px
+	nav
+		width: 100%
+		float: right
+		// right: 0
+		ul
+			float: right
+			width: 62%
+			margin: 0
+			padding: 0
+			list-style-type: none
+			height: 30px
+			
+			li  
+				// float: right
+				display: inline-block
+				list-style-type: none
+				margin-right: 1%
+				a 
+					display: inline-block
+					// padding: 10px 15px
+					text-decoration: none
+					color: #272727
+					font-family: $Poppins
+					font-size: 14px
+					font-weight: 500
+					&:hover
+						color: $orange
+						cursor: pointer
+						transition: all 1s
+
+
+.menuToggle 
+	display: none
+	cursor: pointer
+	// border: 1px solid #000
+	height: 30px
+	width: 30px
+	// background-color: transparent
+	position: absolute
+	right: 10%
+	// background-color: red
+	
+
+.heading
+	width: 100%
+	min-height: 775px
+	.heading_bg
+		width: 100%
+		// min-height: 775px
+		background-color: rgba(38, 39, 50, 0.85)
+		
+		z-index: 3
+		.heading_wrap
+			width: 100%
+			height: 145px
+			margin-top: 190px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center	
+			.head
+				text-align: center
+				width: 99%
+				color: $white
+				font-family: $LibreBaskerville
+				font-size: 60px
+				font-weight: 400
+	.heading_bg
+		.container
+			.row
+				.col-md-3 .col-lg-3 .col-xl-3
+					-ms-flex: 0 0 18%
+					-webkit-box-flex: 0
+					-webkit-flex: 0 0 18%
+					flex: 0 0 18%
+					max-width: 18%
+.head_button_wrap
+	height: 60px
+	width: 100%
+	margin-top: 60px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex		
+	align-items: center
+	justify-content: center
+	.head_button
+		width: 180px
+		height: 50px
+		background-color: #fc5f45
+		border-radius: 25px
+		color: $white
+		font-family: $Poppins
+		font-size: 16px
+		font-weight: 600
+		text-transform: uppercase
+		border: none
+		&:hover
+			cursor: pointer
+			transition: all 1s
+			color: $orange
+			background-color: #FFF
+.features_wrap
+	width: 100%
+	margin-top: 90px
+	margin-bottom: 170px
+	.feature1, .feature2, .feature3
+		width: 100%
+		text-align: center
+
+		.feature1_img
+		.feature1_text, .feature2_text, .feature3_text
+			margin-top: 30px
+			color: $green
+			font-family: $Poppins
+			font-size: 18px
+			font-weight: 500
+			text-transform: uppercase
+		.feature2_text
+			color: $violet
+		.feature3_text
+			color: $yellow
+	.feature3
+		margin: auto
+		width: 237px
+.about_us
+	height: 1000px
+	background-color: #FFF
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	.about_us_img_wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		max-height: 695px
+		max-width: 555px
+		border: 10px solid rgba(0, 0, 0, 0.2)
+	.about_us_wrap
+		width: 652px
+		max-height: 550px
+		background-color: $white
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		position: absolute
+		left: -43px
+		.about_uss
+			width: 80%
+			margin: 85px auto 100px
+			position: relative
+			h1
+				// margin-top: 90px
+				color: $header
+				font-family: $LibreBaskerville
+				font-size: 50px
+				font-weight: 700
+			p
+				color: $p
+				font-family: $Poppins
+				font-size: 15px
+				font-weight: 400
+		.bb1,	.bb2, .bb3, .bb4 
+			width: 25%
+			height: 3px
+			background-color: #fc5f45
+			bottom: 0
+			left: 0
+			position: absolute
+		.bb2
+			background-color: $green
+			left: 25%
+		.bb3
+			background-color: $violet
+			left: 50%
+		.bb4
+			background-color: $yellow
+			left: 75%
+		.about_uss_number
+			position: absolute
+			height: 199px
+			top: -103px
+			left: -8px
+			width: 256px
+			opacity: 0.9
+			color: #e0e0e0
+			font-family: $Poppins
+			font-size: 274px
+			font-weight: 700
+			text-transform: uppercase	
+.number_top_wrap
+	width: 90%
+	position: absolute
+	height: 200px
+	.number_wrap	
+		width: 30%
+		margin: auto
+		opacity: 0.3
+		color: #e0e0e0	
+		height: 200px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		margin-top: 5px
+		.number
+			font-family: $Poppins
+			font-size: 274px
+			font-weight: 700
+			text-transform: uppercase
+.container
+	position: relative	
+.df 
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+.our_focus
+	width: 100%
+	// height: 824px
+	background-color: #f7f7f7
+	.text_wrap
+		width: 100%
+		// height: 90px
+		text-align: center
+		margin-top: 120px
+		margin-bottom: 20px
+		h1
+			color: $header
+			font-family: $LibreBaskerville
+			font-size: 50px
+			font-weight: 700
+			margin: 0px 0px 20px 0px
+		p
+			color: $p
+			font-family: $Poppins
+			font-size: 18px
+			font-weight: 400
+			margin: 0
+.service_wrap, .service_wrap2 , .service_wrap3 , .service_wrap4
+	width: 95%
+	height: 350px
+	background-color: $white
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+	border-bottom: 3px solid $orange
+	margin-top: 100px
+	margin-bottom: 150px
+	.service1
+		height: 215px
+		// width: 200px
+		text-align: center
+		margin: auto
+
+		img
+			margin-top: 60px
+			width: 55px
+		h3
+			color: $header
+			font-family: $Poppins
+			font-size: 20px
+			font-weight: 500
+		p
+			color: $p
+			font-family: $Poppins
+			font-size: 15px
+			font-weight: 400
+.service_wrap2
+	border-bottom: 3px solid $green
+.service_wrap3
+	border-bottom: 3px solid $violet
+.service_wrap4
+	border-bottom: 3px solid $yellow
+.video_wrap
+	height: 500px
+	width: 100%
+	overflow-y: hidden
+	position: relative
+	.video_play_wrap 
+		background-repeat: no-repeat
+		width: 50%
+		height: 100%
+		position: absolute
+		left: 0%
+		right: 0%
+		top: 0%
+		bottom: 0%
+		margin: auto
+		background-size: contain
+		background-position: center
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		.video_play
+			height: 50%
+			width: 100%
+			text-align: center
+			// display: -webkit-flex
+			// display: -moz-flex
+			// display: -ms-flex
+			// display: -o-flex
+			// display: flex
+			// align-items: center
+			.video_text
+				color: $white
+				font-family: $Poppins
+				font-size: 30px
+				font-weight: 400
+				margin-bottom: 35px
+			.playpause
+				// background: url(../img/video_button.png) no-repeat
+				width: 80px
+				height: 80px		
+				margin: auto
+				margin-bottom: 30px
+			.video_text2
+				color: $white
+				font-family: $Poppins
+				font-size: 15px
+				font-weight: 400
+.portfolio
+	background-color: #FFF
+	padding-bottom: 150px
+	.header_text_wrap
+		text-align: center
+		margin: auto
+		padding-top: 145px
+		h1
+			color: $header
+			font-family: $LibreBaskerville
+			font-size: 50px
+			font-weight: 700
+			margin-top: 0
+		p
+			color: $p
+			font-family: $Poppins
+			font-size: 18px
+			font-weight: 400
+	.port_item_wrap
+		margin-bottom: 30px
+		width: 95%
+		position: relative
+		transition: all 25s
+		.port_hover
+			position: absolute
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			height: 100%
+			width: 100%
+			opacity: 0
+			background-color: rgba(2, 2, 2, 0.25)
+			cursor: pointer
+			transition: all 1s
+			.plus
+				margin-top: 20%
+			.bottom
+				position: absolute
+				bottom: 0
+				width: 100%
+				height: 50px
+				background-color: #FFF
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				justify-content: center
+				box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+				.bottom_text
+					text-align: center
+					span
+						color: $header
+						font-family: $Poppins
+						font-size: 18px
+						font-weight: 500
+				.t1, .t2, .t3, .t4
+					width: 25%
+					height: 3px
+					position: absolute
+					top: 0
+				.t1
+					background-color: $orange	
+					left: 0		
+				.t2
+					background-color: $green	
+					left: 25%
+				.t3
+					background-color: $violet	
+					left: 50%
+				.t4
+					background-color: $yellow	
+					left: 75%
+		&:hover
+			.port_hover
+				opacity: 1
+.header_text_wrap
+		text-align: center
+		margin: auto
+		padding-top: 145px
+		h1
+			color: $header
+			font-family: $LibreBaskerville
+			font-size: 50px
+			font-weight: 700
+			margin-top: 0
+		p
+			color: $p
+			font-family: $Poppins
+			font-size: 18px
+			font-weight: 400
+.tab-content			
+	display: none
+.tab-content.current
+	display: block
+.aic 
+	align-items: center
+
+.ot 
+	background-color: #f7f7f7
+	ul
+		padding: 0
+	li 
+		list-style-type: none
+
+	a
+		text-decoration: none
+	img
+		height: 163px
+		padding: 3px
+	.header_text_wrap
+		margin-bottom: 80px
+	.ot_item_wrap
+		position: relative
+		height: 261px
+		background: #fff
+		.bb, .bb2, .bb3, .bb4
+			position: absolute
+			bottom: 0
+			width: 100%
+			height: 3px
+			background-color: $orange
+			margin-top: 15px
+		.bb2
+			background-color: $green
+		.bb3
+			background-color: $violet
+		.bb4
+			background-color: $yellow
+		.text_wrap
+			text-align: center
+			padding-bottom: 15px
+			.t1, .t2 , .t3, .t4
+				color: $orange
+				font-family: $Poppins
+				font-size: 18px
+				font-weight: 500
+			.t2
+				color: $green
+			.t3
+				color: $violet
+			.t4
+				color: $yellow
+			span
+				color: $p
+				font-family: $Poppins
+				font-size: 13px
+				font-weight: 400
+	.ot1	
+		&:hover
+			background-color: $orange
+			cursor: pointer
+			transition: all 1s
+			border-radius: 5px
+			.t1
+				color: #fff
+			.bb
+				background-color: #FFF
+			span
+				color: #fff
+	.ot2	
+		&:hover
+			background-color: $green
+			cursor: pointer
+			transition: all 1s
+			border-radius: 5px
+			.t2
+				color: #fff
+			.bb2
+				background-color: #FFF
+			span
+				color: #fff
+	.ot3	
+		&:hover
+			background-color: $violet
+			cursor: pointer
+			transition: all 1s
+			border-radius: 5px
+			.t3
+				color: #fff
+			.bb3
+				background-color: #FFF
+			span
+				color: #fff
+	.ot4	
+		&:hover
+			background-color: $yellow
+			cursor: pointer
+			transition: all 1s
+			border-radius: 5px
+			.t4
+				color: #fff
+			.bb4
+				background-color: #FFF
+			span
+				color: #fff
+	.wbg_wrapper
+		width: 100%
+		height: 35px
+		position: relative
+		.arrow, .arrow2, .arrow3, .arrow4
+			position: absolute
+			left: 5%
+			width: 20%
+			height: 35px
+			background: url(../img/arrow2.jpg) no-repeat
+		.arrow2
+			left: 30%
+		.arrow3
+			left: 60%
+		.arrow4
+			left: 90%
+	.wbg_wrap
+		width: 100%
+		min-height: 350px
+		background-color: #FFF
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+		// margin-top: 50px
+		position: relative
+		padding-left: 10%
+		margin-bottom: 150px
+		// &:before
+		// 	left: 10%
+		// 	top: -17%
+		// 	border: solid transparent
+		// 	content: " "
+		// 	height: 0
+		// 	width: 0
+		// 	position: absolute
+		// 	pointer-events: none
+		// 	border-color: rgba(136, 183, 213, 0)
+		// 	border-bottom-color: #fff
+		// 	border-width: 30px
+		// 	margin-left: -30px
+		.h_wrap
+			padding-top: 70px	
+			.w_text1
+				color: #272727
+				font-family: $Poppins
+				font-size: 20px
+				font-weight: 500
+		// .t_wrap
+		// 	width: 100%
+		// 	display: -webkit-flex
+		// 	display: -moz-flex
+		// 	display: -ms-flex
+		// 	display: -o-flex
+		// 	display: flex
+		// 	justify-content: space-between
+		// 	align-items: center
+		// .p_wrap
+		// 	width: 50%
+		p 
+			color: #616161
+			font-family: $Poppins
+			font-size: 15px
+			font-weight: 400
+		.links_wrap
+			width: 145px
+			height: 145px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			margin: auto
+			.soc
+				height: 115px
+				width: 120px
+
+				span
+					color: #616161
+					font-family: $Poppins
+					font-size: 15px
+				.in, .lk, .tw, .fb
+					background: url(../img/sprites.png) no-repeat
+					background-position: -20px -64.0000114440918px
+					// width: 15px
+					height: 15px
+					margin-bottom: 15px
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					justify-content: center
+					align-items: center
+				.lk					
+					background-position: -20px -43.000003814697266px
+					
+				.tw				
+					background-position: -20px -21.991069793701172px
+				
+				.fb			
+					background-position: -20px -2.000011444091797px
+.jcc
+	justify-content: center
+.jcspb
+	justify-content: space-between
+.stats
+	background: url(../img/coffe.jpg) no-repeat
+	background-position: center center
+	max-height: 465px
+	width: 100%
+	.stats_op
+		height: 465px
+		width: 100%
+		background-color: rgba(38, 39, 50, 0.85)
+		.container
+			height: 465px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			.row	
+				width: 90%
+				padding-left: 3%
+				.stat_wrap
+					text-align: center			
+					.img_wrap
+						width: 100%
+						height: 47px
+						margin-bottom: 30px
+					.number_wrap
+						color: #fefefe
+						font-family: $Poppins
+						font-size: 20px
+						font-weight: 500
+						margin-bottom: 30px
+					.text_wrapper
+						opacity: 0.7
+						color: #fefefe
+						font-family: $Poppins
+						font-size: 15px
+						font-weight: 400
+						margin-bottom: 35px
+					.point_wrap1, .point_wrap2, .point_wrap3, .point_wrap4
+						width: 16px
+						height: 16px
+						border-radius: 50%
+						border: 1px solid $orange
+						position: relative
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						align-items: center
+						justify-content: center
+						margin: auto
+						.point1, .point2, .point3, .point4				
+							width: 10px
+							height: 10px
+							border-radius: 50%
+							background-color: $orange
+						.point2
+							background-color: $green
+						.point3
+							background-color: $violet
+						.point4
+							background-color: $yellow
+					.point_wrap2
+						border: 1px solid $green
+					.point_wrap3
+						border: 1px solid $violet
+					.point_wrap4
+						border: 1px solid $yellow
+.nmb_wr
+	width: 57px
+	height: 40px
+	color: #e0e0e0
+	font-family: $LibreBaskerville;
+	font-size: 50px
+	font-weight: 700
+	text-transform: uppercase
+	position: absolute
+	left: 5%
+	top: 5%
+	.line
+		width: 144px
+		height: 3px
+		position: absolute
+		top: 144%
+		left: -60%
+		background-color: #e0e0e0
+		transform: rotate(-45deg)
+.ws
+	background-color: $white
+	padding-bottom: 135px
+	.header_text_wrap
+		margin-bottom: 120px
+	.wrap
+		width: 100%
+		height: 300px
+		position: relative
+		.img_wrap
+			width: 100%
+			margin: auto
+		.text_wrap1, .text_wrap2, .text_wrap3, .text_wrap4
+			position: absolute
+			width: 100%
+			height: 100%
+			max-width: 458px
+			max-height: 301px
+			background-color: $white
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			
+			.text
+				width: 280px
+				h3
+					color: #272727
+					font-family: $Poppins
+					font-size: 25px
+					font-weight: 400
+				p 
+					text-align: left
+					color: #616161
+					font-family: $Poppins
+					font-size: 15px
+					font-weight: 400
+		.text_wrap1, .text_wrap3
+			top: -15%
+			left: 0
+
+		.text_wrap2, .text_wrap4
+			right: 0
+			top: -15%
+		.text_wrap1
+			border-bottom: 3px solid $orange
+		.text_wrap2
+			border-bottom: 3px solid $green
+		.text_wrap3
+			border-bottom: 3px solid $violet
+		.text_wrap4
+			border-bottom: 3px solid $yellow
+.pt
+	background-color: #f7f7f7
+	.header_text_wrap
+		p 
+			margin-bottom: 80px
+	.pt_wrap1, .pt_wrap2, .pt_wrap3
+		width: 360px
+		background-color: $white	
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		text-align: center
+		margin-bottom: 150px
+	.pt_wrap1
+		border-top: 3px solid $green
+	.pt_wrap2
+		border-top: 3px solid $orange
+	.pt_wrap3
+		border-top: 3px solid $violet
+	.h3_wrap
+		color: #313131
+		font-family: $Poppins
+		font-size: 20px
+		font-weight: 500
+	.point_wrap1, .point_wrap2, .point_wrap3
+		width: 106px
+		height: 106px
+		border: 3px solid $white
+		border-radius: 50%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 30px auto 40px 
+		.point1, .point2, .point3
+			width: 100px
+			height: 100px
+			border-radius: 50%
+			padding-top: 20%
+			.price, .time
+				color: $white
+				font-family: $Poppins
+				font-weight: 400
+			.price
+				font-size: 25px
+			.time
+				font-size: 13px
+		.point1
+			background-color: $green
+		.point2
+			background-color: $orange
+		.point3
+			background-color: $violet
+	.point_wrap1
+		box-shadow: 0 0 0 3px $green
+	.point_wrap2
+		box-shadow: 0 0 0 3px $orange
+	.point_wrap3
+		box-shadow: 0 0 0 3px $violet
+	.description_wrap
+		.description
+			font-size: 15px
+			color: #616161
+			font-family: $Poppins
+			font-weight: 400
+			margin-bottom: 25px
+			span
+				color: #272727
+				font-family: $Poppins
+				font-weight: 500;			
+			i
+				color: #272727
+				font-weight: 400
+	.button_wrap
+		width: 100%
+		margin: 35px auto
+	
+		.button1, .button2 ,.button3
+			width: 180px
+			height: 50px	
+			border-radius: 25px
+			font-family: $Poppins
+			font-size: 16px
+			font-weight: 600
+			text-transform: uppercase
+			background-color: transparent
+		.button1
+			border: 2px solid $green
+			color: $green
+			&:hover
+				cursor: pointer
+				transition: all 1s
+				border: 2px solid darken($green, 10%)
+				color: $white
+				background-color: $green
+		.button2
+			border: 2px solid $orange
+			color: $orange
+			&:hover
+				cursor: pointer
+				transition: all 1s
+				border: 2px solid darken($orange, 10%)
+				color: $white
+				background-color: $orange
+		.button3
+			border: 2px solid $violet
+			color: $violet
+			&:hover
+				cursor: pointer
+				transition: all 1s
+				border: 2px solid darken($violet, 10%)
+				color: $white
+				background-color: $violet
+.testimonials
+	width: 100%
+	height: 875px
+	.number
+		color: #5d5d62
+	.section_bg
+		width: 100%
+		height: 875px
+		background-color: rgba(38, 39, 50, 0.85)
+		.header_text_wrap
+			h1
+				color: $white
+				font-family: $LibreBaskerville
+				font-size: 50px
+				font-weight: 700
+			p 
+				color: $white
+				font-family: $Poppins
+				font-size: 18px
+				font-weight: 400
+				margin-bottom: 70px
+.swiper-container 
+	width: 100%
+	height: 400px
+	.swiper-slide .swiper-slide-active
+		width: 100%!important
+	.img_wrap1, .img_wrap2, .img_wrap3, .img_wrap4, .img_wrap5, .img_wrap6
+		width: 384px
+		height: 399px
+		border: 10px solid rgba(0, 0, 0, 0.2)
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)	
+		background-size: cover	
+		background-position: center center
+	.img_wrap1
+		background: url(../img/t2.jpg) no-repeat 
+		background-position: center center
+	.img_wrap2
+		background: url(../img/t1.jpg) no-repeat 
+		background-position: center center
+	.img_wrap3
+		background: url(../img/t4.jpg) no-repeat 
+		background-position: center center
+	.img_wrap4
+		background: url(../img/t3.jpg) no-repeat 
+		background-position: center center
+	.img_wrap5
+		background: url(../img/t5.jpg) no-repeat 
+		background-position: -100px 0
+	.img_wrap6
+		background: url(../img/t6.jpg) no-repeat 
+		background-position: center center
+	.text_wrap
+		width: 100%
+		height: 312px
+		background-color: $white
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		border-bottom: 3px solid $orange
+		.text
+			width: 80%
+			margin-left: 30px
+			.p_wrap
+				width: 100%
+				color: #616161
+				font-family: $Poppins
+				font-size: 15px
+				font-weight: 400
+			.name_wrap
+				width: 115px
+				height: 31px
+				color: #272727
+				font-family: $Sacramento
+				font-size: 40px
+				font-weight: 400
+				margin-bottom: 30px
+			.full_name_wrap
+				width: 200px
+				height: 15px
+				color: #272727
+				font-family: $Poppins
+				font-size: 18px
+				font-weight: 500
+				margin-bottom: 10px
+			.position
+				width: 130px
+				height: 14px
+				color: $orange
+				font-family: $Poppins
+				font-size: 13px
+				font-weight: 400
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
+	left: 30%
+	// display: inline-block
+	// vertical-align: middle
+	// height: 25px
+	// line-height: 25px
+	.swiper-pagination-bullet.swiper-pagination-bullet-active
+		width: 12px
+		height: 12px
+		background-color: $orange
+		position: relative
+		border: none
+		&:after
+	    content: ''  
+	    display: block 
+	    position: absolute 
+	    top: -50% 
+	    bottom: -50%  
+	    left: -50%  
+	    right: -50%   
+	    border-radius: 50%
+	    border: 1px solid $orange
+	.swiper-pagination-bullet
+		width: 20px
+		height: 20px
+		border: 1px solid $white
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+	vertical-align: middle
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+	margin: 0 6px
+.wsu
+	background-color: $white
+	.header_text_wrap
+		p
+			margin-bottom: 60px	
+	.top_wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		.left
+		 display: inline-block
+		.right
+			display: inline-block
+			width: 	159px
+			height: 100%
+			color: #272727
+			font-family: $Poppins
+			font-size: 18px
+			font-weight: 500
+			padding-left: 15px
+		.right5
+			width: 	100px
+	.bottom_wrap
+		margin-top: 25px
+		.text_wrap
+			color: #616161
+			font-family: $Poppins
+			font-size: 15px
+			font-weight: 400
+			width: 100%
+			margin-bottom: 70px
+	.b_wrap
+		
+		margin: 0px auto 160px
+		.span_wrap
+			display: inline-block
+			span
+				color: #272727
+				font-family: $Poppins
+				font-size: 25px
+				font-weight: 400
+		.button_wrap
+			display: inline-block
+			button
+				width: 180px
+				height: 50px
+				background-color: $orange
+				border-radius: 25px
+				color: $white
+				font-family: $Poppins
+				font-size: 16px
+				font-weight: 600
+				text-transform: uppercase
+				border: none
+				margin-left: 15px
+				margin-top: 20px
+				&:hover
+					cursor: pointer
+					transition: all 1s
+					color: $orange
+					background-color: #FFF
+					border: 3px solid $orange
+.ob
+	padding-bottom: 155px
+	.header_text_wrap
+		margin-bottom: 75px
+	.img_wrap
+		width: 98%
+		height: 443px
+		background: url(../img/traveler.jpg) no-repeat
+	.wr
+		width: 100%
+		// position: absolute
+		// top: 0
+	.blog_item_wrap1, .blog_item_wrap2 ,.blog_item_wrap3 ,.blog_item_wrap4
+		width: 100%
+		height: 210px
+		background-color: $white
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.05)
+		display: block
+		.blog_item
+			width: 90%
+			 
+			margin: 30px auto
+			.top
+				margin-bottom: 10px
+				padding-top: 30px
+				.name1, .name2, .name3, .name4			
+					font-family: $Poppins
+					font-size: 15px
+					font-weight: 500
+					text-transform: uppercase
+					display: inline-block
+					margin-right: 15px
+				.name1
+					color: $green
+				.name2
+					color: $violet
+				.name3
+					color: $orange
+				.name4
+					color: $yellow
+				.date
+					color: #616161
+					font-family: $Poppins
+					font-size: 13px
+					font-weight: 400
+					display: inline-block
+			.middlle
+				.h
+					color: #272727
+					font-family: $Poppins
+					font-size: 18px
+					font-weight: 500
+			.bottom
+				p, , .rfa1, .rfa2, .rfa3, .rfa4
+					font-family: $Poppins
+					font-size: 15px
+					color: #616161
+					font-weight: 400
+				.rfa1
+					color: $green
+					font-weight: 500
+				.rfa2
+					color: $violet
+					font-weight: 500
+				.rfa3
+					color: $orange
+					font-weight: 500
+				.rfa4
+					color: $yellow
+					font-weight: 500
+	.blog_item_wrap1
+		border-bottom: 3px solid $green
+		position: absolute
+		top: 0
+	.blog_item_wrap2
+		border-bottom: 3px solid $violet
+		position: absolute
+		top: 52%
+	.blog_item_wrap3
+		border-bottom: 3px solid $orange
+		margin-right: 25px
+.ob 
+	.blog_item_wrap3 
+		.blog_item .top
+			margin-bottom: 0
+			padding-top: 10px
+	.blog_item_wrap4
+		border-bottom: 3px solid $yellow
+		margin-top: 20px
+.ob 
+	.blog_item_wrap4 
+		.blog_item .top
+			margin-bottom: 0
+			padding-top: 10px
+.aife
+	align-items: flex-end
+.news_wrap
+	text-align: center
+	margin: auto
+	.h_news
+		color: #272727
+		font-family: $Poppins
+		font-size: 30px
+		font-weight: 400
+		margin-top: 270px
+	.item_news
+		position: relative
+		input
+			width: 480px
+			height: 50px
+			background-color: #f7f7f7
+			border: 2px solid #efefef
+			border-radius: 25px
+			&::placeholder
+				color: #616161
+				font-family: $Poppins
+				font-size: 16px
+				font-weight: 400
+				padding-left: 40px
+		button
+			width: 180px
+			position: absolute
+			top: 0
+			right: 0
+			height: 50px
+			background-color: $orange
+			border-radius: 0px 25px 25px 0px
+			color: $white
+			font-family: Poppins
+			font-size: 16px
+			font-weight: 600
+			text-transform: uppercase
+			border: none
+			&:hover
+				color: $orange
+				background-color: #fff
+				cursor: pointer
+				transition: all 1s
+				border: 3px solid $orange
+.jcfe
+	justify-content: flex-end
+.git
+	width: 100%
+	background: url(../img/forest.jpg) no-repeat
+	background-position: top center
+	.header_text_wrap
+	p 
+		margin-bottom: 70px
+	form
+		width: 65%
+		margin: auto
+		text-align: center
+		.input_wrap
+			display: inline-block
+	
+			height: 50px	
+			margin-bottom: 20px		
+			input
+				width: 360px
+				height: 50px
+				color: #616161
+				border: 1px solid #efefef
+				border-radius: 4px
+				background-color: $white
+				font-family: $Poppins
+				font-size: 16px
+				font-weight: 400
+				text-align: center
+		.textarea_wrap
+			width: 100%
+			height: 100%
+			margin-bottom: 45px
+			textarea
+				resize: none
+				width: 760px
+				height: 200px
+				background-color: $white
+				border: 1px solid #efefef
+				border-radius: 4px
+				color: #616161
+				font-family: Poppins
+				font-size: 16px
+				font-weight: 400
+				&::placeholder
+					padding-left: 315px
+					padding-top: 10px
+		.button_wrap
+			width: 25%
+			margin: 50px auto 140px
+			button
+				width: 190px
+				height: 50px
+				background-color: $orange
+				border-radius: 25px
+				border: none
+				color: $white
+				font-family: $Poppins
+				font-size: 16px
+				font-weight: 600
+				text-transform: uppercase
+				&:hover
+					color: $orange
+					background-color: #fff
+					cursor: pointer
+					transition: all 1s
+					border: 3px solid $orange
+footer
+	width: 100%
+	padding-bottom: 40px
+	.footer_wrap
+		width: 100%
+		height: 225px
+		background-color: rgba(38, 39, 50, 0.85)
+
+		.logo_wrapper
+			// height: 30px
+			width: 100%	
+			height: 100%
+			// background-color: red
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			border-bottom: 3px solid $orange
+			.logo
+				margin: auto
+				.alexis
+					font-family: $Wisdom
+					font-size: 35px
+					color: #fef4f2
+					.a
+						color: $orange
+		.footer_item_wrap1, .footer_item_wrap2, .footer_item_wrap3
+			height: 100%
+			width: 100%
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			.footer_item
+				font-family: $Poppins
+				height: 125px
+				width: 100%
+				.h_wrap
+					.h1, .h2, .h3					
+						font-size: 18px
+						font-weight: 500
+						margin-bottom: 30px
+					.h1
+						color: $green
+					.h2
+						color: $violet
+					.h3
+						color: $yellow
+
+				.p_wrap
+					color: #fef4f2
+					font-size: 16px
+					font-weight: 400
+					.soc
+						display: -webkit-flex
+						display: -moz-flex
+						display: -ms-flex
+						display: -o-flex
+						display: flex
+						justify-content: space-between
+						width: 165px
+						.fb, ,.tw ,.in ,.go
+							display: inline-block
+		.footer_item_wrap1
+			border-bottom: 3px solid $green
+		.footer_item_wrap2
+			border-bottom: 3px solid $violet
+		.footer_item_wrap3
+			border-bottom: 3px solid $yellow
+@import "media" // Всегда в конце
+

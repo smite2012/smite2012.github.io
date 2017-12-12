@@ -1,0 +1,28 @@
+.in, .lk, .tw, .fb{
+	background: url(sprites.png) no-repeat;
+}
+
+.in{
+	background-position: -20px -64.0000114440918px ;
+	width: 15px;
+	height: 15px;
+}
+
+.lk{
+	background-position: -20px -43.000003814697266px ;
+	width: 15px;
+	height: 15px;
+}
+
+.tw{
+	background-position: -20px -21.991069793701172px ;
+	width: 15px;
+	height: 15px;
+}
+
+.fb{
+	background-position: -20px -2.000011444091797px ;
+	width: 15px;
+	height: 15px;
+}
+
