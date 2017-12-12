@@ -34,7 +34,32 @@ html, body
 	max-width: 1920px
 	// height: 100%
 	margin: 0 auto
+
+// Back to top
+button.btn-top
+	position: fixed
+	bottom: 20px
+	right: 2%
+	z-index: 2
+	border: none
+	outline: none
+	background-color: $orange
+	color: $white
+	cursor: pointer
+	padding: 10px 30px
+	border-radius: 10px
 	
+	&:hover
+		background-color: darken($orange,10%)
+	i 
+    border: solid $white
+    border-width: 0 3px 3px 0
+    display: inline-block
+    padding: 3px
+	.up 
+    transform: rotate(-135deg)
+    -webkit-transform: rotate(-135deg)
+
 .cotainer
 	width: 100%
 	max-width: 1170px
@@ -427,11 +452,15 @@ html, body
 				font-weight: 400
 				margin-bottom: 35px
 			.playpause
-				// background: url(../img/video_button.png) no-repeat
+				background: url(../img/video_button.png) no-repeat
 				width: 80px
 				height: 80px		
 				margin: auto
 				margin-bottom: 30px
+				&:hover
+					cursor: pointer
+					background-color: #fff
+					border-radius: 50%
 			.video_text2
 				color: $white
 				font-family: $Poppins
@@ -1475,5 +1504,52 @@ footer
 			border-bottom: 3px solid $violet
 		.footer_item_wrap3
 			border-bottom: 3px solid $yellow
+// Preloader
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+.preloader
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	bottom: 0
+	top: 0
+	z-index: 10000
+	background-color: $orange
+	.pulse
+		position: relative
+		left: 50%
+		top: 50vh
+		margin:
+			left: -40px
+			right: -40px
+		&::before, &::after
+			content: ''
+			border: 5px solid $white
+			width: 80px
+			height: 80px
+			border-radius: 500px
+			position: absolute
+		&::before
+			animation: pulse-outer .8s ease-in infinite
+		&::after
+			animation: pulse-inner .8s linear infinite
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)
 @import "media" // Всегда в конце
 

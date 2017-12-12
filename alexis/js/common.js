@@ -1,3 +1,8 @@
+// preloader
+$(window).on('load', function () {
+    $('.preloader').delay(1000).fadeOut('slow');
+})
+
 $(function(){
 	$('.menuToggle').on('click', function(){
 		$('.menu').slideToggle(300, function(){
@@ -10,6 +15,19 @@ $(function(){
 	});
 });
 
+// back to top button
+var $btnTop = $(".btn-top")
+$(window).on("scroll", function(){
+    if ($(window).scrollTop() >= 20){
+        $btnTop.fadeIn();
+    }else{
+        $btnTop.fadeOut();
+    }
+});
+// back to top button click
+$btnTop.on("click", function(){
+    $("html,body").animate({scrollTop:0},900)
+});
 
 if($(window).width() < 600){
     $(".menu li a").on('click', function(){
