@@ -1,0 +1,726 @@
+@import "fonts"
+@import "libs"
+// @import "base"
+@import "vars"
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+	 
+*
+	box-sizing: border-box
+
+	// * 
+//   background: #000 !important
+//   color: #0f0 !important
+//   outline: solid #f00 1px !important
+
+html, body
+	background-color: whitesmoke
+	height: 100%
+	width: 100%
+	margin: 0 auto
+	overflow-x: hidden
+.row
+	margin: 0
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto
+	margin: 0
+	padding: 0
+.wrapper
+	max-width: 1700px
+	height: 100%
+	margin: 0 auto
+	margin-bottom: 20px
+	padding-bottom: 20px
+	// background-color: green
+.container
+	padding: 0
+ul 
+	padding: 0
+header
+	background-color: white
+	width: 100%
+	height: 95px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+button
+	&:hover
+		cursor: pointer
+		transition: all 1s
+		background-color: #FFF!important
+		color: $yellow!important
+		border: 3px solid $yellow!important
+.top_wrapper
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: space-between
+.menu_wrapper
+	ul 
+		li
+			list-style-type: none
+			display: inline-block
+			
+			a, .li_active
+				text-decoration: none
+				font-family: $Lato
+				font-size: 14px
+				font-weight: 400
+				text-transform: uppercase
+				color: $menu
+				display: block
+				padding: 10px 10px
+			&:hover
+				cursor: pointer
+				transition: all 1s
+				background-color: $yellow
+				a
+					color: white
+		.li_active
+			background-color: $yellow
+			border-radius: 2px
+			a
+				color: white
+
+h1, p
+	margin: 0
+.menuToggle 
+	display: none
+	cursor: pointer
+	// border: 1px solid #000
+	height: 30px
+	width: 30px
+	// background-color: transparent
+	// position: absolute
+	// right: 10%
+	// background-color: red
+.banner
+	width: 100%
+	min-height: 590px
+	background-color: $accent
+.text_wrapper
+	text-align: center
+	margin-top: 100px
+	h1, p
+		color: $white
+	h1
+		font-family: $Gotham
+		font-size: 35px
+		font-weight: 900
+		text-transform: uppercase
+	p
+		font-family: $OpenSans
+		font-size: 16px
+		font-weight: 300
+		margin-bottom: 40px
+.input_wrap, .button_wrap
+	width: 97%
+	position: relative
+	input
+		width: 100%
+		height: 46px
+		background-color: $white
+		border: 1px solid #cbcbcb
+		border-radius: 2px
+		
+		&::placeholder
+			padding-left: 40px
+	i 
+		position: absolute
+		top: 35%
+		left: 8%
+		width: 13px
+		height: 15px
+		color: $dark
+		font-size: 16px
+		font-weight: 400
+	button
+		height: 46px
+		width: 100%
+		background-color: $yellow
+		border-radius: 2px
+		color: $white
+		font-family: $OpenSans
+		font-size: 14px
+		font-weight: 400
+		text-transform: uppercase
+		border: none
+
+.sl
+	width: 100%
+	height: 340px
+.ma 
+	margin: auto
+.swiper-container
+	// width: 100%
+	// margin: auto
+	margin: 60px auto 0
+	height: 385px
+	width: 60%
+	img
+		// left: 40%
+		position: absolute
+		// width: 100%
+		// .swiper-container-android .swiper-slide, .swiper-wrapper
+		// 	width: 65%
+		// 	margin: auto
+.swiper-slide.swiper-slide-active
+	width: 100%!important
+	margin: auto
+	padding-top: 18px
+	img
+		// margin: auto
+		left: 15%
+			// position: relative
+			// background-color: #000
+			// .swiper-slide
+			// 	position: absolute
+			// 	top: 5%
+			// 	left: 0
+			// 	.slide
+			// 		// background-color: #FFF
+			// 		img
+			// 			margin: auto
+.swiper-container-cube .swiper-slide
+	visibility: visible
+.swiper-slide .swiper-slide-next
+	width: 100%
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
+	// bottom: -25px
+.swiper-button-next, .swiper-button-prev, .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled
+	i 
+		border: solid $white
+		border-width: 0 3px 3px 0
+		display: inline-block
+		padding: 3px
+		color: $white
+		font-size: 25px
+		font-weight: 400
+		text-transform: uppercase
+	.right 
+	    transform: rotate(-45deg)
+	    -webkit-transform: rotate(-45deg)
+	.left 
+	    transform: rotate(135deg)
+	    -webkit-transform: rotate(135deg)
+.swiper-button-next, .swiper-button-prev
+	background: transparent
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+	background: transparent
+	border: 2px solid #000
+	background-color: transparent
+	width: 15px
+	height: 15px
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active
+	border: 2px solid #1ca8dd
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction
+	width: 95%
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled
+	position: absolute
+	top: 50%
+.swiper-button-next
+	right: 50px
+.txt_wrapper
+	text-align: center
+	.h1, .p 
+		color: $text
+		width: 100%
+	.h1
+		font-family: $Gotham
+		font-size: 30px
+		font-weight: 900
+		text-transform: uppercase
+	.p
+		font-family: $OpenSans
+		font-size: 16px
+		font-weight: 400
+		margin-bottom: 80px
+.df
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.os
+	margin-top: 200px
+	margin-bottom: 160px
+	.wr 
+		display: flex
+	.img_wrap
+		display: inline-block
+		width: 75px
+	.text_wrap
+		margin-left: 35px
+	i 
+		color: $yellow
+		font-size: 50px
+		font-weight: 400
+		width: 50px
+		height: 50px
+	.f
+		color: $accent
+	h1
+		color: $text
+		font-family: $Lato
+		font-size: 16px
+		font-weight: 900
+		text-transform: uppercase
+		margin-bottom: 20px
+
+	p
+		color: #7b7b7b
+		font-family: $OpenSans
+		font-size: 13px
+		font-weight: 400
+		line-height: 22px	
+		width: 90%
+		margin-bottom: 80px
+.as
+	.img_wrap
+		width: 100%
+		height: 100%
+		
+.yellow
+	// width: 100%
+	// height: 100%
+	height: 100%
+	background-color: $yellow
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	.text_wrap
+		// height: 290px
+		width: 80.5%
+		
+		h1 
+			color: $white
+			font-family: $Gotham
+			font-size: 30px
+			font-weight: 900
+			text-transform: uppercase
+			margin-bottom: 20px
+			margin-top: 20px
+			// margin-top: 30px
+	.p_wrap
+		p	
+		color: $white
+		font-family: $OpenSans
+		font-size: 13px
+		font-weight: 400
+		margin-bottom: 40px
+		line-height: 24px
+		text-align: justify
+		margin-bottom: 20px
+	.button_wrap
+		button
+			color: $white
+			font-family: $Lato
+			font-size: 14px
+			font-weight: 400
+			text-transform: uppercase
+			width: 145px
+			height: 46px
+			border: 1px solid #e7ad48
+			border-radius: 2px
+			margin-bottom: 20px
+.jcspb
+	justify-content: space-between
+.cyp
+	background-color: $gray
+	padding-top: 135px
+	padding-bottom: 190px
+	.item_wrap
+		text-align: center
+		background-color: $white
+		border-bottom: 1px solid #ccd5df
+		border-radius: 3px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 440px
+		margin-bottom: 20px
+		transition: all 1s
+		&:hover
+			cursor: pointer
+			
+			transform: scale(1.1)
+			// height: 500px
+			// padding-top: 30px
+			// width: 110%
+			background-color: $accent
+		.item
+			height: 340px
+			width: 87%
+	.name_wrap
+		margin-bottom: 30px
+	.name 
+		color: #818b95
+		font-family: $Lato
+		font-size: 25px
+		font-weight: 300
+		line-height: 22px
+		text-transform: uppercase
+	.price, .d ,.time
+		font-family: $Lato
+		line-height: 22px
+	.d
+		color: $yellow
+		font-size: 30px
+		font-weight: 700
+		text-transform: uppercase
+		display: inline-block
+		position: absolute
+		top: -27%
+		left: 34%
+	.price_wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		height: 50px
+		position: relative
+	.price
+		color: $yellow
+		font-size: 60px
+		font-weight: 700
+		text-transform: uppercase
+	.time_wrap
+		position: relative
+		top: -22px
+	.time
+		color: #818b95
+		font-size: 20px
+		font-weight: 300
+		font-variant: small-caps
+	li 
+		list-style-type: none
+		width: 100%
+		height: 45px
+		color: #b5bbc1
+		font-family: $Lato
+		font-size: 14px
+		font-weight: 400
+		text-transform: uppercase
+		border-top: 1px solid #ccd5df
+		border-radius: 3px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+	button
+		width: 131px
+		height: 42px
+		background-color: $yellow
+		border-radius: 2px
+		color: $white
+		font-family: $Lato
+		font-size: 14px
+		font-weight: 400
+		text-transform: uppercase
+		border: none
+.hit
+	background-color: #FFF
+	padding: 150px 0
+	.img_wrap
+		width: 100%
+		height: 130px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		.i_wrap
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			width: 20%
+			i 
+				color: $accent
+				font-size: 72px
+				font-weight: 400
+				margin: auto
+
+		.img_wrap2
+			display: inline-block
+			position: relative
+			top: -50px
+		.sc
+			transform: scale(1,-1)
+			position: relative
+			top: 50px
+	.text_item
+		width: 17%
+		display: inline-block
+		text-align: center
+	.h3_wrap
+		color: #394b50
+		font-family: $Lato
+		font-size: 20px
+		font-weight: 700
+		text-transform: uppercase	
+	.p_wrap
+		color: #7b7b7b
+		font-family: $OpenSans
+		font-size: 13px
+		font-weight: 400
+.hc
+	width: 100%
+	background-color: $yellow
+	padding-top: 140px
+	padding-bottom: 160px
+	.item_wrap
+		background-color: $white
+		margin-bottom: 20px
+	.item
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		align-items: center
+		min-height: 240px
+	.img_wrap
+		display: inline-block
+		height: 125px
+		width: 125px
+		margin: auto 25px
+		
+	.text_wrap
+		display: inline-block
+		width: 57%
+		
+	.h1, .p
+		color: #fff
+	.p
+		margin-bottom: 0
+		padding-bottom: 60px
+	
+	.q
+		color: #7b7b7b
+		font-family: $BrandonGrotesque
+		font-size: 22px
+		font-weight: 700
+		display: inline
+		quotes: "“" "”" "‘" "’" 
+		.q::before 
+			content: open-quote
+		.q::after 
+			content: close-quote
+
+	q 
+		color: #7b7b7b
+		font-family: $OpenSans
+		font-size: 13px
+		font-weight: 400
+		line-height: 18px
+		q::before 
+			content: ""
+		q::after 
+			content: ""
+			vertical-align: sub
+		
+	.orange, span
+		font-family: $Lato
+		font-size: 14px
+		font-weight: 400
+		line-height: 22px
+		text-transform: uppercase
+		display: block
+		margin-top: 5px
+	.orange
+		color: $orange
+	span
+		color: #99a9ae
+		display: inline-block
+.jcc 
+	justify-content: center
+.news
+	background-color: #FFF
+	.txt_wrapper
+		margin-top: 150px
+		margin-bottom: 40px
+	.button_wrap
+		margin-bottom: 50px
+	.map_wrap
+		width: 100%
+	.map
+		width: 100%
+		height: 550px
+		.circle_wrap
+			padding-top: 50px
+		.circle
+			position: relative
+			width: 285px
+			height: 298px
+			background-color: #394b50
+			border: 3px solid white
+			border-radius: 50%
+			margin:  auto 
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			&::after
+				width: 10px
+				height: 10px
+				border-style: solid
+				border-width: 100px 100px 0 100px
+				border-color: #007bff transparent transparent transparent
+		.h3_wrap 
+			color: $white
+			font-family: $Lato
+			font-size: 15px
+			font-weight: 700
+			text-transform: uppercase
+		.text_wrap2
+			color: #aeb7ba
+			font-family: $OpenSans
+			font-size: 13px
+			font-weight: 400
+			text-align: center
+			line-height: 24px
+		.text_wrap
+			width: 80%
+			height: 65%
+			text-align: center
+		.email_wrap
+			color: #ffbb42
+			font-family: $OpenSans
+			font-size: 13px
+			font-weight: 400
+			line-height: 24px
+		.circle_bottom
+			width: 0
+			height: 0
+			position: absolute
+			bottom: -5%
+			border: 0 solid transparent
+			border-left-width: 20px
+			border-right-width: 20px
+			border-top: 20px solid #394b50
+		.logo
+			position: absolute
+			bottom: -30%
+.f_wr 
+	width: 70%
+	margin: auto
+	.container
+		max-width: 98%
+.footer_nav
+	ul
+		padding: 0
+		width: 80%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 0px auto 25px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		li
+			list-style-type: none
+			display: inline-block
+			// margin-left: 5%
+			a
+				color: $text
+				font-family: $Lato
+				font-size: 13px
+				font-weight: 400
+				text-transform: uppercase
+				text-decoration: none
+	.number_wrap
+		
+	.number
+		color: $text
+		font-size: 20px
+		font-weight: 400
+		text-transform: uppercase
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+	.i_wrap
+		margin-right: 10px
+	.number_wrap2
+		color: $text
+		font-family: $Lato
+		font-size: 23px
+		font-weight: 400
+	.soc_wrap
+		width: 100%
+	.soc
+		width: 132px
+		margin: auto
+		.tw, .fb, .in, .go
+			color: $accent
+			font-size: 18px
+			font-weight: 400
+			display: inline-block
+			margin: 15px 15px 50px 0
+			&:hover
+				cursor: pointer
+				transition: all 1s
+				color: $yellow
+footer
+	width: 100%
+	height: 49px
+	background-color: $accent
+	.footer
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 49px
+	.f
+		color: $white
+		font-family: $OpenSans
+		font-size: 13px
+		font-weight: 400
+		text-align: center
+		
+@import "media" // Всегда в конце
