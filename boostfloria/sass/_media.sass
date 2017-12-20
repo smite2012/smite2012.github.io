@@ -1,0 +1,164 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.clients
+		.container
+			max-width: 850px
+	button.slick-prev.slick-arrow
+		left: -3vw
+	button.slick-next.slick-arrow
+		right: -6vw
+	.clients .client_img_wrap .text_wrap span
+		font-size: 30px
+	.section_head .heading_wrap::after
+		left: 39%
+	#video .video_play_wrap .video_play .playpause i
+		font-size: 110px
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+	.swiper-button-next, .swiper-button-prev
+		margin-top: -15px
+	.swiper-button-next
+		padding-right: 32px
+	.swiper-button-prev
+		padding-left: 0
+	#as
+		padding-bottom: 50px
+		.as_item_wrap 
+			margin-bottom: 20px
+	#ow
+		#portfolio_grid
+			.p_item_wrap
+				img
+					margin: auto
+	.clients .client_img_wrap
+		width: 200px
+		margin: auto
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+	#wwa
+		margin-bottom: 40px
+	#wwa .swiper-container
+		height: auto
+	#wwa .swiper-slide.swiper-slide-active
+		display: block
+	#wwa .human_wrap, #wwa .skills_wrap
+		height: auto
+		min-height: auto
+		padding-top: 40px
+		margin-bottom: 20px
+	#sf .sf_item_wrap .sf_item .number_wrap, #sf .sf_item_wrap .sf_item .i_wrap, #sf .sf_item_wrap .sf_item .name_wrap
+		margin-bottom: 5px
+	#sf
+		padding-bottom: 40px
+	#sf .head_wrap::after
+		left: 41%
+	#bp .bp_item .img_wrap img
+		margin: auto
+	.section_head .heading_wrap::after
+		left: 34%
+	#video .video_play_wrap .video_play
+		height: 40%
+@media only screen and (max-width : 576px)
+	#video .video_wrap, #video .left_wrap
+		min-height: 350px
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	.menu_wrapper .hamburger
+		right: 0vw
+	#video .video_wrap, #video .left_wrap
+		min-height: 300px
+	#ow .nav_wrapper nav ul .li_active
+		margin-bottom: 20px
+	#sf .head_wrap
+		text-align: center
+	#sf .head_wrap::after
+		left: 38%
+	.section_head .heading_wrap::after
+		left: 29%
+	#video .video_play_wrap .video_play .playpause i
+		font-size: 100px
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+	#video .video_wrap, #video .left_wrap
+		min-height: 210px
+	#video .video_play_wrap .video_play .playpause i
+		font-size: 90px
+	#video .left_wrap .left .button_wrap button
+		margin-top: 20px
+	button.slick-next.slick-arrow
+		right: -15vw
+	button.slick-prev.slick-arrow
+		left: -10vw
+	#sf .head_wrap::after
+		left: 33%
+	#bp .bp_item .p_wrap
+		padding-right: 5px
+	.section_head .heading_wrap::after
+		left: 22%
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+	.container 
+    width: 1000px
+    max-width: 100%
+	#ow
+		.col-xl-2
+	    -ms-flex: 0 0 19%
+	    -webkit-box-flex: 0
+	    -webkit-flex: 0 0 19%
+	    flex: 0 0 19%
+	    max-width: 19%
+	#sf
+		.col-xl-2
+			-ms-flex: 0 0 18%
+			-webkit-box-flex: 0
+			-webkit-flex: 0 0 18%
+			flex: 0 0 18%
+			max-width: 18%
+	#cp 
+		.col-xl-3
+			-ms-flex: 0 0 23%
+			-webkit-box-flex: 0
+			-webkit-flex: 0 0 23%
+			flex: 0 0 23%
+			max-width: 23%

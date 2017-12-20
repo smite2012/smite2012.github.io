@@ -1,0 +1,1134 @@
+@import "fonts"
+@import "libs"
+// @import "base"
+@import "vars"
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+	 
+*
+	box-sizing: border-box
+	font-style: normal
+	&:focus
+		outline: none
+
+
+// * 
+//   background: #000 !important
+//   color: #0f0 !important
+//   outline: solid #f00 1px !important
+
+html, body
+	background-color: #f8f6f6
+	height: 100%
+	width: 100%
+	margin: 0 auto
+	overflow-x: hidden
+video::-webkit-media-controls-overlay-play-button
+	display: none!important
+	-webkit-appearance: none
+.row
+	margin: 0
+.wrapper
+	max-width: 1350px	
+	margin: 0 auto
+	
+	// background-color: green
+.container
+	// background-color: green
+.top_wrapper
+	background-color: #f8f6f6
+.mm-navbar
+	border-bottom: none
+nav#my-menu
+	background: #171f23!important
+.mm-menu .mm-navbar a, .mm-menu .mm-navbar > *
+	color: $orange
+	font-size: 30px
+	font-family: $BigNoodleTitling
+	font-weight: 400
+	letter-spacing: 5px
+.mm-listview > li
+	cursor: pointer
+	transition: all 1s
+	&:hover
+		background-color: #FFF
+		a 
+			color: $orange
+.mm-listview > li, .mm-listview > li .mm-next, .mm-listview > li .mm-next:before, .mm-listview > li:after
+	border-color: $orange
+.mm-listview > li > a, .mm-listview > li > span
+	font-size: 16px
+	color: #fff
+	text-transform: uppercase
+	letter-spacing: 1px
+.mm-listview > li:not(.mm-divider):after
+	left: 0
+li.mm-selected
+	background-color: #FFF
+	a 
+		color: $orange
+#mm-blocker
+	background: rgba(0,0,0,0.5)
+html.mm-right.mm-opening .mm-menu.mm-opened ~ .mm-slideout
+	margin-right: 0
+// .hamburger--spring.is-active .hamburger-inner::before
+// 	background-color: #FFF!important
+// .hamburger--spring.is-active .hamburger-inner::after 
+// 	background-color: #FFF!important
+// Back to top
+button.btn-top
+	position: fixed
+	bottom: 20px
+	right: 30px
+	z-index: 2
+	border: none
+	outline: none
+	background-color: lighten(#171f23,10%)
+	color: $white
+	cursor: pointer
+	padding: 10px 30px
+	border-radius: 10px
+	// border: 1px solid #fff
+	&:hover
+		background-color: lighten(#171f23,30%)
+a.hamburger.hamburger--spring.js-hamburger.is-active
+	&:hover
+		cursor: pointer
+.menu_wrapper
+	height: 145px
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: space-between
+	.hamburger
+		// position: absolute
+		right: 10vw
+		top: 5vh
+	.logo_wrapper
+		width: 220px
+		height: 40px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+	.logo_img_wrap
+		// width: 15px
+		display: inline-block
+		margin-right: 25px
+	.logo_text_wrap
+		display: inline-block
+		width: 170px
+		color: dimgrey
+		font-family: $BigNoodleTitling
+		// font-size: 40px
+		font-weight: 400
+		letter-spacing: 5px
+		h1
+		 margin: 0
+.top_slider_wrapper
+	min-height: 710px
+	width: 100%
+	background: rgb(53,53,53)
+	.sl_wr1
+		height: 710px
+		width: 100%
+		
+		position: relative
+		h1
+			color: $light
+			font-family: $BigNoodleTitling
+			font-size: 72px
+			font-weight: 400
+			margin: 0
+			letter-spacing: 5px
+		h3
+			color: $light
+			font-family: $BigNoodleTitling
+			font-size: 36px
+			font-weight: 400
+			letter-spacing: 5px
+	.h_wrap
+		text-align: center
+	.b_bg
+		position: absolute
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background: rgba(0,0,0,0.5)
+.swiper-button-next, .swiper-button-prev, .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled
+	i 
+		border: solid $white
+		border-width: 0 3px 3px 0
+		display: inline-block
+		padding: 15px
+		color: $white
+		font-size: 55px
+		font-weight: 400
+		text-transform: uppercase
+	.right 
+	    transform: rotate(-45deg)
+	    -webkit-transform: rotate(-45deg)
+	.left 
+	    transform: rotate(135deg)
+	    -webkit-transform: rotate(135deg)
+.swiper-button-next, .swiper-button-prev
+	background: transparent
+.swiper-button-next, .swiper-button-prev
+	margin-top: -70px
+.swiper-button-prev
+	padding-left: 20px
+.swiper-button-next
+	padding-right: 45px
+#as
+	width: 100%
+	min-height: 560px
+	background-color: $white
+.section_head
+	margin-top: 95px
+	text-align: center
+	.heading_wrap
+		h1
+			color: $accent
+			font-family: $BigNoodleTitling
+			font-size: 48px
+			font-weight: 400
+			margin: 0
+			font-style: normal
+			letter-spacing: 5px
+		&::after
+			content: ""
+			height: 2px
+			left: 42%
+			position: absolute
+			width: 153px
+			background-color: $red
+	.paragraph_wrap
+		p
+			color: dimgrey
+			font-family: $Roboto
+			font-size: 14px
+			font-weight: 100
+			font-style: normal
+			line-height: 20px
+			margin-bottom: 55px
+.as_item_wrap
+	background-color: #171f23
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	&:hover
+		cursor: pointer
+		transition: all 1s
+		background-color: $orange
+		transform: scale(1.1)
+		.i_wrap
+			i 
+				color: #fff
+		.name_wrap
+			span
+				color: #fff
+		.p_wrap
+			p
+				color: #fff
+	.as_item
+		width: 90%
+		text-align: center
+		align-items: center
+	.i_wrap
+		font-family: $Pe
+		margin-bottom: 20px
+		margin-top: 25px
+		i
+			color: #f4511e
+			font-family: $Pe
+			font-size: 60px
+	.name_wrap
+		span
+			color: #fff
+			font-family: $Roboto
+			font-size: 18px
+			font-weight: 700
+			font-style: normal
+	.p_wrap
+		padding-bottom: 25px
+		p 
+			color: #fff
+			font-family: $Roboto
+			font-size: 14px
+			font-weight: 100	
+			font-style: normal
+
+
+#video
+	min-height: 425px
+	width: 100%
+	background-color: #171f23
+	.left_wrap
+		min-height: 425px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		.left
+			text-align: center
+			.h3_wrap
+				h3
+					color: #e7e7e7
+					font-family: $Roboto
+					font-size: 30px
+					font-weight: 700
+			.p_wrap
+				p
+					color: #fff
+					font-family: $Roboto
+					font-size: 14px
+					font-weight: 100
+			.button_wrap
+				button
+					width: 127px
+					height: 35px
+					background-color: $red
+					color: #ebebeb
+					font-family: $Roboto
+					font-size: 14px
+					font-weight: 700
+					border: none
+					margin-top: 45px
+					&:hover
+						cursor: pointer
+						transition: all 1s
+						color: $red
+						background-color: #fff
+
+	.video_wrap
+		min-height: 425px
+		width: 100%
+		overflow-y: hidden
+		position: relative
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+	.video_play_wrap 
+		background-repeat: no-repeat
+		width: 50%
+		height: 30%
+		position: absolute
+		left: 0%
+		right: 0%
+		top: 0%
+		bottom: 0%
+		margin: auto
+		background-size: contain
+		background-position: center
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		.video_play
+			height: 50%
+			width: 100%
+			text-align: center
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			.playpause
+				width: 150px	
+				margin: 0 auto
+				
+				&:hover
+					cursor: pointer
+					// background-color: #fff
+					
+				i
+					color: whitesmoke
+					font-family: $Pe
+					font-size: 150px
+#ow 
+	.nav_wrapper	
+		nav
+			margin-bottom: 35px
+			ul 
+				margin: 0
+				padding: 0
+				text-align: center
+				li 
+					display: inline-block
+					list-style-type: none
+					color: #3d3d3d
+					font-family: $Roboto
+					font-size: 14px
+					font-weight: 300
+					margin-right: 10px
+					&:hover
+						cursor: pointer
+				.li_active
+					color: #3d3d3d
+					font-family: $Roboto
+					font-size: 14px
+					font-weight: 700
+					border-bottom: 2px solid $red
+					padding-bottom: 2px
+	#portfolio_grid
+		text-align: center
+	.port_row
+	.portfolio_item
+		padding: 0
+		display: none
+		.p_item_wrap
+			margin-bottom: 30px
+			&:hover
+				transform: scale(1.5)
+				transition: all 1s
+				cursor: pointer
+button.slick-prev.slick-arrow
+	position: absolute
+	top: 35%
+	left: -2vw
+	z-index: 10
+	border: none
+	background: transparent
+	color: transparent
+	&::before
+		content: "\e686"!important	
+		font-family: $Pe
+		font-size: 70px
+		color: #fff
+	&:hover
+		cursor: pointer
+button.slick-next.slick-arrow 
+	position: absolute
+	top: 35%
+	right: -3vw
+	z-index: 10
+	border: none
+	background: transparent
+	color: transparent
+	&::before
+		content: "\e684"!important
+		font-family: $Pe
+		font-size: 70px
+		color: #fff
+	&:hover
+		cursor: pointer	
+.clients
+	min-height: 245px
+	width: 100%
+	position: relative
+	.container
+		height: 245px
+	.slick-list.draggable, .slick-track
+		height: 245px
+	.slick-track
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+
+	#slider
+		height: 245px
+		overflow: hidden
+		margin: 0 auto
+		position: relative
+		width: 100%
+	.bl_bg
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background: rgba(0,0,0,0.7)
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+	.p2, .n2
+		margin-top: -17px
+	.client_img_wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		height: 50px
+		align-items: center
+		justify-content: center
+		.bg_img
+			width: 36px
+			height: 37px
+			border: 1px solid $white;
+			box-shadow: inset 0 0 0 1px black
+			background-color: #3d3d3d
+			border-radius: 5px
+			margin-right: 10px
+		.text_wrap
+			span	
+				color: #ececec
+				font-family: $MgOpenModata
+				font-size: 33px
+				font-weight: 400
+	.swiper-button-prev
+		padding-left: 0
+#wwa
+	min-height: 810px
+	width: 100%
+	background-color: #FFF
+	.swiper-container
+		height: 50vh
+	.swiper-wrapper
+		height: 90%
+	.human_wrap, .skills_wrap
+		width: 100%
+
+		min-height: 436px
+		background-color: #171f23
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+	.swiper-slide.swiper-slide-active
+		width: 100%!important
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+	.human
+		text-align: center
+		min-height: 290px
+		position: relative
+	.img_wrap
+		padding-bottom: 25px
+		img 
+			border-radius: 50%
+			margin: auto
+			
+	.name_wrap
+		span
+			width: 134px
+			height: 16px
+			color: #fff
+			font-family: $Roboto
+			font-size: 20px
+			font-weight: 700
+	.text_wrap
+		span
+			width: 75px
+			height: 12px
+			color: #fff
+			font-family: $Roboto
+			font-size: 14px
+			font-weight: 300
+	.soc 
+		margin-top: 15px
+		display: flex
+		justify-content: space-evenly
+		.be, .fb, .tw
+			display: inline-block
+			i 
+				color: #fff
+				font-family: $FontAwesome
+				font-size: 14px
+				font-weight: 400
+				&:hover
+					cursor: pointer
+					transition: all 1s
+					color: $orange
+
+	.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets
+		bottom: 0!important
+		left: 35%
+	.swiper-pagination-bullet.swiper-pagination-bullet-active
+		background-color: $orange
+	.swiper-pagination-bullet
+		background-color: #FFF
+		margin-right: 5px
+		height: 11px
+		width: 11px
+		opacity: 1
+		margin-bottom: 20px
+	.skills_wrap
+		.skills
+			width: 80%
+			.name_wrap
+				.name
+					color: #FFF
+					font-family: $Roboto
+					font-size: 24px
+					font-weight: 700
+			.p_wrap
+				p
+					color: #FFF
+					font-family: $Roboto
+					font-size: 14px
+					font-weight: 100
+	.bars_wrap
+		margin-top: 45px
+		.bar
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-bottom: 20px
+			.soft
+				color: #FFF
+				font-family: $Roboto
+				font-size: 14px
+				font-weight: 700
+				width: 130px
+			.bar_wrap
+				width: 80%
+				position: relative
+				.gray_bar, .gray_bar2, .gray_bar3, .gray_bar4
+					width: 100%
+					height: 1px
+					background-color: white
+					position: absolute
+				.yellow_bar, .yellow_bar2 , .yellow_bar3, .yellow_bar4
+					height: 1px
+					background-color: $red
+					position: absolute
+				.yellow_bar
+					width: 88%
+				.yellow_bar2
+					width: 92%		
+				.gray_bar3
+					width: 100%	
+				.yellow_bar3
+					width: 90%			
+				.yellow_bar4
+					width: 98%
+	.per_wrap
+		margin-left: 10px	
+		color: #fff
+#sf 
+	min-height: 384px
+	background-color: #171f23
+	.head_wrap
+		position: relative
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		h3	
+			color: #f6f6f6
+			font-family: $Roboto;
+			font-size: 36px
+			margin: 
+				top: 60px
+				bottom: 25px
+			letter-spacing: 5px
+		&::after
+			content: ""
+			width: 86px
+			height: 2px
+			background-color: #404040	
+			position: absolute
+			left: 43%	
+			bottom: 0
+	.sf_item_wrap	
+		margin:
+			top: 45px
+		text-align: center
+		.sf_item
+			.i_wrap
+				margin-bottom: 35px
+				i
+					color: #ff7062
+					font-family: $Pe
+					font-size: 60px
+			.name_wrap
+				margin-bottom: 30px
+				span
+					color: #f6f6f6
+					font-family: $Roboto
+					font-size: 18px
+					font-weight: 300
+			.number_wrap
+				margin-bottom: 65px
+				span
+					color: #f6f6f6
+					font-family: $Roboto
+					font-size: 48px
+					font-weight: 300
+#bp 
+	.paragraph_wrap
+		margin-top: 30px
+		margin-bottom: 80px
+	.bp_item
+		width: 100%
+		background-color: #171f23
+		text-align: left
+		margin-bottom: 110px
+		.img_wrap
+			width: 100%
+			margin-bottom: 40px
+		.name_wrap
+			color: #fff
+			font-family: $Roboto
+			font-size: 18px
+			font-weight: 300
+			margin-left: 25px
+			letter-spacing: 3px
+		.p_wrap
+			color: #fff
+			font-family: $Roboto
+			font-size: 14px
+			font-weight: 100
+			margin-left: 25px
+
+		.bot_wrap
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-left: 25px
+			padding-bottom: 25px
+		.date
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			width: 80px
+			justify-content: space-between
+			i 
+				color: #fff
+				font-family: Pe
+				font-size: 14px
+			span
+				color: #fff
+				font-family: $Roboto
+				font-size: 10px
+		.likes
+			margin-right: 25px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			width: 80px
+			.i1
+				color: #fff
+				font-family: $Pe
+				font-size: 14px
+				margin-right: 5px
+			.num
+				color: #fff
+				font-family: $Roboto
+				font-size: 10px
+				margin-right: 5px
+	.bp_item_wrap
+		&:hover
+			cursor: pointer
+			transition: all 1s
+			.bp_item
+				background-color: $orange
+				transition: all 1s
+				transform: scale(1.3)
+				z-index: 10
+			.date
+				i 
+					color: #fff
+				span
+					color: #fff
+			.likes
+				.i1
+					color: #fff
+				.num
+					color: #fff
+			.name_wrap ,.p_wrap
+				color: #fff
+#cp 	
+	background-color: #171f23
+	.head_wrap
+		position: relative
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+
+		h3	
+			color: #f6f6f6
+			font-family: $Roboto;
+			font-size: 36px
+			margin: 
+				top: 60px
+				bottom: 25px
+			letter-spacing: 5px
+		&::after
+			content: ""
+			width: 86px
+			height: 2px
+			background-color: #404040	
+			position: absolute
+			left: 47%	
+			bottom: 0
+	.cp_item_wrap
+		width: 100%
+		margin-bottom: 100px
+		margin-top: 55px
+		.cp_item	
+			width: 100%
+			transition: all 1s
+			&:hover
+				cursor: pointer
+				transform: scale(1.1)
+				transition: all 1s
+				border: 1px solid $orange
+			.cp_head_wrap
+				width: 100%
+				height: 130px
+				background-color: #0e1316
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				justify-content: center
+				text-align: center
+				.cp_head
+					width: 105px
+					height: 50px
+					.name_wrap
+						span
+							color: white
+							font-family: $Roboto
+							font-size: 14px
+							font-weight: 700
+					.price_wrap
+						span
+							color: white
+							font-family: Roboto
+							font-size: 36px
+							font-weight: 300
+		.cp_body_wrap	
+			width: 100%
+			background-color: #1f282c
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			.cp_body
+				width: 125px
+				min-height: 230px
+				margin: 45px 0
+				.first
+					color: white
+					font-family: $Roboto
+					font-size: 14px
+					margin-bottom: 20px
+					text-align: center
+
+
+					.num
+						font-weight: 400
+
+						.name
+							font-weight: 100
+							margin-left: 5px
+							letter-spacing: 2px
+				.button_wrap
+					width: 98%
+					margin: 70px auto 0							
+					button	
+						width: 100%	
+						height: 34px			
+						background-color: #f6744b
+						border-radius: 3px
+						color: white
+						font-family: $Roboto
+						font-size: 14px
+						font-weight: 700
+						border: none
+						&:hover
+							background-color: #FFF
+							color: #f6744b
+							cursor: pointer
+							transition: all 1s
+.form-group
+	display: block
+	margin-bottom: 20px
+	position: relative
+	.color_element
+		font-weight: 700
+		font-size: 18px
+	.text-danger
+		font-size: 14px
+		display: block
+		position: absolute
+		top: 0
+		left: 20%
+		color: $orange
+		ul,
+		li
+			margin: 0
+			padding: 0
+			list-style-type: none
+	.txt 
+		left: 42%
+#git
+	.paragraph_wrap
+		margin-bottom: 95px
+	.input_wrap
+		width: 100%
+		height: 65px
+		.text_wrap
+			height: 10px
+			width: 20%
+			font-family: Roboto
+			font-size: 14px
+			font-weight: 700
+			color: dimgrey
+			span
+				color: #f6744b
+				margin-left: 5px
+		input
+			height: 40px
+			width: 100%
+			border: none
+			margin-top: 5px
+			background-color: transparent
+			border-bottom: 1px solid #cacaca
+	.textarea_wrap
+		.text_wrap
+			height: 10px
+			width: 20%
+			font-family: Roboto
+			font-size: 14px
+			font-weight: 700
+			color: dimgrey
+			span
+				color: #f6744b
+				margin-left: 5px
+		textarea
+			width: 100%
+			min-height: 85px
+			margin-top: 5px
+			border: none
+			background-color: transparent
+			border-bottom: 1px solid #cacaca
+			resize: none
+			margin-bottom: 65px
+			overflow-y: hidden
+	.button_wrap
+		height: 50px
+		width: 203px
+		margin: 0 auto 85px
+		button
+			width: 203px
+			height: 51px
+			background-color: #f6744b
+			color: white
+			font-family: $Roboto
+			font-size: 14px
+			font-weight: 700
+			border: none
+			&:hover
+				background-color: #FFF
+				color: #f6744b
+				cursor: pointer
+				transition: all 1s
+				border: 1px solid #f6744b
+footer
+	.top
+		width: 100%
+		background-color: #0c1215
+		
+			
+		.pe_active
+			transform: rotate(180deg)
+			transition: all 1.5s
+		.location_wrap
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 84px
+			.location
+				width: 235px
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				&:hover
+					cursor: pointer
+			span 
+				color: white
+				font-family: Roboto
+				font-size: 24px
+				font-weight: 700
+			i
+				color: #f6744b
+				font-family: $Pe
+				font-size: 48px
+				transition: all 1.5s
+		.map_wrapper	
+			height: 300px
+			// background-color: green
+			display: none
+			#map
+				width: 100%
+				height: 300px
+	.bottom
+		width: 100%
+		height: 245px
+		background-color: #171f23
+		.bottom_wrap
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: center
+			.bot
+				text-align: center
+				width: 300px
+			
+
+				.i_wrap
+					margin-top: 50px
+					margin-bottom: 10px
+				.pe-7s-rocket
+					color: #f6744b
+					font-family: $Pe
+					font-size: 48px
+				.logo_wrap
+					color: white
+					font-family: $BigNoodleTitling
+					font-size: 24px
+					font-weight: 400
+					margin-bottom: 15px
+					letter-spacing: 3px
+				.text_wrap
+					color: white
+					font-family: $Roboto
+					font-size: 14px
+					margin-bottom: 20px
+					letter-spacing: 1px
+				.soc	
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					justify-content: center
+					.be, .fb, .tw
+						color: #e2e0e0
+						font-family: $FontAwesome
+						font-size: 14px
+						font-weight: 400
+						margin-right: 5px
+						&:hover
+							cursor: pointer
+							transition: all 1s
+							color: $orange
+// Preloader
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+.preloader
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	bottom: 0
+	top: 0
+	z-index: 10000
+	background-color: #171f23
+	.pulse
+		position: relative
+		left: 50%
+		top: 50vh
+		margin:
+			left: -40px
+			right: -40px
+		&::before, &::after
+			content: ''
+			border: 5px solid $white
+			width: 80px
+			height: 80px
+			border-radius: 500px
+			position: absolute
+		&::before
+			animation: pulse-outer .8s ease-in infinite
+		&::after
+			animation: pulse-inner .8s linear infinite
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)
+@import "media" // Всегда в конце
