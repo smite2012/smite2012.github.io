@@ -3951,15 +3951,17 @@ ul {
 
 button.btn-top {
   position: fixed;
+  width: 35px;
+  height: 35px;
   bottom: 20px;
   right: 2%;
   z-index: 2;
   border: none;
   outline: none;
-  background-color: lightnen(#1d1d1d, 10%);
+  background-color: #6a6a6a;
   color: #fff;
   cursor: pointer;
-  padding: 10px 10px;
+  padding: 14px 10px;
   -webkit-border-radius: 10px;
           border-radius: 10px;
   -webkit-transition: all 1s;
@@ -3972,9 +3974,9 @@ button.btn-top {
     transition: all 1s; }
   button.btn-top i {
     border: solid #1d1d1d;
-    border-width: 0 3px 3px 0;
+    border-width: 0 5px 5px 0;
     display: inline-block;
-    padding: 3px;
+    padding: 5px;
     font-size: 14px; }
   button.btn-top .up {
     -ms-transform: rotate(-135deg);
@@ -4900,7 +4902,11 @@ footer {
 @media only screen and (max-width: 320px) {
   /**/
   .form-group .txt {
-    left: 20%; } }
+    left: 20%; }
+  #wpe .post_wrap .post .p2 {
+    top: 35vh; }
+  #wpe .post_wrap .post .p3 {
+    top: 70vh; } }
 
 /*==========  Mobile First  ==========*/
 /* Custom, iPhone Retina */
