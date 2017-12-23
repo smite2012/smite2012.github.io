@@ -30,3 +30,9 @@ $(window).on("scroll", function(){
 $btnTop.on("click", function(){
 	$("html,body").animate({scrollTop:0},900)
 });
+
+$(".menu_wrap ul li").on("click", function(){
+	$(".menu_wrap ul li").removeClass("li_active");
+	$(this).addClass("li_active");
+	
+});
