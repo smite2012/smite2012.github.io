@@ -1,0 +1,996 @@
+@import "fonts"
+@import "libs"
+// @import "base"
+@import "vars"
+
+img
+	display: block
+	max-width: 100%
+	height: auto
+	 
+*
+	box-sizing: border-box
+
+	// * 
+ //  background: #000 !important
+ //  color: #0f0 !important
+ //  outline: solid #f00 1px !important
+
+html, body
+	background-color: whitesmoke
+	height: 100%
+	width: 100%
+	margin: 0 auto
+	overflow-x: hidden
+video::-webkit-media-controls-overlay-play-button
+	display: none!important
+	-webkit-appearance: none
+ul 
+	margin: 0
+	padding: 0
+// Back to top
+button.btn-top
+	position: fixed
+	bottom: 20px
+	right: 2%
+	z-index: 2
+	border: none
+	outline: none
+	background-color: $accent
+	color: $white
+	cursor: pointer
+	padding: 10px 30px
+	border-radius: 10px
+	transition: all 1s
+	&:hover
+		background-color: darken($accent,10%)!important
+		transition: all 1s
+	i 
+    border: solid $white
+    border-width: 0 3px 3px 0
+    display: inline-block
+    padding: 3px
+	.up 
+		transform: rotate(-135deg)
+		-webkit-transform: rotate(-135deg)
+  &:active
+  	background-color: $accent
+		color: $white
+.row
+	margin: 0
+.wrapper
+	max-width: 1920px
+	height: 100%
+	margin: 0 auto
+	margin-bottom: 20px
+	padding-bottom: 20px
+	// background-color: green
+.container
+	// background-color: green
+#top
+	min-height: 155px
+	background-color: #FFF
+	.col-12 
+		padding: 0
+	.logo_register_wrap
+		min-height: 45px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-top: 25px
+		.logo_wrap
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			.logo
+				margin-right: 5px
+			h1
+				margin: 0
+				color: #161920
+				font-family: $OpenSans
+				font-size: 20px
+				font-weight: 700
+				text-transform: uppercase
+	.register_wrap
+		min-height: 45px
+		width: 36%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		.register
+			width: 100%
+			min-height: 45px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			.text
+				width: 100%
+				min-height: 45px
+				border: 1px solid #e1e9f2
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				ul 
+					margin: 0
+					padding: 0
+					width: 100%
+					.line
+						width: 1px
+						height: 17px
+						background-color: #dde2e8		
+						position: absolute
+						right: 0
+						top: 0	
+						display: inline-block		
+					li 
+						list-style-type: none
+						display: inline-block
+						position: relative
+						margin-right: 2%
+						padding-right: 2%
+					&:first-child
+						margin-left: 10%
+					.sup, li a
+						font-family: $OpenSans
+						font-size: 14px
+						font-weight: 400
+					.sup
+						color: #484e57
+					li
+					 a
+					 	color: #9ba4b0
+					 	text-decoration: none
+					 	&:hover
+					 		cursor: pointer
+					 		text-decoration: underline
+	.menu_wrap	
+		width: 100%
+		min-height: 55px
+		margin-top: 30px
+		.menu
+			min-height: 55px
+			nav
+				background-color: $accent
+				width: 100%
+				min-height: 55px
+				position: relative
+				.menu_toggle
+					height: 55px
+					width: 55px
+					margin: auto
+					position: relative
+					display: none
+					&:hover
+						cursor: pointer
+					.burg
+						position: relative
+						left: 20%
+						height: 3px
+						width: 29px
+						background-color: $blue
+						display: block
+						position: relative
+						-webkit-transition: all .5s
+						-o-transition: all .5s
+						transition: all .5s
+						&:first-child 
+							position: absolute
+							top: 30%
+						&:nth-child(2) 
+							position: absolute
+							top: 45%
+						&:last-child 
+							position: absolute
+							top: 60%
+					.burg_active
+						transition: all .5s
+						background-color: #FFF
+						&:first-child
+							position: absolute
+							top: 45%
+							transform: rotate(45deg)
+						&:nth-child(2)
+							display: none
+						&:last-child
+							top: 45%
+							position: absolute
+							transform: rotate(-45deg)
+			ul
+				margin: 0
+				padding: 0
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				
+				li 
+					list-style-type: none
+					background-color: $accent
+					width: 10%
+					min-height: 55px
+					position: relative	
+					&:hover
+						cursor: pointer
+						transition: all 1s
+						background-color: $blue
+						a 
+							text-decoration: underline	
+
+					a 
+						text-decoration: none
+						color: white
+						font-family: $OpenSans
+						font-size: 13px
+						font-weight: 400
+						text-transform: uppercase	
+						display: block
+						height: 55px
+						line-height: 55px
+						text-align: center
+						transition: all 1s	
+				.li_active
+					background-color: $blue
+#slider
+	width: 100%	
+	// min-height: 570px
+	background-color: #222836
+	.col-12 ,.col-sm-12 ,.col-md-12 ,.col-lg-12 ,.col-xl-12
+		padding: 0
+	.swiper-container 
+		width: 100%	
+		.swiper-slide 
+			background-position: center
+			background-size: cover
+			width: 100%	
+			min-height: 570px	
+			position: relative
+#slider .swiper-container .swiper-slide, .swiper-container-flip .swiper-slide-active
+	min-height: auto			
+.txt_wrapp
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-end
+.txt_wrap
+	// padding-top: 340px
+	margin:  auto 
+
+	.h1_wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		h1
+			color: white
+			font-family: $OpenSans
+			text-transform: uppercase
+			font-size: 40px
+			font-weight: 700
+	.h3_wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		h3
+			color: white
+			font-family: $OpenSans
+			text-transform: uppercase
+			font-size: 20px
+			font-weight: 300
+.swiper-container-flip .swiper-slide-active, .swiper-container-flip .swiper-slide-active .swiper-slide-active
+	min-height: 570px
+
+
+
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev
+	width: 59px
+	height: 59px
+	border-radius: 50%
+	border: 2px solid rgba(255, 255, 255, 0.5)
+	background-image: none
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	i 
+		color: white
+		font-family: $FontAwesome
+		font-size: 24px
+		font-weight: 400
+		text-transform: uppercase
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next
+	width: 59px
+	height: 59px
+	border-radius: 50%
+	border: 2px solid rgba(255, 255, 255, 0.5)
+	background-image: none
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	i
+		color: white
+		font-family: $FontAwesome
+		font-size: 24px
+		font-weight: 400
+		text-transform: uppercase
+.swiper-pagination-bullet-active
+	width: 13px
+	height: 13px
+	border: 2px solid $blue
+	background-color: transparent
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+	width: 13px
+	height: 13px
+	border: 2px solid #ff8261
+	background-color: transparent
+	&:hover
+		cursor: pointer
+
+#domain
+	width: 100%
+	min-height: 200px
+	background-color: #e7f4f8
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+
+	.main_wrap
+		min-height: 80px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		.row 	
+			width: 100%
+		.domain_wrap
+			.search
+				i
+					color: $accent
+					font-family: $FontAwesome
+					font-size: 27px
+					font-weight: 400
+					text-transform: uppercase	
+			.search_y, .domain
+				font-family: $OpenSans
+				line-height: 31px
+				text-transform: uppercase
+			.search_y
+				color: #859aa1
+				font-size: 18px
+				font-weight: 400
+			.domain
+				color: #556b72
+				font-size: 30px
+				font-weight: 700
+		.input_wrap
+			input
+				width: 100%
+				height: 55px
+				background-color: white
+				border: 1px solid #dfeef3
+				&::placeholder
+					color: #a0a9b6
+					font-family: $OpenSans
+					font-size: 14px
+					font-weight: 400
+					
+		input[type=text]
+			padding-left: 5%
+			font-family: $OpenSans
+			font-size: 14px
+			color: #a0a9b6
+		.select_wrap
+			select
+				width: 100%
+				height: 55px
+				color: #a0a9b6
+				font-family: $OpenSans
+				font-size: 14px
+				font-weight: 400
+				padding-left: 5%
+				&:hover
+					cursor: pointer
+					
+		.select_wrap2
+			select
+				width: 100%
+				height: 55px
+				color: #a0a9b6
+				font-family: $OpenSans
+				font-size: 14px
+				font-weight: 400
+				padding-left: 5%
+				&:hover
+					cursor: pointer
+		.button_wrap
+			button
+				width: 100%
+				height: 55px
+				background-color: $accent
+				color: white
+				font-family: $OpenSans
+				font-size: 14px
+				font-weight: 700
+				text-transform: uppercase
+				border: none
+				&:hover
+					cursor: pointer
+					transition: all 1s
+					background-color: #FFF
+					color: $accent
+#benefits
+	padding-top: 70px
+	.ben_header
+		min-height: 55px
+		margin-bottom: 35px
+		.header
+			position: relative
+			padding-top: 10px
+		.header1, .header2
+			width: 133px
+			height: 44px
+			font-family: $OpenSans
+			line-height: 31px
+			text-transform: uppercase
+		.bd
+			width: 21px
+			height: 2px
+			background-color: $accent
+			position: absolute
+			top: 0
+			left: 0
+		.header1
+			color: #859aa1
+			font-size: 18px
+			font-weight: 400
+		.header2
+			color: #556b72
+			font-size: 30px
+			font-weight: 700
+	.row
+		&:first-child
+			margin-bottom: 70px
+		&:last-child
+			margin-bottom: 100px
+	.benefits
+		i 
+			
+			color: $accent
+			font-family: $FontAwesome
+			font-size: 60px
+			font-weight: 400
+			text-transform: uppercase
+			text-align: center
+		.name 
+			color: #556b72
+			font-family: $OpenSans
+			font-size: 16px
+			font-weight: 700
+			text-transform: uppercase
+			margin-bottom: 15px
+		.descr
+			color: $text
+			font-family: $OpenSans
+			font-size: 14px
+			font-weight: 400
+#hot_features
+	padding-top: 80px
+	padding-bottom: 100px
+	background-color: #fffbde
+	.col-12, .col-sm-12, .col-md-3, .col-lg-3, .col-xl-3, .col-12, .col-sm-12, .col-md-2, .col-lg-2, .col-xl-2
+		padding: 0
+	.col-md-3, .col-lg-3, .col-xl-3
+		margin-left: 10%
+	.col-xl-3
+		-ms-flex: 0 0 23%
+		-webkit-box-flex: 0
+		-webkit-flex: 0 0 23%
+		flex: 0 0 23%
+		max-width: 23%
+	.hot_features_header
+		min-height: 60px
+		margin-bottom: 35px
+		.header
+			position: relative
+			padding-top: 10px
+			min-height: 60px
+			margin-bottom: 35px
+		.header1, .header2
+			width: 133px
+			font-family: $OpenSans
+			line-height: 31px
+			text-transform: uppercase
+		.bd
+			width: 21px
+			height: 2px
+			background-color: $accent
+			position: absolute
+			top: 0
+			left: 0
+		.header1
+			color: #859aa1
+			font-size: 18px
+			font-weight: 400
+			height: 15px
+			margin-bottom: 10px
+		.header2
+			color: #556b72
+			font-size: 30px
+			font-weight: 700
+			height: 25px
+			width: 200px
+	.df 
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+	.list
+		ul 
+			margin: 0
+			padding: 0
+			li
+				list-style-type: none
+				margin-bottom: 20px
+				i, a 
+					font-weight: 400
+				i
+					color: #4c515b
+					font-family: $FontAwesome
+					font-size: 12px
+					text-transform: uppercase
+					margin-right: 10px
+				a
+					color: #696556
+					font-family: $OpenSans
+					font-size: 14px
+					text-decoration: none
+					&:hover
+						cursor: pointer
+						text-decoration: underline
+	button	
+		width: 165px
+		height: 55px
+		background-color: $accent
+		color: white
+		font-family: $OpenSans
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		border: none
+		margin-bottom: 20px
+		&:hover
+			cursor: pointer
+			transition: all 1s
+			background-color: #fff
+			color: $accent
+	.offer_wrap
+		width: 100%
+		height: 116px
+		background-color: white
+		border: 2px solid #fffbde
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		font-family: $OpenSans
+		font-weight: 700
+		text-transform: uppercase
+		.offer
+			width: 330px
+			height: 86px
+			
+			border: 2px solid #fffbde
+
+			.get
+				color: #97947f
+				font-size: 14px
+			.of_wrap
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				.fif
+					color: $accent
+					font-size: 48px
+					margin-right: 20px
+				.off
+					color: $blue
+					font-size: 48px
+					margin-right: 15px	
+			.eh_wrap
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: center
+				.eh	
+				.each, .hosting
+					font-family: $OpenSans
+					font-size: 17px
+					text-transform: uppercase
+				.each
+					color: #97947f
+					font-weight: 300
+				.hosting
+					color: #4c515b
+					font-weight: 700
+#hosting
+	padding-top: 85px
+	padding-bottom: 110px
+	.hot_features_header
+			min-height: 60px
+			margin-bottom: 35px
+			.header
+				position: relative
+				padding-top: 10px
+				min-height: 60px
+				margin-bottom: 35px
+			.header1, .header2
+				width: 133px
+				font-family: $OpenSans
+				line-height: 31px
+				text-transform: uppercase
+			.bd
+				width: 21px
+				height: 2px
+				background-color: $accent
+				position: absolute
+				top: 0
+				left: 0
+			.header1
+				color: #859aa1
+				font-size: 18px
+				font-weight: 400
+				height: 15px
+				margin-bottom: 10px
+			.header2
+				color: #556b72
+				font-size: 30px
+				font-weight: 700
+				height: 25px
+				width: 200px
+	.hosting_item
+		height: 480px
+		background-color: white
+		border: 1px solid #e1eff4
+		&:hover
+			cursor: pointer
+			transition: all 1s
+			transform: scale(1.1)
+			
+		.dollar, .dol, .time
+			color: #556b72
+			font-family: $OpenSans
+			text-transform: uppercase
+			text-align: center
+		.dollar
+			font-size: 50px
+			font-weight: 700
+			line-height: 27px
+			margin-top: 30px
+		.dol
+			font-size: 50px
+			font-weight: 300
+			line-height: 27px
+		.time
+			font-size: 14px
+			font-weight: 600
+			margin-top: 5px
+		.plan
+			width: 80%
+			height: 39px
+			background-color: $blue
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: center
+			margin: 25px auto 50px
+			.name
+				color: white
+				font-family: $OpenSans
+				font-size: 14px
+				font-weight: 700
+				text-transform: uppercase
+				text-align: center
+		.descr
+			.descrr
+				color: #8d9198
+				font-family: $OpenSans
+				font-size: 14px
+				font-weight: 400
+				text-align: center
+				border-bottom: 1px solid #e1eff4
+				padding-bottom: 10px
+				margin-bottom: 10px
+				&:last-child
+					border-bottom: none
+		.button
+			width: 100%
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			justify-content: center
+			button
+				width: 115px
+				height: 43px
+				background-color: $accent
+				color: white
+				font-family: $OpenSans
+				font-size: 13px
+				font-weight: 700
+				text-transform: uppercase
+				border: none
+				margin: 25px auto 20px
+				&:hover
+					cursor: pointer
+					transition: all 1s
+					transform: scale(1.1)
+#newsletter
+	padding-top: 65px
+	padding-bottom: 90px
+	background-color:  #e7f4f8
+	// .col-md-8, .col-lg-8, .col-xl-8, .col-md-2, .col-lg-2, .col-xl-2
+	// 	padding: 0 
+	.news_wrap
+		min-height: 80px
+		width: 100%
+	.mail_wrap
+		margin-left: 10%
+		.mail
+			color: $accent
+			font-family: $FontAwesome
+			font-size: 27px
+			font-weight: 400
+			text-transform: uppercase
+		.sign, .newsl
+			font-family: $OpenSans
+			text-transform: uppercase
+		.sign
+			color: #859aa1
+			font-size: 18px
+			font-weight: 400
+		.newsl
+			color: #556b72
+			font-size: 30px
+			font-weight: 700
+	.input_wrap
+		height: 92px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: flex-end
+		margin-left: 5%
+		input[type=text]
+			padding-left: 5%
+			width: 100%
+			height: 55px
+			background-color: white
+			border: none
+			font-family: $OpenSans
+			font-size: 14px
+			color: #a0a9b6
+			&::placeholder
+				
+				color: #a0a9b6
+				font-family: $OpenSans
+				font-size: 14px
+				font-weight: 400
+	.button_wrap
+		height: 92px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: flex-end
+		margin-right: 5%
+		button
+			width: 196px
+			height: 55px
+			background-color: $accent
+			color: white
+			font-family: $OpenSans
+			font-size: 14px
+			font-weight: 700
+			text-transform: uppercase
+			border: none
+			&:hover
+				cursor: pointer
+				transition: all 1s
+				background-color: #FFF
+				color: $accent
+.df
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+footer
+	padding: 105px 0
+	background-color: #4c515b
+	.wr
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex	
+		display: -o-flex
+		display: flex
+		width: 220px
+		.logo
+			margin-right: 5px
+		.logo_text
+			.host
+				color: #e7f4f8
+				font-family: $OpenSans
+				font-size: 20px
+				font-weight: 700
+				text-transform: uppercase
+				margin-bottom: 10px
+			.copy
+				color: #909aad
+				font-family: $OpenSans
+				font-size: 14px
+				font-weight: 400
+				width: 100%
+	.head
+		color: white
+		font-family: $OpenSans
+		font-size: 14px
+		font-weight: 700
+		text-transform: uppercase
+		margin-bottom: 30px
+	.links
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		
+	ul 
+		margin: 0
+		padding: 0
+
+		&:first-child
+			margin-right: 65px
+		li 
+			list-style-type: none
+			margin-bottom: 15px
+			width: 90px
+			a 
+				color: #909aad
+				font-family: $OpenSans
+				font-size: 14px
+				font-weight: 400
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+					cursor: pointer
+	.addres ,.text ,.email,.call
+		font-family: $OpenSans
+		font-size: 14px
+		font-weight: 400
+		width: 210px
+		color: #909aad
+		margin-bottom: 15px
+		.white
+			color: #e7f4f8
+	.soc 
+		width: 165px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		i
+			color: #909aad
+			font-family: $FontAwesome
+			font-size: 24px
+			font-weight: 400
+			&:hover
+				cursor: pointer
+				transition: all 1s
+				color: $accent
+// Preloader
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+.preloader
+	position: fixed
+	width: 100%
+	height: 100%
+	top: 0
+	left: 0
+	bottom: 0
+	top: 0
+	z-index: 10000
+	background-color: $accent
+	.pulse
+		position: relative
+		left: 50%
+		top: 50vh
+		margin:
+			left: -40px
+			right: -40px
+		&::before, &::after
+			content: ''
+			border: 5px solid $white
+			width: 80px
+			height: 80px
+			border-radius: 500px
+			position: absolute
+		&::before
+			animation: pulse-outer .8s ease-in infinite
+		&::after
+			animation: pulse-inner .8s linear infinite
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+
+@keyframes pulse-inner
+	0%
+		@include opacity(0)
+		transform: scale(0)
+	100%
+		@include opacity(100)
+		transform: scale(1)
+
+@import "media" // Всегда в конце
