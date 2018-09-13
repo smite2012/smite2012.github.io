@@ -1,0 +1,13 @@
+html, body {
+  background-color: #090715;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto; }
+
+.div1 {
+  height: 100vh;
+  background-color: red; }
+
+.div2 {
+  height: 100vh;
+  background-color: green; }

@@ -1,0 +1,187 @@
+<div class="progressbar">
+                <div class="progressbar__icons">
+                    <div class="progressbar__icon selected"><img src="https://www.lucidica.co.uk/wp-content/themes/lucidica/img/itcontracts/stage-1.png" alt="Alt text"></div>
+                    <div class="progressbar__icon"><img src="https://www.lucidica.co.uk/wp-content/themes/lucidica/img/itcontracts/stage-2.png" alt="Alt text"></div>
+                    <div class="progressbar__icon"><img src="https://www.lucidica.co.uk/wp-content/themes/lucidica/img/itcontracts/stage-3.png" alt="Alt text"></div>
+                    <div class="progressbar__icon"><img src="https://www.lucidica.co.uk/wp-content/themes/lucidica/img/itcontracts/stage-4.png" alt="Alt text"></div>
+                    <div class="progressbar__icon"><img src="https://www.lucidica.co.uk/wp-content/themes/lucidica/img/itcontracts/stage-5.png" alt="Alt text"></div>
+                    <div class="progressbar__icon"><img src="https://www.lucidica.co.uk/wp-content/themes/lucidica/img/itcontracts/stage-6.png" alt="Alt text"></div>
+                    <div class="progressbar__icon"><img src="https://www.lucidica.co.uk/wp-content/themes/lucidica/img/itcontracts/stage-7.png" alt="Alt text"></div>
+                </div>
+                <div class="progressbar__bar">
+                    <div class="progressbar__bar-fill"></div>
+                </div>
+                <div class="progressbar__description">
+                    <ul>
+                        <li class="visible current">You contact us letting us know what you are looking for</li>
+                        <li>Follow up call with an engineer to answer any technical questions</li>
+                        <li>A meeting at your office to look at your current IT set up, you also get an hours
+                            worth of engineering time to go through any issues
+                        </li>
+                        <li>We dent you a bespoke contract proposal</li>
+                        <li>Have a call to discuss proposal and answer any questions</li>
+                        <li>Contract signed</li>
+                        <li>Onboarding!</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+            <form action="" class="web-calculator">
+                <div class="web-calculator__section">
+                    <h5>Do you want a custom design or a template?</h5>
+                    <label class="web-calculator__radio">Custom Design<input name="design" type="radio" data-price="400" value="Custom"><span class="switcher"></span></label>
+                    <label class="web-calculator__radio">Template<input name="design" type="radio" data-price="150" value="Purchased"><span class="switcher"></span></label>
+                </div>
+                <div class="web-calculator__section">
+                    <label class="web-calculator__input web-calculator__pages-count">
+                        <h5>How many pages do you want?</h5>
+                        <input type="number" min="1" max="20" value="1" name="pages" data-price="60"></label>
+                </div>
+                <div class="web-calculator__section">
+                    <h5>Do you want an Ecommerce website?</h5>
+                    <label class="web-calculator__radio"><span>Yes, I need an online store</span><input name="ecomm" type="radio" data-price="400" value="Yes"><span class="switcher"></span></label>
+                    <label class="web-calculator__radio"><span>No, I'm not selling any products online</span><input name="ecomm" type="radio" data-price="150" value="No"><span class="switcher"></span></label>
+                </div>
+                <div class="web-calculator__section">
+                    <h5>SEO &amp; Analytics</h5>
+                    <label class="web-calculator__checkbox">On-page optimisation<input name="seo-page-optim" type="checkbox" data-price="120"><span class="switcher"></span></label>
+                    <label class="web-calculator__checkbox">Yes, I need an online store<input name="seo-backlink" type="checkbox" data-price="120"><span class="switcher"></span></label>
+                    <label class="web-calculator__checkbox">Yes, I need an online store<input name="seo-ga" type="checkbox" data-price="60"><span class="switcher"></span></label>
+                </div>
+                <div class="web-calculator__section">
+                    <h5>Extra Features</h5>
+                    <label class="web-calculator__checkbox">Live Chat<input name="extra-live" type="checkbox" data-price="60"><span class="switcher"></span></label>
+                    <label class="web-calculator__checkbox">Social Media Integration<input name="extra-social" type="checkbox" data-price="100"><span class="switcher"></span></label>
+                    <label class="web-calculator__checkbox">Blog<input name="extra-blog" type="checkbox" data-price="150"><span class="switcher"></span></label>
+                </div>
+                <div class="web-calculator__section">
+                    <h5>Website Add-ons</h5>
+                    <label class="web-calculator__checkbox">Hosting<input name="addons-hosting" type="checkbox" data-price="200"><span class="switcher"></span></label>
+                    <label class="web-calculator__checkbox">Ithemes<input name="addons-ithemes" type="checkbox" data-price="200"><span class="switcher"></span></label>
+                    <label class="web-calculator__checkbox">Domain<input name="addons-domain" type="checkbox" data-price="30"><span class="switcher"></span></label>
+                    <label class="web-calculator__checkbox">SSL<input name="addons-ssl" type="checkbox" data-price="70"><span class="switcher"></span></label>
+                </div>
+                <div class="estimate-price"><h2>Starting from: £<span>60</span></h2></div>
+                <div class="web-calculator__section">
+                    <label class="web-calculator__input">Name:
+                        <input type="text" name="name"></label>
+                    <label class="web-calculator__input">Email:
+                    <input type="email" name="email"></label>
+                </div>
+                <div class="web-calculator__section">
+                    <label class="web-calculator__input">Number:
+                        <input type="text" name="number"></label>
+                    <label class="web-calculator__input">Company:
+                    <input type="text" name="Company"></label>
+                </div>
+                <div class="submit">
+                    <button class="link-label">Build a website!</button>
+                    <h4>Request has sent successfully</h4>
+                </div>
+            </form>
+<script>
+/* Progress bar section animation */
+jQuery(function() {
+    var progressbarContainer = jQuery('.progressbar');
+    if (progressbarContainer.length > 0) {
+        var progressbarBar = jQuery('.progressbar__bar');
+        var progressbarBarFill = jQuery('.progressbar__bar-fill');
+        var progressbarDescription = jQuery('.progressbar__description ul li');
+        var progressbarIcons = jQuery('.progressbar__icons');
+    }
+    jQuery(progressbarContainer).on('click','.progressbar__icon', function (e) {
+        //remove .selected from the icons
+        jQuery(progressbarIcons).children('div').each(function () {jQuery(this).removeClass('selected')});
+        //get index of clicked icon and add .selected to it
+        var indexClicked = jQuery(progressbarIcons).find(this).addClass('selected').index();
+        //change progress bar width
+        jQuery(progressbarBarFill).css('width',(jQuery(progressbarBar).width() / 6) * indexClicked);
+        //apply styles to li elements to match clicked icon
+        jQuery(progressbarDescription).each(function (i) {
+            jQuery(this).removeClass('visible current');
+            if (i < indexClicked) {
+                jQuery(this).addClass('visible');
+            } else if (i === indexClicked) {
+                jQuery(this).addClass('visible current');
+            }
+        });
+    });
+});
+jQuery(document).ready(function () {
+    var $ = jQuery;
+    var currentPrice = 0;
+    var newPrice = 0;
+    var switchers = $('.web-calculator input[type="checkbox"], .web-calculator input[type="radio"]');
+    var pagesCount = $('.web-calculator__pages-count input');
+    var totalEl = $('.estimate-price span');
+
+    var timer;
+    console.log(switchers);
+    $('.web-calculator').on('change', function (e) {
+        var selectorsPrice = 0;
+        $(switchers).each(function () {
+            selectorsPrice += this.checked ? $(this).data('price') : 0;
+        });
+        var pagesPrice = pagesCount[0].value * $(pagesCount).data('price') - $(pagesCount).data('price');
+        newPrice = selectorsPrice + pagesPrice;
+        clearTimeout(timer);
+        timer = setTimeout(changePrice, 500);
+    });
+
+    function changePrice() {
+        var counter = setInterval(change, 3);
+
+        function change() {
+            if (currentPrice < newPrice) {
+                currentPrice = currentPrice + 2;
+                $(totalEl).html(currentPrice);
+            } else if (currentPrice > newPrice) {
+                currentPrice = currentPrice - 2;
+                $(totalEl).html(currentPrice);
+            } else {
+                clearInterval(counter);
+            }
+        }
+
+        console.log('change price');
+        console.log(currentPrice);
+        console.log(newPrice);
+        // while (currentPrice !== newPrice) {
+        // }
+    }
+
+    $('.web-calculator').on('submit', function(e) {
+        e.preventDefault();
+        var data = $(this).serializeObject();
+        data.action = 'website_builder';
+        console.log(data);;
+        $.post(myajax.url, data)
+            .done(function (result) {
+                if (result === '1') {
+                    console.log($(e.target).find('.submit button'));
+                    console.log(e);
+                    $(e.target).find('.submit button').attr('disabled', true);
+                }
+            })
+    });
+    $.fn.serializeObject = function()
+    {
+        var o = {};
+        var a = this.serializeArray();
+        $.each(a, function() {
+            if (o[this.name]) {
+                if (!o[this.name].push) {
+                    o[this.name] = [o[this.name]];
+                }
+                o[this.name].push(this.value || '');
+            } else {
+                o[this.name] = this.value || '';
+            }
+        });
+        return o;
+    };
+});
+</script>

@@ -1,0 +1,24 @@
+@keyframes  menu_a_slide_in{
+	0%   { transform: translateX(-100%); }
+  100% { transform: translate(0px);}
+}
+
+@keyframes  menu_a_slide_out{
+	0%   { transform: translateX(0px); }
+  100% { transform: translateX(-100%);}
+}
+
+@keyframes  menu_wrap_slide_in{
+	0% {transform: translateX(-100%);}
+  0% { transform: translateX(0);opacity: 0;}
+  100% {transform: translateX(0);opacity: 1;}
+}
+
+@keyframes  menu_wrap_slide_out{
+	0%   { opacity: 1;transform: tranlateX(0);}
+	100% { opacity: 0;transform: tranlateX(0);}
+  100% { transform: translateX(-100%);}
+}
+
+
+

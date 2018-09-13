@@ -1,0 +1,22 @@
+@mixin size($width: auto, $height: auto) {
+    width: $width;
+    height: $height;
+}
+
+@mixin displayFlex($align: null, $valign: null, $direction: auto, $wrap: wrap) {
+    display: flex;
+    justify-content: $align;
+    align-items: $valign;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+
+@mixin animationRotate($name,$from,$to,$duration) {
+    animation: $name;
+    animation-duration: $duration;
+    animation-fill-mode: forwards;
+    @include keyframes($name) {
+        from {transform: rotate($from)}
+        to {transform: rotate($to)}
+    }
+}

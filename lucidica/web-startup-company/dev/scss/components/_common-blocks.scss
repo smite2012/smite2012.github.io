@@ -1,0 +1,83 @@
+html, body {
+    background-color: $main-dark;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    font-size: $main-font-size;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box
+}
+
+/*
+TYPOGRAPHY
+*/
+h1 {
+    font-size: $h1-size;
+    font-family: $main-font;
+    font-weight: 600;
+    color: $main-color;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: $h2-size;
+    font-family: $main-font;
+    text-transform: uppercase;
+    color: $secondary-color;
+}
+h3 {
+    font-size: $h3-size;
+    font-family: $main-font;
+    color: $main-color;
+    font-weight: 300;
+}
+h4 {
+}
+
+p, a {
+    color: $secondary-color;
+    font-size: $h4-size;
+    font-family: $main-font;
+    line-height: 1.8em;
+    span {
+        color: $main-color;
+    }
+}
+
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px;
+    border: solid 3px $main-color;
+    padding: 10px 40px;
+    margin: 30pt 0;
+    min-width: 470px;
+    background: transparent;
+
+    text-transform: uppercase;
+    color: $main-color;
+    font-size: $h3-size;
+    text-decoration: none;
+    &:hover {
+        color: #FFFFFF;
+        background: $main-color;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .button {
+        min-width: unset;
+        width: 100%;
+        max-width: 470px;
+    }
+}
