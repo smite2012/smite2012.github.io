@@ -1,0 +1,10 @@
+[submodule "externals/phpmd"]
+	path = externals/phpmd
+	url = git://github.com/manuelpichler/phpmd.git
+
+[submodule "externals/phpcs"]
+	path = externals/phpcs
+	url = https://github.com/squizlabs/PHP_CodeSniffer.git
+[submodule "externals/phpcs-phpunit"]
+	path = externals/phpcs-phpunit
+	url = https://github.com/elblinkin/PHPUnit-CodeSniffer
