@@ -1,0 +1,3906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>PHP Coding Standard Generator</title>
+    <script src="js/libs/jquery-1.5.1.min.js"></script>
+    <script src="js/phpmd.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/rulesets.css"></link>
+</head>
+<body>
+<div id="wrap">
+    <div id="header">
+        <h1>PHP Coding Standard Generator</h1>
+        <p>The goal of this site is to enable you do very quickly create and maintain your own coding standard.</p>
+        <p><a href="http://phpmd.org">PHP Mess Detector</a> <a href="http://phpmd.org/documentation/creating-a-ruleset.html">rule sets files</a> and <a href="http://pear.php.net/PHP_CodeSniffer">PHP Code Sniffer</a> rulesets are supported.</p>
+    </div>
+    <div id="nav">
+        <ul>
+            <li id='phpmd-activate'>PHPMD</li>
+            <li id='phpcs-activate'>PHPCS</li>
+        </ul>
+    </div>
+    <div id="main">
+        <div id="phpmd-container" class="rule-container">
+            <h2>PHP Mess Detector</h2>
+            Ruleset name: 
+            <input type="text" id="phpmd-ruleset-name" size="30" value="pcsg-generated-ruleset"/>
+            <br/>
+            <br/>
+            Ruleset description:
+            <br/>
+            <textarea id="phpmd-ruleset-description" class="ruleset-description">Created with the PHP Coding Standard Generator. http://edorian.github.com/php-coding-standard-generator/</textarea>
+<h2>Code Size Rules</h2><p class="ruleset-description">
+The Code Size Ruleset contains a collection of rules that find code size related problems.
+    </p><div class="rule-section" name="codesize.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-codesize.xml/CyclomaticComplexity" name="codesize.xml/CyclomaticComplexity"><div class="rule-name"><label for="phpmd-codesize.xml/CyclomaticComplexity">CyclomaticComplexity</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+// Cyclomatic Complexity = 12
+class Foo {
+1   public function example()  {
+2       if ($a == $b)  {
+3           if ($a1 == $b1) {
+                fiddle();
+4           } else if ($a2 == $b2) {
+                fiddle();
+            }  else {
+                fiddle();
+            }
+5       } else if ($c == $d) {
+6           while ($c == $d) {
+                fiddle();
+            }
+7        } else if ($e == $f) {
+8           for ($n = 0; $n &lt; $h; $n++) {
+                fiddle();
+            }
+        } else{
+            switch ($z) {
+9               case 1:
+                    fiddle();
+                    break;
+10              case 2:
+                    fiddle();
+                    break;
+11              case 3:
+                    fiddle();
+                    break;
+12              default:
+                    fiddle();
+                    break;
+            }
+        }
+    }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="codesize.xml/CyclomaticComplexity">
+            
+Complexity is determined by the number of decision points in a method plus one for the
+method entry.  The decision points are 'if', 'while', 'for', and 'case labels'.  Generally,
+1-4 is low complexity, 5-7 indicates moderate complexity, 8-10 is high complexity,
+ and 11+ is very high complexity.
+            
+        </label></div>
+<div class="property">reportLevel:
+            <input type="text" size="5" class="property-selector" id="property-codesize.xml/CyclomaticComplexity-reportLevel" name="reportLevel" value="10" default="10"><div class="property-description"><label for="property-codesize.xml/CyclomaticComplexity-reportLevel">The Cyclomatic Complexity reporting threshold</label></div>
+</div>
+<div class="property">showClassesComplexity:
+            <input type="checkbox" checked class="property-selector" id="property-codesize.xml/CyclomaticComplexity-showClassesComplexity" name="showClassesComplexity" value="true" default="true"><div class="property-description"><label for="property-codesize.xml/CyclomaticComplexity-showClassesComplexity">Indicate if class average violation should be added to the report</label></div>
+</div>
+<div class="property">showMethodsComplexity:
+            <input type="checkbox" checked class="property-selector" id="property-codesize.xml/CyclomaticComplexity-showMethodsComplexity" name="showMethodsComplexity" value="true" default="true"><div class="property-description"><label for="property-codesize.xml/CyclomaticComplexity-showMethodsComplexity">Indicate if class average violation should be added to the report</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-codesize.xml/NPathComplexity" name="codesize.xml/NPathComplexity"><div class="rule-name"><label for="phpmd-codesize.xml/NPathComplexity">NPathComplexity</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Foo {
+    function bar() {
+        // lots of complicated code
+    }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="codesize.xml/NPathComplexity">
+The NPath complexity of a method is the number of acyclic execution paths through that method.
+A threshold of 200 is generally considered the point where measures should be taken to reduce complexity.
+        </label></div>
+<div class="property">minimum:
+            <input type="text" size="5" class="property-selector" id="property-codesize.xml/NPathComplexity-minimum" name="minimum" value="200" default="200"><div class="property-description"><label for="property-codesize.xml/NPathComplexity-minimum">The npath reporting threshold</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-codesize.xml/ExcessiveMethodLength" name="codesize.xml/ExcessiveMethodLength"><div class="rule-name"><label for="phpmd-codesize.xml/ExcessiveMethodLength">ExcessiveMethodLength</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Foo {
+    public function doSomething() {
+        print("Hello world!" . PHP_EOL);
+        print("Hello world!" . PHP_EOL);
+        // 98 copies omitted for brevity.
+    }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="codesize.xml/ExcessiveMethodLength">
+Violations of this rule usually indicate that the method is doing
+too much.  Try to reduce the method size by creating helper methods and removing any copy/pasted code.
+        </label></div>
+<div class="property">minimum:
+            <input type="text" size="5" class="property-selector" id="property-codesize.xml/ExcessiveMethodLength-minimum" name="minimum" value="100" default="100"><div class="property-description"><label for="property-codesize.xml/ExcessiveMethodLength-minimum">The method size reporting threshold</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-codesize.xml/ExcessiveClassLength" name="codesize.xml/ExcessiveClassLength"><div class="rule-name"><label for="phpmd-codesize.xml/ExcessiveClassLength">ExcessiveClassLength</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Foo {
+  public function bar() {
+    // 1000 lines of code
+  }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="codesize.xml/ExcessiveClassLength">
+Long Class files are indications that the class may be trying to
+do too much.  Try to break it down, and reduce the size to something
+manageable.
+        </label></div>
+<div class="property">minimum:
+            <input type="text" size="5" class="property-selector" id="property-codesize.xml/ExcessiveClassLength-minimum" name="minimum" value="1000" default="1000"><div class="property-description"><label for="property-codesize.xml/ExcessiveClassLength-minimum">The class size reporting threshold</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-codesize.xml/ExcessiveParameterList" name="codesize.xml/ExcessiveParameterList"><div class="rule-name"><label for="phpmd-codesize.xml/ExcessiveParameterList">ExcessiveParameterList</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Foo {
+    public function addData(
+        $p0, $p1, $p2, $p3, $p4, $p5,
+        $p5, $p6, $p7, $p8, $p9, $p10) {
+    }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="codesize.xml/ExcessiveParameterList">
+Long parameter lists can indicate that a new object should be created to
+wrap the numerous parameters.  Basically, try to group the parameters together.
+        </label></div>
+<div class="property">minimum:
+            <input type="text" size="5" class="property-selector" id="property-codesize.xml/ExcessiveParameterList-minimum" name="minimum" value="10" default="10"><div class="property-description"><label for="property-codesize.xml/ExcessiveParameterList-minimum">The parameter count reporting threshold</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-codesize.xml/ExcessivePublicCount" name="codesize.xml/ExcessivePublicCount"><div class="rule-name"><label for="phpmd-codesize.xml/ExcessivePublicCount">ExcessivePublicCount</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+public class Foo {
+    public $value;
+    public $something;
+    public $var;
+    // [... more more public attributes ...]
+
+    public function doWork() {}
+    public function doMoreWork() {}
+    public function doWorkAgain() {}
+    // [... more more public methods ...]
+}
+    
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="codesize.xml/ExcessivePublicCount">
+A large number of public methods and attributes declared in a class can indicate
+the class may need to be broken up as increased effort will be required to
+thoroughly test it.
+        </label></div>
+<div class="property">minimum:
+            <input type="text" size="5" class="property-selector" id="property-codesize.xml/ExcessivePublicCount-minimum" name="minimum" value="45" default="45"><div class="property-description"><label for="property-codesize.xml/ExcessivePublicCount-minimum">The public item reporting threshold</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-codesize.xml/TooManyFields" name="codesize.xml/TooManyFields"><div class="rule-name"><label for="phpmd-codesize.xml/TooManyFields">TooManyFields</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Person {
+   protected $one;
+   private $two;
+   private $three;
+   [... many more fields ...]
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="codesize.xml/TooManyFields">
+Classes that have too many fields could be redesigned to have fewer fields,
+possibly through some nested object grouping of some of the information. For
+example, a class with city/state/zip fields could instead have one Address
+field.
+        </label></div>
+<div class="property">maxfields:
+            <input type="text" size="5" class="property-selector" id="property-codesize.xml/TooManyFields-maxfields" name="maxfields" value="15" default="15"><div class="property-description"><label for="property-codesize.xml/TooManyFields-maxfields">The field count reporting threshold </label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-codesize.xml/TooManyMethods" name="codesize.xml/TooManyMethods"><div class="rule-name"><label for="phpmd-codesize.xml/TooManyMethods">TooManyMethods</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="codesize.xml/TooManyMethods">
+            
+A class with too many methods is probably a good suspect for refactoring, in
+order to reduce its complexity and find a way to have more fine grained objects.
+            
+        </label></div>
+<div class="property">maxmethods:
+            <input type="text" size="5" class="property-selector" id="property-codesize.xml/TooManyMethods-maxmethods" name="maxmethods" value="10" default="10"><div class="property-description"><label for="property-codesize.xml/TooManyMethods-maxmethods">The method count reporting threshold </label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-codesize.xml/ExcessiveClassComplexity" name="codesize.xml/ExcessiveClassComplexity"><div class="rule-name"><label for="phpmd-codesize.xml/ExcessiveClassComplexity">ExcessiveClassComplexity</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Foo {
+    public function bar()  {
+        if ($a == $b)  {
+            if ($a1 == $b1) {
+                fiddle();
+            } else if ($a2 == $b2) {
+                fiddle();
+            }  else {
+            }
+        }
+    }
+    public function baz()  {
+        if ($a == $b)  {
+            if ($a1 == $b1) {
+                fiddle();
+            } else if ($a2 == $b2) {
+                fiddle();
+            }  else {
+            }
+        }
+    }
+    // Several other complex methods
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="codesize.xml/ExcessiveClassComplexity">
+            
+The WMC of a class is a good indicator of how much time and effort is required
+to modify and maintain this class. A large number of methods also means that
+this class has a greater potential impact on derived classes.
+            
+        </label></div>
+<div class="property">maximum:
+            <input type="text" size="5" class="property-selector" id="property-codesize.xml/ExcessiveClassComplexity-maximum" name="maximum" value="50" default="50"><div class="property-description"><label for="property-codesize.xml/ExcessiveClassComplexity-maximum">The maximum WMC tolerable for a class.</label></div>
+</div>
+</div>
+</div>
+<h2>Controversial Rules</h2><p class="ruleset-description">
+This ruleset contains a collection of controversial rules.
+    </p><div class="rule-section" name="controversial.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-controversial.xml/Superglobals" name="controversial.xml/Superglobals"><div class="rule-name"><label for="phpmd-controversial.xml/Superglobals">Superglobals</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Foo {
+    public function bar() {
+        $name = $_POST['foo'];
+    }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="controversial.xml/Superglobals">
+            
+Accessing a super-global variable directly is considered a bad practice.
+These variables should be encapsulated in objects that are provided by a framework, for instance.
+            
+        </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-controversial.xml/CamelCaseClassName" name="controversial.xml/CamelCaseClassName"><div class="rule-name"><label for="phpmd-controversial.xml/CamelCaseClassName">CamelCaseClassName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class class_name {
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="controversial.xml/CamelCaseClassName">
+			
+It is considered best practice to use the CamelCase notation to name classes.
+            
+        </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-controversial.xml/CamelCasePropertyName" name="controversial.xml/CamelCasePropertyName"><div class="rule-name"><label for="phpmd-controversial.xml/CamelCasePropertyName">CamelCasePropertyName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class ClassName {
+    protected $property_name;
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="controversial.xml/CamelCasePropertyName">
+            
+It is considered best practice to use the camelCase notation to name attributes.
+            
+        </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-controversial.xml/CamelCaseMethodName" name="controversial.xml/CamelCaseMethodName"><div class="rule-name"><label for="phpmd-controversial.xml/CamelCaseMethodName">CamelCaseMethodName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class ClassName {
+    public function get_name() {
+    }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="controversial.xml/CamelCaseMethodName">
+            
+It is considered best practice to use the CamelCase notation to name methods.
+            
+        </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-controversial.xml/CamelCaseParameterName" name="controversial.xml/CamelCaseParameterName"><div class="rule-name"><label for="phpmd-controversial.xml/CamelCaseParameterName">CamelCaseParameterName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class ClassName {
+    public function doSomething($user_name) {
+    }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="controversial.xml/CamelCaseParameterName">
+            
+It is considered best practice to use the camelCase notation to name parameters.
+            
+        </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-controversial.xml/CamelCaseVariableName" name="controversial.xml/CamelCaseVariableName"><div class="rule-name"><label for="phpmd-controversial.xml/CamelCaseVariableName">CamelCaseVariableName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class ClassName {
+    public function doSomething() {
+        $data_module = new DataModule();
+    }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="controversial.xml/CamelCaseVariableName">
+            
+It is considered best practice to use the camelCase notation to name variables.
+            
+        </label></div>
+</div>
+</div>
+<h2>Design Rules</h2><p class="ruleset-description">
+The Code Size Ruleset contains a collection of rules that find software design related problems.
+    </p><div class="rule-section" name="design.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-design.xml/ExitExpression" name="design.xml/ExitExpression"><div class="rule-name"><label for="phpmd-design.xml/ExitExpression">ExitExpression</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Foo {
+    public function bar($param)  {
+        if ($param === 42) {
+            exit(23);
+        }
+    }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="design.xml/ExitExpression">
+            
+An exit-expression within regular code is untestable and therefore it should
+be avoided. Consider to move the exit-expression into some kind of startup
+script where an error/exception code is returned to the calling environment.
+            
+        </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-design.xml/EvalExpression" name="design.xml/EvalExpression"><div class="rule-name"><label for="phpmd-design.xml/EvalExpression">EvalExpression</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Foo {
+    public function bar($param)  {
+        if ($param === 42) {
+            eval('$param = 23;');
+        }
+    }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="design.xml/EvalExpression">
+            
+An eval-expression is untestable, a security risk and bad practice. Therefore
+it should be avoided. Consider to replace the eval-expression with regular
+code.
+            
+        </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-design.xml/GotoStatement" name="design.xml/GotoStatement"><div class="rule-name"><label for="phpmd-design.xml/GotoStatement">GotoStatement</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Foo {
+    public function bar($param)  {
+        A:
+        if ($param === 42) {
+            goto X;
+        }
+        Y:
+        if (time() % 42 === 23) {
+            goto Z;
+        }
+        X:
+        if (time() % 23 === 42) {
+            goto Y;
+        }
+        Z:
+        return 42;                 
+    }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="design.xml/GotoStatement">
+            
+Goto makes code harder to read and it is nearly impossible to understand the
+control flow of an application that uses this language construct. Therefore it
+should be avoided. Consider to replace Goto with regular control structures and
+separate methods/function, which are easier to read.
+            
+        </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-design.xml/NumberOfChildren" name="design.xml/NumberOfChildren"><div class="rule-name"><label for="phpmd-design.xml/NumberOfChildren">NumberOfChildren</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre></pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="design.xml/NumberOfChildren">
+            
+A class with an excessive number of children is an indicator for an unbalanced
+class hierarchy. You should consider to refactor this class hierarchy.
+            
+        </label></div>
+<div class="property">minimum:
+            <input type="text" size="5" class="property-selector" id="property-design.xml/NumberOfChildren-minimum" name="minimum" value="15" default="15"><div class="property-description"><label for="property-design.xml/NumberOfChildren-minimum">Maximum number of acceptable child classes.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-design.xml/DepthOfInheritance" name="design.xml/DepthOfInheritance"><div class="rule-name"><label for="phpmd-design.xml/DepthOfInheritance">DepthOfInheritance</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre></pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="design.xml/DepthOfInheritance">
+            
+A class with many parents is an indicator for an unbalanced and wrong class
+hierarchy. You should consider to refactor this class hierarchy.
+            
+        </label></div>
+<div class="property">minimum:
+            <input type="text" size="5" class="property-selector" id="property-design.xml/DepthOfInheritance-minimum" name="minimum" value="6" default="6"><div class="property-description"><label for="property-design.xml/DepthOfInheritance-minimum">Maximum number of acceptable parent classes.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-design.xml/CouplingBetweenObjects" name="design.xml/CouplingBetweenObjects"><div class="rule-name"><label for="phpmd-design.xml/CouplingBetweenObjects">CouplingBetweenObjects</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Foo {
+    /**
+     * @var \foo\bar\X
+     */
+    private $x = null;
+
+    /**
+     * @var \foo\bar\Y
+     */
+    private $y = null;
+
+    /**
+     * @var \foo\bar\Z
+     */
+    private $z = null;
+
+    public function setFoo(\Foo $foo) {}
+    public function setBar(\Bar $bar) {}
+    public function setBaz(\Baz $baz) {}
+
+    /**
+     * @return \SplObjectStorage
+     * @throws \OutOfRangeException
+     * @throws \InvalidArgumentException
+     * @throws \ErrorException
+     */
+    public function process(Iterator $it) {}
+
+    // ...
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="design.xml/CouplingBetweenObjects">
+            
+A class with to many dependencies has negative impacts on several quality
+aspects of a class. This includes quality criterias like stability,
+maintainability and understandability
+            
+        </label></div>
+<div class="property">minimum:
+            <input type="text" size="5" class="property-selector" id="property-design.xml/CouplingBetweenObjects-minimum" name="minimum" value="13" default="13"><div class="property-description"><label for="property-design.xml/CouplingBetweenObjects-minimum">Maximum number of acceptable dependencies.</label></div>
+</div>
+</div>
+</div>
+<h2>Naming Rules</h2><p class="ruleset-description">
+The Naming Ruleset contains a collection of rules about names - too long, too short, and so forth.
+    </p><div class="rule-section" name="naming.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-naming.xml/ShortVariable" name="naming.xml/ShortVariable"><div class="rule-name"><label for="phpmd-naming.xml/ShortVariable">ShortVariable</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Something {
+    private $q = 15; // VIOLATION - Field
+    public static function main( array $as ) {  // VIOLATION - Formal
+        $r = 20 + $this-&gt;q; // VIOLATION - Local
+        for (int $i = 0; $i &lt; 10; $i++) { // Not a Violation (inside FOR)
+            $r += $this-&gt;q;
+        }
+    }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="naming.xml/ShortVariable">
+Detects when a field, local, or parameter has a very short name.
+        </label></div>
+<div class="property">minimum:
+            <input type="text" size="5" class="property-selector" id="property-naming.xml/ShortVariable-minimum" name="minimum" value="3" default="3"><div class="property-description"><label for="property-naming.xml/ShortVariable-minimum">Minimum length for a variable, property or parameter name</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-naming.xml/LongVariable" name="naming.xml/LongVariable"><div class="rule-name"><label for="phpmd-naming.xml/LongVariable">LongVariable</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Something {
+    protected $reallyLongIntName = -3;  // VIOLATION - Field
+    public static function main( array $argumentsList[] ) { // VIOLATION - Formal
+        $otherReallyLongName = -5; // VIOLATION - Local
+        for ($interestingIntIndex = 0;  // VIOLATION - For
+             $interestingIntIndex &lt; 10;
+             $interestingIntIndex++ ) {
+        }
+    }
+}
+
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="naming.xml/LongVariable">
+Detects when a field, formal or local variable is declared with a long name.
+        </label></div>
+<div class="property">maximum:
+            <input type="text" size="5" class="property-selector" id="property-naming.xml/LongVariable-maximum" name="maximum" value="20" default="20"><div class="property-description"><label for="property-naming.xml/LongVariable-maximum">The variable length reporting threshold</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-naming.xml/ShortMethodName" name="naming.xml/ShortMethodName"><div class="rule-name"><label for="phpmd-naming.xml/ShortMethodName">ShortMethodName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class ShortMethod {
+    public function a( $index ) { // Violation
+    }
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="naming.xml/ShortMethodName">
+Detects when very short method names are used.
+        </label></div>
+<div class="property">minimum:
+            <input type="text" size="5" class="property-selector" id="property-naming.xml/ShortMethodName-minimum" name="minimum" value="3" default="3"><div class="property-description"><label for="property-naming.xml/ShortMethodName-minimum">Minimum length for a method or function name</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-naming.xml/ConstructorWithNameAsEnclosingClass" name="naming.xml/ConstructorWithNameAsEnclosingClass"><div class="rule-name"><label for="phpmd-naming.xml/ConstructorWithNameAsEnclosingClass">ConstructorWithNameAsEnclosingClass</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class MyClass {
+     // this is bad because it is PHP 4 style
+    public function MyClass() {}
+    // this is good because it is a PHP 5 constructor
+    public function __construct() {}
+}
+    
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="naming.xml/ConstructorWithNameAsEnclosingClass">
+A constructor method should not have the same name as the enclosing class, consider
+to use the PHP 5 __construct method.
+        </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-naming.xml/ConstantNamingConventions" name="naming.xml/ConstantNamingConventions"><div class="rule-name"><label for="phpmd-naming.xml/ConstantNamingConventions">ConstantNamingConventions</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Foo {
+    const MY_NUM = 0; // ok
+    const myTest = ""; // fail
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="naming.xml/ConstantNamingConventions">
+Class/Interface constant nanmes should always be defined in uppercase.
+        </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-naming.xml/BooleanGetMethodName" name="naming.xml/BooleanGetMethodName"><div class="rule-name"><label for="phpmd-naming.xml/BooleanGetMethodName">BooleanGetMethodName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+            
+class Foo {
+    /**
+     * @return boolean
+     */
+    public function getFoo() {} // bad
+    /**
+     * @return bool
+     */
+    public function isFoo(); // ok
+    /**
+     * @return boolean
+     */
+    public function getFoo($bar); // ok, unless checkParameterizedMethods=true
+}
+            
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="naming.xml/BooleanGetMethodName">
+Looks for methods named 'getX()' with 'boolean' as the return type. The convention
+is to name these methods 'isX()' or 'hasX()'.
+        </label></div>
+<div class="property">checkParameterizedMethods:
+            <input type="checkbox" class="property-selector" id="property-naming.xml/BooleanGetMethodName-checkParameterizedMethods" name="checkParameterizedMethods" value="false" default="false"><div class="property-description"><label for="property-naming.xml/BooleanGetMethodName-checkParameterizedMethods">Applies only to methods without parameter when set to true</label></div>
+</div>
+</div>
+</div>
+<h2>Unused Code Rules</h2><p class="ruleset-description">
+The Unused Code Ruleset contains a collection of rules that find unused code.
+    </p><div class="rule-section" name="unusedcode.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-unusedcode.xml/UnusedPrivateField" name="unusedcode.xml/UnusedPrivateField"><div class="rule-name"><label for="phpmd-unusedcode.xml/UnusedPrivateField">UnusedPrivateField</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+
+class Something
+{
+    private static $FOO = 2; // Unused
+    private $i = 5; // Unused
+    private $j = 6;
+    public function addOne()
+    {
+        return $this-&gt;j++;
+    }
+}
+
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="unusedcode.xml/UnusedPrivateField">
+Detects when a private field is declared and/or assigned a value, but not used.
+        </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-unusedcode.xml/UnusedLocalVariable" name="unusedcode.xml/UnusedLocalVariable"><div class="rule-name"><label for="phpmd-unusedcode.xml/UnusedLocalVariable">UnusedLocalVariable</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+
+class Foo {
+    public function doSomething()
+    {
+        $i = 5; // Unused
+    }
+}
+
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="unusedcode.xml/UnusedLocalVariable">
+Detects when a local variable is declared and/or assigned, but not used.
+        </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-unusedcode.xml/UnusedPrivateMethod" name="unusedcode.xml/UnusedPrivateMethod"><div class="rule-name"><label for="phpmd-unusedcode.xml/UnusedPrivateMethod">UnusedPrivateMethod</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+
+class Something
+{
+    private function foo() {} // unused
+}
+
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="unusedcode.xml/UnusedPrivateMethod">
+Unused Private Method detects when a private method is declared but is unused.
+        </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpmd-unusedcode.xml/UnusedFormalParameter" name="unusedcode.xml/UnusedFormalParameter"><div class="rule-name"><label for="phpmd-unusedcode.xml/UnusedFormalParameter">UnusedFormalParameter</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+
+class Foo
+{
+    private function bar($howdy)
+    {
+        // $howdy is not used
+    }
+}
+
+        </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="unusedcode.xml/UnusedFormalParameter">
+Avoid passing parameters to methods or constructors and then not using those parameters.
+        </label></div>
+</div>
+</div>
+        </div>
+        <div id="phpcs-container" class="rule-container">
+            <h2>PHP Code Sniffer</h2>
+            Ruleset name: 
+            <input type="text" id="phpcs-ruleset-name" size="30" value="pcsg-generated-ruleset"/>
+            <br/>
+            <br/>
+            Ruleset description:
+            <br/>
+            <textarea id="phpcs-ruleset-description" class="ruleset-description">Created with the PHP Coding Standard Generator. http://edorian.github.com/php-coding-standard-generator/</textarea>
+<h2>Generic - Classes</h2><p class="ruleset-description">
+Sniffs related to PHP classes
+  </p><div class="rule-section" name="Generic.Classes.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Classes.DuplicateClassName" name="Generic.Classes.DuplicateClassName"><div class="rule-name"><label for="phpcs-Generic.Classes.DuplicateClassName">DuplicateClassName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// bar.php
+class foo {}
+// foo.php
+class foo {}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Classes.DuplicateClassName">
+A class or interface must not be defined in multiple files.
+    </label></div>
+</div></div>
+<h2>Generic - Code Analysis</h2><p class="ruleset-description">
+Sniff for detecting superfluously complex expressions and trivial but harder to spot mistakes
+  </p><div class="rule-section" name="Generic.CodeAnalysis.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.CodeAnalysis.EmptyStatement" name="Generic.CodeAnalysis.EmptyStatement"><div class="rule-name"><label for="phpcs-Generic.CodeAnalysis.EmptyStatement">EmptyStatement</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+if($x == 5) {
+  // nothing in the statements body
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.CodeAnalysis.EmptyStatement">
+Statements may not have an empty body.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.CodeAnalysis.ForLoopShouldBeWhileLoop" name="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"><div class="rule-name"><label for="phpcs-Generic.CodeAnalysis.ForLoopShouldBeWhileLoop">ForLoopShouldBeWhileLoop</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+class Foo {
+  public function bar($x) {
+    for (;$x &gt; 5;) { /* ... */ } // No Init or Update part, may as well be: while ($x &gt; 5)
+  }
+}      
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop">
+All 'for' loops that could be simplified to a 'while' loop must be simplified.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.CodeAnalysis.ForLoopWithTestFunctionCall" name="Generic.CodeAnalysis.ForLoopWithTestFunctionCall"><div class="rule-name"><label for="phpcs-Generic.CodeAnalysis.ForLoopWithTestFunctionCall">ForLoopWithTestFunctionCall</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+ class Foo {
+   public function bar($x) {
+     $a = array(1, 2, 3, 4);
+     for ($i = 0; $i &lt; count($a); $i++) {
+       $a[$i] *= $i;
+     }
+   }
+ }
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.CodeAnalysis.ForLoopWithTestFunctionCall">
+For loops test expressions may not have function calls in them.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.CodeAnalysis.JumbledIncrementer" name="Generic.CodeAnalysis.JumbledIncrementer"><div class="rule-name"><label for="phpcs-Generic.CodeAnalysis.JumbledIncrementer">JumbledIncrementer</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+ function bar($x) {
+   for ($i = 0; $i &lt; 10; $i++) {
+     for ($k = 0; $k &lt; 20; $i++) {
+       echo 'Hello';
+     }
+   }
+ }
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.CodeAnalysis.JumbledIncrementer">
+Reports cases where incrementer jumbling might happen in 'for' loops.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.CodeAnalysis.UnconditionalIfStatement" name="Generic.CodeAnalysis.UnconditionalIfStatement"><div class="rule-name"><label for="phpcs-Generic.CodeAnalysis.UnconditionalIfStatement">UnconditionalIfStatement</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+if(true) {
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.CodeAnalysis.UnconditionalIfStatement">
+If- and elseif-statements may not be unconditional.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.CodeAnalysis.UnnecessaryFinalModifier" name="Generic.CodeAnalysis.UnnecessaryFinalModifier"><div class="rule-name"><label for="phpcs-Generic.CodeAnalysis.UnnecessaryFinalModifier">UnnecessaryFinalModifier</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+final class Bar {
+  final public function() {
+  }
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.CodeAnalysis.UnnecessaryFinalModifier">
+No unnecessary final modifiers inside of final classes.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.CodeAnalysis.UnusedFunctionParameter" name="Generic.CodeAnalysis.UnusedFunctionParameter"><div class="rule-name"><label for="phpcs-Generic.CodeAnalysis.UnusedFunctionParameter">UnusedFunctionParameter</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+function bar($x, $y) {
+  echo $y; // No $x usage
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.CodeAnalysis.UnusedFunctionParameter">
+No unused function parameters are allowed.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.CodeAnalysis.UselessOverridingMethod" name="Generic.CodeAnalysis.UselessOverridingMethod"><div class="rule-name"><label for="phpcs-Generic.CodeAnalysis.UselessOverridingMethod">UselessOverridingMethod</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+class Foo {
+  public function __construct($foo, $bar) {
+    parent::__construct($foo, $bar);
+  }
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.CodeAnalysis.UselessOverridingMethod">
+No unnecessary overridden methods, that simply call their parent, are allowed.
+    </label></div>
+</div>
+</div>
+<h2>Generic - Commenting</h2><p class="ruleset-description">
+Detects patterns in comments
+  </p><div class="rule-section" name="Generic.Commenting.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Commenting.Todo" name="Generic.Commenting.Todo"><div class="rule-name"><label for="phpcs-Generic.Commenting.Todo">Todo</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+function worldPeace() {
+  // TODO: Achieve this
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Commenting.Todo">
+      There may not be any 'TODO' comments
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Commenting.Fixme" name="Generic.Commenting.Fixme"><div class="rule-name"><label for="phpcs-Generic.Commenting.Fixme">Fixme</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+function worldPeace() {
+  // FIXME: Not working yet
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Commenting.Fixme">
+      There may not be any 'FIXME' comments
+    </label></div>
+</div>
+</div>
+<h2>Generic - ControlStructures</h2><p class="ruleset-description">
+Sniffs related to control structures
+  </p><div class="rule-section" name="Generic.ControlStructures.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.ControlStructures.InlineControlStructure" name="Generic.ControlStructures.InlineControlStructure"><div class="rule-name"><label for="phpcs-Generic.ControlStructures.InlineControlStructure">InlineControlStructure</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// No braces! Gets reported!
+while(true) $x++; if($x &gt; 10); break;
+
+// Also not allowed
+if($x)
+  continue;
+
+//Everything needs braces
+if($x) {
+  continue;
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.ControlStructures.InlineControlStructure">
+Inline control structures like 'if($a) continue;' are not allowed
+    </label></div>
+<div class="property">error:
+            <input type="checkbox" checked class="property-selector" id="property-Generic.ControlStructures.InlineControlStructure-error" name="error" value="true" default="true"><div class="property-description"><label for="property-Generic.ControlStructures.InlineControlStructure-error">If true, an error will be reported; otherwise a warning.</label></div>
+</div>
+</div></div>
+<h2>Generic - Debug</h2><p class="ruleset-description">
+Javascript related checking options. Show in general not be needed for phpcs. The named tools have to be installed for these sniffs to work.
+  </p><div class="rule-section" name="Generic.Debug.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Debug.ClosureLinter" name="Generic.Debug.ClosureLinter"><div class="rule-name"><label for="phpcs-Generic.Debug.ClosureLinter">ClosureLinter</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Debug.ClosureLinter">
+Runs 'gjslint' on your javascript files.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Debug.JSHint" name="Generic.Debug.JSHint"><div class="rule-name"><label for="phpcs-Generic.Debug.JSHint">JSHint</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Debug.JSHint">
+      Runs 'jshint' on your javascript files.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Debug.CSSLint" name="Generic.Debug.CSSLint"><div class="rule-name"><label for="phpcs-Generic.Debug.CSSLint">CSSLint</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Debug.CSSLint">
+      Runs 'csslint' on your css files.
+    </label></div>
+</div>
+</div>
+<h2>Generic - Files</h2><p class="ruleset-description">
+Sniffs related to file layout
+  </p><div class="rule-section" name="Generic.Files.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Files.ByteOrderMark" name="Generic.Files.ByteOrderMark"><div class="rule-name"><label for="phpcs-Generic.Files.ByteOrderMark">ByteOrderMark</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Files.ByteOrderMark">
+Reports cases where a byte order mark is found in any PHP file to avoid application failures.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Files.LineEndings" name="Generic.Files.LineEndings"><div class="rule-name"><label for="phpcs-Generic.Files.LineEndings">LineEndings</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// One of those lines is wrong. $eolChar decides which one
+echo "My line";\r\n
+echo "My other line";\n
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Files.LineEndings">
+Line endings must be $eolChar. Defaults to making sure that everything has UNIX line endings.
+    </label></div>
+<div class="property">eolChar:
+            <input type="text" size="5" class="property-selector" id="property-Generic.Files.LineEndings-eolChar" name="eolChar" value="\n" default="\n"><div class="property-description"><label for="property-Generic.Files.LineEndings-eolChar">Use \n for UNIX line endings and \r\n for WINDOWS line endings.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Files.LineLength" name="Generic.Files.LineLength"><div class="rule-name"><label for="phpcs-Generic.Files.LineLength">LineLength</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Files.LineLength">
+Lines should not longer than $lineLimit (warning) and must not be longer than $absoluteLineLimit (error).
+
+If $lineLimit and $absoluteLineLimit are configured to have the same value only one error is reported.
+To turn of $absoluteLineLimit '0' can be used.
+    </label></div>
+<div class="property">lineLimit:
+            <input type="text" size="5" class="property-selector" id="property-Generic.Files.LineLength-lineLimit" name="lineLimit" value="80" default="80"><div class="property-description"><label for="property-Generic.Files.LineLength-lineLimit">Lines longer than this value will raising a warning</label></div>
+</div>
+<div class="property">absoluteLineLimit:
+            <input type="text" size="5" class="property-selector" id="property-Generic.Files.LineLength-absoluteLineLimit" name="absoluteLineLimit" value="120" default="120"><div class="property-description"><label for="property-Generic.Files.LineLength-absoluteLineLimit">Lines longer than this value will raising an error</label></div>
+</div>
+</div>
+</div>
+<h2>Generic - Formatting</h2><p class="ruleset-description">
+Sniffs related to basic formatting
+  </p><div class="rule-section" name="Generic.Formatting.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Formatting.DisallowMultipleStatements" name="Generic.Formatting.DisallowMultipleStatements"><div class="rule-name"><label for="phpcs-Generic.Formatting.DisallowMultipleStatements">DisallowMultipleStatements</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+$x = 6; $y = 7; $z = 6 * 7;
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Formatting.DisallowMultipleStatements">
+There must be only on statement per line.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Formatting.MultipleStatementAlignment" name="Generic.Formatting.MultipleStatementAlignment"><div class="rule-name"><label for="phpcs-Generic.Formatting.MultipleStatementAlignment">MultipleStatementAlignment</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+//Valid
+$stuff      = 1;
+$otherStuff = 2;
+//Invalid
+$stuff = 1;
+$otherStuff = 2;
+//Also valid
+$myVar           = 1
+$myOtherVariable = 2;
+
+$x = 100; // Must not be indeted because of the blank line!
+while($x--) {
+  echo $x, PHP_EOL;
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Formatting.MultipleStatementAlignment">
+If there are multiple adjacent assignments, the equals signs of each assignment have to be aligned.
+    </label></div>
+<div class="property">error:
+            <input type="checkbox" checked class="property-selector" id="property-Generic.Formatting.MultipleStatementAlignment-error" name="error" value="true" default="true"><div class="property-description"><label for="property-Generic.Formatting.MultipleStatementAlignment-error">If true, an error will be reported; otherwise a warning.</label></div>
+</div>
+<div class="property">maxPadding:
+            <input type="text" size="5" class="property-selector" id="property-Generic.Formatting.MultipleStatementAlignment-maxPadding" name="maxPadding" value="1000" default="1000"><div class="property-description"><label for="property-Generic.Formatting.MultipleStatementAlignment-maxPadding">The maximum amount of padding before the alignment is ignored.</label></div>
+</div>
+<div class="property">ignoreMultiLine:
+            <input type="checkbox" class="property-selector" id="property-Generic.Formatting.MultipleStatementAlignment-ignoreMultiLine" name="ignoreMultiLine" value="false" default="false"><div class="property-description"><label for="property-Generic.Formatting.MultipleStatementAlignment-ignoreMultiLine">If true, multi-line assignments are not checked.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Formatting.NoSpaceAfterCast" name="Generic.Formatting.NoSpaceAfterCast"><div class="rule-name"><label for="phpcs-Generic.Formatting.NoSpaceAfterCast">NoSpaceAfterCast</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+//Valid
+$x = (string)1;
+//Invalid
+$x = (string) 1;
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Formatting.NoSpaceAfterCast">
+There may be no spaces after cast statements.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Formatting.SpaceAfterCast" name="Generic.Formatting.SpaceAfterCast"><div class="rule-name"><label for="phpcs-Generic.Formatting.SpaceAfterCast">SpaceAfterCast</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+//Valid
+$x = (string) 1;
+//Invalid
+$x = (string)1;
+//Also invalid
+$x = (string)  1; // Only 1 space allowed!
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Formatting.SpaceAfterCast">
+There must be a space after a cast statement.
+    </label></div>
+</div>
+</div>
+<h2>Generic - Functions</h2><p class="ruleset-description">
+Sniffs related to function arguments and brace styles
+  </p><div class="rule-section" name="Generic.Functions.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Functions.CallTimePassByReference" name="Generic.Functions.CallTimePassByReference"><div class="rule-name"><label for="phpcs-Generic.Functions.CallTimePassByReference">CallTimePassByReference</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+//Invalid
+function foo($bar) {
+  $bar++;
+}
+$x = 1;
+foo(&amp;$x);
+//Valid
+function foo(&amp;$bar) {
+  $bar++;
+}
+$x = 1;
+foo($x);
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Functions.CallTimePassByReference">
+Disallows usage of call-time pass-by-reference. See: http://php.net/manual/en/language.references.pass.php
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Functions.FunctionCallArgumentSpacing" name="Generic.Functions.FunctionCallArgumentSpacing"><div class="rule-name"><label for="phpcs-Generic.Functions.FunctionCallArgumentSpacing">FunctionCallArgumentSpacing</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+NO SAMPLE AVAILABLE. Contributions welcome.
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Functions.FunctionCallArgumentSpacing">
+NO DOCUMENTATION AVAILABLE. Contributions welcome. I didn't want to reverse engineer what this is supposed to do and how it works *exactly*.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Functions.OpeningFunctionBraceBsdAllman" name="Generic.Functions.OpeningFunctionBraceBsdAllman"><div class="rule-name"><label for="phpcs-Generic.Functions.OpeningFunctionBraceBsdAllman">OpeningFunctionBraceBsdAllman</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+//Valid
+function foo()
+{
+    // ...
+}
+//Invalid
+function foo() {
+    // ...
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Functions.OpeningFunctionBraceBsdAllman">
+Function declarations must follow the "BSD/Allman style".
+
+The function brace is on the line following the function declaration and is indented to the same column as the start of the function declaration.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Functions.OpeningFunctionBraceKernighanRitchie" name="Generic.Functions.OpeningFunctionBraceKernighanRitchie"><div class="rule-name"><label for="phpcs-Generic.Functions.OpeningFunctionBraceKernighanRitchie">OpeningFunctionBraceKernighanRitchie</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+//Valid
+function foo() {
+    // ...
+}
+//Invalid
+function foo()
+{
+    // ...
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Functions.OpeningFunctionBraceKernighanRitchie">
+Function declarations follow the "Kernighan/Ritchie style".
+
+The function brace is on the same line as the function declaration. One space is required between the closing parenthesis and the brace.
+    </label></div>
+</div>
+</div>
+<h2>Generic - Metrics</h2><p class="ruleset-description">
+Sniffs related to code metrics
+  </p><div class="rule-section" name="Generic.Metrics.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Metrics.CyclomaticComplexity" name="Generic.Metrics.CyclomaticComplexity"><div class="rule-name"><label for="phpcs-Generic.Metrics.CyclomaticComplexity">CyclomaticComplexity</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+Just check Wikipedia for the details
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Metrics.CyclomaticComplexity">
+Disallows to complex function determined by the cyclomatic complexity (McCabe, http://en.wikipedia.org/wiki/Cyclomatic_complexity) of that function.
+
+If $absoluteComplexity has the same value as $complexity then there will be only errors and no warnings.
+    </label></div>
+<div class="property">complexity:
+            <input type="text" size="5" class="property-selector" id="property-Generic.Metrics.CyclomaticComplexity-complexity" name="complexity" value="10" default="10"><div class="property-description"><label for="property-Generic.Metrics.CyclomaticComplexity-complexity">More complex functions will generate a warning</label></div>
+</div>
+<div class="property">absoluteComplexity:
+            <input type="text" size="5" class="property-selector" id="property-Generic.Metrics.CyclomaticComplexity-absoluteComplexity" name="absoluteComplexity" value="20" default="20"><div class="property-description"><label for="property-Generic.Metrics.CyclomaticComplexity-absoluteComplexity">More complex functions will generate an error</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Metrics.NestingLevel" name="Generic.Metrics.NestingLevel"><div class="rule-name"><label for="phpcs-Generic.Metrics.NestingLevel">NestingLevel</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Too deep!
+if($a) {
+  if($b) {
+    if($c) {
+      if($d) {
+        if($e) {
+          if($f) {
+            echo 'Stuff';
+          }
+        }
+      }
+    }
+  }
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Metrics.NestingLevel">
+Defines a maximum $nestingLevel and $absoluteNestingLevel for functions.
+
+If $nestingLevel has the same value as $absoluteNestingLevel then there will be only errors and no warnings.
+    </label></div>
+<div class="property">nestingLevel:
+            <input type="text" size="5" class="property-selector" id="property-Generic.Metrics.NestingLevel-nestingLevel" name="nestingLevel" value="5" default="5"><div class="property-description"><label for="property-Generic.Metrics.NestingLevel-nestingLevel">Deeper nested functions will generate a warning</label></div>
+</div>
+<div class="property">absoluteNestingLevel:
+            <input type="text" size="5" class="property-selector" id="property-Generic.Metrics.NestingLevel-absoluteNestingLevel" name="absoluteNestingLevel" value="10" default="10"><div class="property-description"><label for="property-Generic.Metrics.NestingLevel-absoluteNestingLevel">Deeper nested functions will generate a warning</label></div>
+</div>
+</div>
+</div>
+<h2>Generic - NamingConventions</h2><p class="ruleset-description">
+Sniffs related to naming things
+  </p><div class="rule-section" name="Generic.NamingConventions.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.NamingConventions.ConstructorName" name="Generic.NamingConventions.ConstructorName"><div class="rule-name"><label for="phpcs-Generic.NamingConventions.ConstructorName">ConstructorName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+class foo {
+  // Old style constructor is not allowed!
+  public function foo() {
+
+  }
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.NamingConventions.ConstructorName">
+Disallows usage of PHP 4 style constructors
+    </label></div>
+<div class="property">error:
+            <input type="checkbox" checked class="property-selector" id="property-Generic.NamingConventions.ConstructorName-error" name="error" value="true" default="true"><div class="property-description"><label for="property-Generic.NamingConventions.ConstructorName-error">If true, an error will be reported; otherwise a warning.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.NamingConventions.UpperCaseConstantName" name="Generic.NamingConventions.UpperCaseConstantName"><div class="rule-name"><label for="phpcs-Generic.NamingConventions.UpperCaseConstantName">UpperCaseConstantName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+const FOO = 'ok';
+define('bad', 7);
+x = bad; // Not ok
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.NamingConventions.UpperCaseConstantName">
+      Constants must be uppercase
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.NamingConventions.CamelCapsFunctionName" name="Generic.NamingConventions.CamelCapsFunctionName"><div class="rule-name"><label for="phpcs-Generic.NamingConventions.CamelCapsFunctionName">CamelCapsFunctionName</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.NamingConventions.CamelCapsFunctionName">
+      Ensures camel case function naming and that only PHP core functions have a double underscore
+    </label></div>
+</div>
+</div>
+<h2>Generic - PHP</h2><p class="ruleset-description">
+Sniffs related to basic PHP usage
+  </p><div class="rule-section" name="Generic.PHP.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.PHP.DeprecatedFunctions" name="Generic.PHP.DeprecatedFunctions"><div class="rule-name"><label for="phpcs-Generic.PHP.DeprecatedFunctions">DeprecatedFunctions</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Raises error
+set_magic_quotes_runtime(false);
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.PHP.DeprecatedFunctions">
+Disallows the use of any deprecated functions
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.PHP.DisallowShortOpenTag" name="Generic.PHP.DisallowShortOpenTag"><div class="rule-name"><label for="phpcs-Generic.PHP.DisallowShortOpenTag">DisallowShortOpenTag</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+&lt;? echo 'This is not acceptable!';
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.PHP.DisallowShortOpenTag">
+Makes sure that shorthand PHP open tags are not used.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.PHP.ForbiddenFunctions" name="Generic.PHP.ForbiddenFunctions"><div class="rule-name"><label for="phpcs-Generic.PHP.ForbiddenFunctions">ForbiddenFunctions</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+delete($foo);
+sizeof($bar);
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.PHP.ForbiddenFunctions">
+Disallows the use of alias functions that are kept in PHP for compatibility with older versions.
+
+Can be used to forbid the use of any function when creating your own Sniff class extending from this class.
+    </label></div>
+<div class="property">error:
+            <input type="checkbox" checked class="property-selector" id="property-Generic.PHP.ForbiddenFunctions-error" name="error" value="true" default="true"><div class="property-description"><label for="property-Generic.PHP.ForbiddenFunctions-error">If true, an error will be reported; otherwise a warning.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.PHP.LowerCaseConstant" name="Generic.PHP.LowerCaseConstant"><div class="rule-name"><label for="phpcs-Generic.PHP.LowerCaseConstant">LowerCaseConstant</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+true, false, null // Good
+TRUE, FALSE, NULL // Bad
+TrUe, FaLsE, NuLl // Also bad
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.PHP.LowerCaseConstant">
+The constants 'true', 'false' or 'null' must be written in lowercase.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.PHP.NoSilencedErrors" name="Generic.PHP.NoSilencedErrors"><div class="rule-name"><label for="phpcs-Generic.PHP.NoSilencedErrors">NoSilencedErrors</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+@stuff();
+if(@$_GET['stuff']) { }
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.PHP.NoSilencedErrors">
+Disallows usage of the @ operator.
+    </label></div>
+<div class="property">error:
+            <input type="checkbox" checked class="property-selector" id="property-Generic.PHP.NoSilencedErrors-error" name="error" value="true" default="true"><div class="property-description"><label for="property-Generic.PHP.NoSilencedErrors-error">If true, an error will be reported; otherwise a warning.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.PHP.UpperCaseConstant" name="Generic.PHP.UpperCaseConstant"><div class="rule-name"><label for="phpcs-Generic.PHP.UpperCaseConstant">UpperCaseConstant</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+TRUE, FALSE, NULL // Good
+true, false, null // Bad
+TrUe, FaLsE, NuLl // Also bad
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.PHP.UpperCaseConstant">
+The constants 'TRUE', 'FALSE' or 'NULL' must be written in uppercase.
+    </label></div>
+</div>
+</div>
+<h2>Generic - Strings</h2><p class="ruleset-description">
+Sniffs related to string handling
+  </p><div class="rule-section" name="Generic.Strings.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.Strings.UnnecessaryStringConcat" name="Generic.Strings.UnnecessaryStringConcat"><div class="rule-name"><label for="phpcs-Generic.Strings.UnnecessaryStringConcat">UnnecessaryStringConcat</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+echo "hi" . "ho";
+// Also not allowed:
+echo "hi"
+    ."there"
+    ."how"
+    ."are"
+    ."you?";
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.Strings.UnnecessaryStringConcat">
+Strings must not be concatenated when they could be written as one string.
+    </label></div>
+<div class="property">error:
+            <input type="checkbox" checked class="property-selector" id="property-Generic.Strings.UnnecessaryStringConcat-error" name="error" value="true" default="true"><div class="property-description"><label for="property-Generic.Strings.UnnecessaryStringConcat-error">If true, an error will be reported; otherwise a warning.</label></div>
+</div>
+</div></div>
+<h2>Generic - VersionControl</h2><p class="ruleset-description">
+Sniffs related to version control
+  </p><div class="rule-section" name="Generic.VersionControl.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.VersionControl.SubversionProperties" name="Generic.VersionControl.SubversionProperties"><div class="rule-name"><label for="phpcs-Generic.VersionControl.SubversionProperties">SubversionProperties</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.VersionControl.SubversionProperties">
+Ensures expected subversion properties exist on files.
+
+By default the expected properties are svn:keywords and svn:eol-style.
+    </label></div>
+</div></div>
+<h2>Generic - WhiteSpace</h2><p class="ruleset-description">
+Sniffs related whitespace usage for structuring source files.
+  </p><div class="rule-section" name="Generic.WhiteSpace.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.WhiteSpace.DisallowTabIndent" name="Generic.WhiteSpace.DisallowTabIndent"><div class="rule-name"><label for="phpcs-Generic.WhiteSpace.DisallowTabIndent">DisallowTabIndent</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+if($x == 1) {
+TAB something();
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.WhiteSpace.DisallowTabIndent">
+Spaces, not tabs, must be used for indentation.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.WhiteSpace.ScopeIndent" name="Generic.WhiteSpace.ScopeIndent"><div class="rule-name"><label for="phpcs-Generic.WhiteSpace.ScopeIndent">ScopeIndent</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+if($x == 1) {
+        echo "hi"; // should be 4 spaces not 8!
+}
+if($x == 1) {
+    if($y == 2) {
+      echo "hi"; // should be 8 spaces not 6!
+    }
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.WhiteSpace.ScopeIndent">
+      Checks that control structures are structured correctly and their content is indented correctly.
+
+      This sniff will throw errors if tabs are used for indentation rather than spaces.
+    </label></div>
+<div class="property">indent:
+            <input type="text" size="5" class="property-selector" id="property-Generic.WhiteSpace.ScopeIndent-indent" name="indent" value="4" default="4"><div class="property-description"><label for="property-Generic.WhiteSpace.ScopeIndent-indent">The number of spaces code should be indented.</label></div>
+</div>
+<div class="property">exact:
+            <input type="checkbox" checked class="property-selector" id="property-Generic.WhiteSpace.ScopeIndent-exact" name="exact" value="true" default="true"><div class="property-description"><label for="property-Generic.WhiteSpace.ScopeIndent-exact">Does the indent need to be exactly right? If TRUE, indent needs to be exactly $ident spaces.  If FALSE indent needs to be at least $ident spaces (but can be more)</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Generic.WhiteSpace.DisallowSpaceIndent" name="Generic.WhiteSpace.DisallowSpaceIndent"><div class="rule-name"><label for="phpcs-Generic.WhiteSpace.DisallowSpaceIndent">DisallowSpaceIndent</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Generic.WhiteSpace.DisallowSpaceIndent">
+Tabs, not spaces, must be used for indentation.    </label></div>
+</div>
+</div>
+<h2>MySource - PHP</h2><p class="ruleset-description">
+Sniffs related to basic PHP usage
+  </p><div class="rule-section" name="MySource.PHP.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-MySource.PHP.EvalObjectFactory" name="MySource.PHP.EvalObjectFactory"><div class="rule-name"><label for="phpcs-MySource.PHP.EvalObjectFactory">EvalObjectFactory</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+$class = "...";
+$args = "1, 'string', 'dynamicBuildingArgs'";
+eval("$x = new $bar($args)");
+// Use
+$x = new $bar($arg1, $arg2); // No eval
+// Or use Reflection
+$x = new ReflectionClass($bar);
+$args = array(1, 'string', 'dynamicBuildingArgs');
+$x-&gt;newInstanceArgs($args);
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="MySource.PHP.EvalObjectFactory">
+Ensures that eval() is not used to create objects.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-MySource.PHP.GetRequestData" name="MySource.PHP.GetRequestData"><div class="rule-name"><label for="phpcs-MySource.PHP.GetRequestData">GetRequestData</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+class foo {
+    function bar() {
+        $x = $_GET['hi']; // Forbidden!
+    }
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="MySource.PHP.GetRequestData">
+Disallows the direct usage of $_REQUEST, $_GET, $_POST and $_FILES.
+It's only allowed in a class called "Security" in a function called "getRequestData".
+The Sniff is very specific and not useful in general but it can be used as template sniff for your own take on it.
+
+If you are using a request object instantiated in your bootstrap or a external lib then this sniff will also work for you. 
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-MySource.PHP.ReturnFunctionValue" name="MySource.PHP.ReturnFunctionValue"><div class="rule-name"><label for="phpcs-MySource.PHP.ReturnFunctionValue">ReturnFunctionValue</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+function bar() {
+    return foo();
+}
+// Allowed
+function bar() {
+    $x = foo();
+    return $x;
+}
+
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="MySource.PHP.ReturnFunctionValue">
+      Warns when function values are returned directly. The Sniff enforces that the result of a function call should be assigned to a variable before being returned.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-MySource.PHP.AjaxNullComparison" name="MySource.PHP.AjaxNullComparison"><div class="rule-name"><label for="phpcs-MySource.PHP.AjaxNullComparison">AjaxNullComparison</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="MySource.PHP.AjaxNullComparison">
+      Functions with an @api annotation may not make null comparisons but have to use empty()
+    </label></div>
+</div>
+</div>
+<h2>PEAR - Classes</h2><p class="ruleset-description">
+PEAR coding standard sniffs related to classes
+  </p><div class="rule-section" name="PEAR.Classes.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.Classes.ClassDeclaration" name="PEAR.Classes.ClassDeclaration"><div class="rule-name"><label for="phpcs-PEAR.Classes.ClassDeclaration">ClassDeclaration</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+&lt;?php
+class Foo_Bar
+{
+
+    //... code goes here
+
+}
+?&gt;
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.Classes.ClassDeclaration">
+Classes must have their opening brace on a new line and must indeted by $indent spaces.
+
+http://pear.php.net/manual/en/standards.classdef.php
+    </label></div>
+<div class="property">indent:
+            <input type="text" size="5" class="property-selector" id="property-PEAR.Classes.ClassDeclaration-indent" name="indent" value="4" default="4"><div class="property-description"><label for="property-PEAR.Classes.ClassDeclaration-indent">The number of spaces code should be indented</label></div>
+</div>
+</div></div>
+<h2>PEAR - Commenting</h2><p class="ruleset-description">
+Sniffs related to how PEAR thinks structures should be commented.
+  </p><div class="rule-section" name="PEAR.Commenting.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.Commenting.ClassComment" name="PEAR.Commenting.ClassComment"><div class="rule-name"><label for="phpcs-PEAR.Commenting.ClassComment">ClassComment</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+Rules:
+- A doc comment must exist.
+- There has to be a blank newline after the short description.
+- There has to be a blank newline between the long and short description.
+- There has to be a blank newline between the long description and tags.
+- The tags have to appear in the following order. A question mark denotes optional tags:
+  @category, @package, @subpackage?, @author, @copyright?,
+  @license?, @version, @link, @see?, @since?, @deprecated?
+- Check the indentation of each tag.
+- Check required and optional tags and the format of their content.
+
+/**
+ * Sample class short comment
+ *
+ * Sample long desc
+ *
+ * @category  Something
+ * @package   MyPackage
+ * @author    name
+ * @copyright something
+ * @license   BSD Licence
+ * @version
+ * @link      url
+ */
+ class TheCommentedClass {
+ }
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.Commenting.ClassComment">
+Enforces class comments and their format. For a detailed rule description check the example section.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.Commenting.FileComment" name="PEAR.Commenting.FileComment"><div class="rule-name"><label for="phpcs-PEAR.Commenting.FileComment">FileComment</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+Rules:
+- A doc comment must exist.
+- There has to be a blank newline after the short description.
+- There has to be a blank newline between the long and short description.
+- There has to be a blank newline between the long description and tags.
+- A PHP version must be specified.
+- The tags have to appear in the following order. A question mark denotes optional tags:
+  @category, @package, @subpackage?, @author, @copyright?,
+  @license?, @version, @link, @see?, @since?, @deprecated?
+- Check the indentation of each tag.
+- Check required and optional tags and the format of their content.
+
+/**
+ * Sample file short comment
+ *
+ * Sample long desc
+ *
+ * PHP Version: 1.2.3
+ *
+ * @category  Something
+ * @package   MyPackage
+ * @author    name
+ * @copyright something
+ * @license   BSD Licence
+ * @version
+ * @link      url
+ */
+
+/**
+ * // class docs
+ */
+class MyClass {
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.Commenting.FileComment">
+Enforces file comments and their format. For a detailed rule description check the example section.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.Commenting.FunctionComment" name="PEAR.Commenting.FunctionComment"><div class="rule-name"><label for="phpcs-PEAR.Commenting.FunctionComment">FunctionComment</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+Rules:
+- A comment must exist
+- There must be a blank newline after the short description.
+- There must be a blank newline between the long and short description.
+- There must be a blank newline between the long description and tags.
+- Parameter names must represent those in the method.
+- Parameter comments must be in the correct order
+- Parameter comments must be complete
+- A space must be present before the first and after the last parameter
+- A return type tag must exists
+- There must be one blank line between body and headline comments
+- Any throw tag must have an exception class.
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.Commenting.FunctionComment">
+Enforces function comments and their format. For a detailed rule description check the example section.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.Commenting.InlineComment" name="PEAR.Commenting.InlineComment"><div class="rule-name"><label for="phpcs-PEAR.Commenting.InlineComment">InlineComment</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+function foo {
+    # Invalid comment
+    // Valid comment
+    /* Also valid */
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.Commenting.InlineComment">
+Checks that no perl-style comments (#) are used.
+    </label></div>
+</div>
+</div>
+<h2>PEAR - ControlStructures</h2><p class="ruleset-description">
+Sniffs related to control structures
+  </p><div class="rule-section" name="PEAR.ControlStructures.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.ControlStructures.ControlSignature" name="PEAR.ControlStructures.ControlSignature"><div class="rule-name"><label for="phpcs-PEAR.ControlStructures.ControlSignature">ControlSignature</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+do {EOL...} while (...);EOL
+
+while (...) {EOL
+
+for (...) {EOL
+
+if (...) {EOL
+
+foreach (...) {EOL
+
+} else if (...) {EOL
+
+} elseif (...) {EOL
+
+} else {EOL
+
+do {EOL'
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.ControlStructures.ControlSignature">
+Enforces show control signatures are spaced. See the examples.
+Also a great base class to easily specify ow you want your own signatures to be spaced.
+    </label></div>
+<div class="property">ignoreComments:
+            <input type="checkbox" checked class="property-selector" id="property-PEAR.ControlStructures.ControlSignature-ignoreComments" name="ignoreComments" value="true" default="true"><div class="property-description"><label for="property-PEAR.ControlStructures.ControlSignature-ignoreComments">If true, comments will be ignored if they are found in the code.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.ControlStructures.MultiLineCondition" name="PEAR.ControlStructures.MultiLineCondition"><div class="rule-name"><label for="phpcs-PEAR.ControlStructures.MultiLineCondition">MultiLineCondition</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+if (($condition1
+    || $condition2)
+    &amp;&amp; $condition3
+    &amp;&amp; $condition4
+    &amp;&amp; $condition5
+) {
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.ControlStructures.MultiLineCondition">
+Closing parenthesis of a multi-line IF statement must be on a new line,
+each line must begin with a boolean operator and there must be a single space between the closing parenthesis and the opening brace.
+    </label></div>
+</div>
+</div>
+<h2>PEAR - Files</h2><p class="ruleset-description">
+Sniffs related to how file inclusion works in PEAR.
+  </p><div class="rule-section" name="PEAR.Files.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.Files.IncludingFile" name="PEAR.Files.IncludingFile"><div class="rule-name"><label for="phpcs-PEAR.Files.IncludingFile">IncludingFile</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// These are statements and should not have brackets.
+require_once('blank.inc');
+require('blank.inc');
+
+// Conditionally including a class file: use include_once
+if ($test) {
+    require_once 'blank.inc';
+    require 'blank.inc';
+}
+
+// Unconditionally including a class file: use require_once
+include_once 'blank.inc';
+include 'blank.inc';
+
+// These are ok
+if ($test) {
+    include_once 'blank.inc';
+    include 'blank.inc';
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.Files.IncludingFile">
+Checks that the include_once is used in conditional situations, and require_once is used elsewhere.
+Also checks that brackets do not surround the file being included.
+    </label></div>
+</div></div>
+<h2>PEAR - Formatting</h2><p class="ruleset-description">
+Sniffs related to how code should be formatted.
+  </p><div class="rule-section" name="PEAR.Formatting.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.Formatting.MultiLineAssignment" name="PEAR.Formatting.MultiLineAssignment"><div class="rule-name"><label for="phpcs-PEAR.Formatting.MultiLineAssignment">MultiLineAssignment</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Valid
+$GLOBALS['TSFE']-&gt;additionalHeaderData[$this-&gt;strApplicationName]
+    = $this-&gt;xajax-&gt;getJavascript(t3lib_extMgm::siteRelPath('nr_xajax'));
+
+// Invalid, wrong indention depth
+$GLOBALS['TSFE']-&gt;additionalHeaderData[$this-&gt;strApplicationName]
+     = $this-&gt;xajax-&gt;getJavascript(t3lib_extMgm::siteRelPath('nr_xajax'));
+
+// Invalid, wrong indention depth
+$GLOBALS['TSFE']-&gt;additionalHeaderData[$this-&gt;strApplicationName]
+   = $this-&gt;xajax-&gt;getJavascript(t3lib_extMgm::siteRelPath('nr_xajax'));
+
+// Invalid, equals sign needs to be on the next line
+$GLOBALS['TSFE']-&gt;additionalHeaderData[$this-&gt;strApplicationName] =
+    $this-&gt;xajax-&gt;getJavascript(t3lib_extMgm::siteRelPath('nr_xajax'));
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.Formatting.MultiLineAssignment">
+Assignment that spawn two lines must have their equal sign indented and on the new line
+    </label></div>
+</div></div>
+<h2>PEAR - Functions</h2><p class="ruleset-description">
+Sniffs related to functions calling and declarations.
+  </p><div class="rule-section" name="PEAR.Functions.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.Functions.FunctionCallSignature" name="PEAR.Functions.FunctionCallSignature"><div class="rule-name"><label for="phpcs-PEAR.Functions.FunctionCallSignature">FunctionCallSignature</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Valid
+test($arg, $arg2);
+// All invalid
+test ();
+test( );
+test() ;
+test( $arg);
+test( $arg );
+test ( $arg );
+
+// No error for multi line calls
+test(
+    $a,
+    $b
+);
+
+// Heredocs dont need to be indented.
+test(
+&lt;&lt;&lt;EOH
+Anyone want to recomment parse errors?
+
+EOH
+);
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.Functions.FunctionCallSignature">
+Enforces function call signatures "foo($a, $b, $c)" style reporting all other whitespaces.
+    </label></div>
+<div class="property">indent:
+            <input type="text" size="5" class="property-selector" id="property-PEAR.Functions.FunctionCallSignature-indent" name="indent" value="4" default="4"><div class="property-description"><label for="property-PEAR.Functions.FunctionCallSignature-indent">The number of spaces code should be indented.</label></div>
+</div>
+<div class="property">allowMultipleArguments:
+            <input type="checkbox" checked class="property-selector" id="property-PEAR.Functions.FunctionCallSignature-allowMultipleArguments" name="allowMultipleArguments" value="true" default="true"><div class="property-description"><label for="property-PEAR.Functions.FunctionCallSignature-allowMultipleArguments">If TRUE, multiple arguments can be defined per line in a multi-line call.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.Functions.FunctionDeclaration" name="PEAR.Functions.FunctionDeclaration"><div class="rule-name"><label for="phpcs-PEAR.Functions.FunctionDeclaration">FunctionDeclaration</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Valid examples:
+function foo($a, $b, $c);
+
+function test(
+    $a,
+    $b
+) {
+}
+
+function &amp;testFunction($arg1,
+    $arg2,
+) {
+}
+
+function validateUrl(
+    $url,
+    $requireScheme=TRUE,
+    array $allowedSchemes=array(
+                           'http',
+                           'https',
+                          )
+) {
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.Functions.FunctionDeclaration">
+Enforces single and multi-line function declarations to defined correctly.
+
+Single line declarations follow the Generic BSD-Allman brace sniff.
+For multi line declarations see the example.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.Functions.ValidDefaultValue" name="PEAR.Functions.ValidDefaultValue"><div class="rule-name"><label for="phpcs-PEAR.Functions.ValidDefaultValue">ValidDefaultValue</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Valid
+function myFunction($arg1, $arg2='hello')
+{
+}
+// Invalid
+function myFunction($arg2='hello', $arg1)
+{
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.Functions.ValidDefaultValue">
+Ensure that parameters defined for a function that have a default value come at the end of the function signature.
+    </label></div>
+</div>
+</div>
+<h2>PEAR - NamingConventions</h2><p class="ruleset-description">
+Sniffs related to PEAR naming conventions
+  </p><div class="rule-section" name="PEAR.NamingConventions.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.NamingConventions.ValidClassName" name="PEAR.NamingConventions.ValidClassName"><div class="rule-name"><label for="phpcs-PEAR.NamingConventions.ValidClassName">ValidClassName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+class VALID_Name {}
+
+class Valid_Name {}
+
+class ValidName {}
+
+class Invalid_name {} // N needs to be uppercase
+
+class invalid_name {}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.NamingConventions.ValidClassName">
+Class and interface names must start with a capital letter for each part of the name, separated by underscores.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.NamingConventions.ValidFunctionName" name="PEAR.NamingConventions.ValidFunctionName"><div class="rule-name"><label for="phpcs-PEAR.NamingConventions.ValidFunctionName">ValidFunctionName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+//Valid
+public function abc() {}
+private function _test() {}
+
+//Invalid
+public function _abc() {}
+private function test() {}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.NamingConventions.ValidFunctionName">
+Protected and private functions must start with an underscore.
+Public functions may not start with an underscore.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.NamingConventions.ValidVariableName" name="PEAR.NamingConventions.ValidVariableName"><div class="rule-name"><label for="phpcs-PEAR.NamingConventions.ValidVariableName">ValidVariableName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Valid
+private $_foo;
+public $bar;
+
+//Invalid
+private $foo;
+public $_bar;
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.NamingConventions.ValidVariableName">
+Private members must have an underscore in front, public members must not.
+    </label></div>
+</div>
+</div>
+<h2>PEAR - WhiteSpace</h2><p class="ruleset-description">
+Sniffs related to white space and indention in PEAR.
+  </p><div class="rule-section" name="PEAR.WhiteSpace.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.WhiteSpace.ObjectOperatorIndent" name="PEAR.WhiteSpace.ObjectOperatorIndent"><div class="rule-name"><label for="phpcs-PEAR.WhiteSpace.ObjectOperatorIndent">ObjectOperatorIndent</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+$object
+    -&gt;setBar($foo)
+    -&gt;setFoo($bar);
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.WhiteSpace.ObjectOperatorIndent">
+Object operators must be indented 4 spaces if they are the first thing on a line.
+    </label></div>
+<div class="property">indent:
+            <input type="text" size="5" class="property-selector" id="property-PEAR.WhiteSpace.ObjectOperatorIndent-indent" name="indent" value="4" default="4"><div class="property-description"><label for="property-PEAR.WhiteSpace.ObjectOperatorIndent-indent">The number of spaces code should be indented.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.WhiteSpace.ScopeClosingBrace" name="PEAR.WhiteSpace.ScopeClosingBrace"><div class="rule-name"><label for="phpcs-PEAR.WhiteSpace.ScopeClosingBrace">ScopeClosingBrace</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+class Test
+{
+    public function __construct()
+    {
+    }
+
+    public function test1()
+    {
+    }
+
+    public function test2()
+    {
+    }
+
+    private function test3()
+    {
+    }
+
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.WhiteSpace.ScopeClosingBrace">
+Closing braces of scopes must be aligned correctly. See the example.
+    </label></div>
+<div class="property">indent:
+            <input type="text" size="5" class="property-selector" id="property-PEAR.WhiteSpace.ScopeClosingBrace-indent" name="indent" value="4" default="4"><div class="property-description"><label for="property-PEAR.WhiteSpace.ScopeClosingBrace-indent">The number of spaces code should be indented.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PEAR.WhiteSpace.ScopeIndent" name="PEAR.WhiteSpace.ScopeIndent"><div class="rule-name"><label for="phpcs-PEAR.WhiteSpace.ScopeIndent">ScopeIndent</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+//Valid indentions
+
+/**
+ * This is a comment 1.
+ * This is a comment 2.
+ * This is a comment 3.
+ * This is a comment 4.
+ */
+public function close()
+{
+    // All ok.
+    if (TRUE) {
+        if (TRUE) {
+        } else if (FALSE) {
+            foreach ($tokens as $token) {
+                switch ($token) {
+                case '1':
+                case '2':
+                    if (true) {
+                        if (false) {
+                            if (false) {
+                                if (false) {
+                                    echo 'hello';
+                                }
+                            }
+                        }
+                    }
+                break;
+                case '5':
+                    break;
+                }
+                do {
+                    while (true) {
+                        foreach ($tokens as $token) {
+                            for ($i = 0; $i &lt; $token; $i++) {
+                                echo 'hello';
+                            }
+                        }
+                    }
+                } while (true);
+            }
+        }
+    }
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PEAR.WhiteSpace.ScopeIndent">
+Checks that control structures are structured correctly, and their content is indented correctly.
+
+See the example for details.
+    </label></div>
+</div>
+</div>
+<h2>PHPUnitStandard - Testing</h2><p class="ruleset-description">
+A coding standard for PHPUnit tests written and mainted by @elblinkin.
+
+You will need to install an addition pear package in order to use these Sniffs! See: https://github.com/elblinkin/PHPUnit-CodeSniffer
+  </p><div class="rule-section" name="PHPUnitStandard.Testing.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.AllowedFunctionOverride" name="PHPUnitStandard.Testing.AllowedFunctionOverride"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.AllowedFunctionOverride">AllowedFunctionOverride</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+class FooTest extends PHPUnit_Framework_TestCase {
+    protected function setUp() {
+        // ok
+    }
+
+    protected function somethingSomethingTestHelper() {
+        // not allowed
+    }
+
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.AllowedFunctionOverride">
+Only a certain set of protected functions are allowed to be overriden
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.ClassName" name="PHPUnitStandard.Testing.ClassName"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.ClassName">ClassName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// File: project/tests/phpunit/foo/bar/BazTest.php
+// Should contain:
+class Foo_Bar_BazTest {
+
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.ClassName">
+Class names should match the path within the unit test folder.
+
+The folder is currently */tests/phpunit/* and this is not configurable so use only if that convention applies to your project.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.ExtraneousClass" name="PHPUnitStandard.Testing.ExtraneousClass"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.ExtraneousClass">ExtraneousClass</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+project/tests/phpunit/foo/bar/BazTest.php // ok
+project/tests/otherTool/but/by/accident/containts/a/phpunit/testcase.php // Not ok
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.ExtraneousClass">
+Tests are expected to reside somewhere in */tests/phpunit/*.
+
+This is not the official PHPUnit recommendation and for now the path is not configurable.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.FileNameSuffix" name="PHPUnitStandard.Testing.FileNameSuffix"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.FileNameSuffix">FileNameSuffix</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+project/tests/unit/FooTest.php // ok
+project/tests/unit/BarTes.php // not ok!
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.FileNameSuffix"></label></div>
+<div class="property">suffix:
+            <input type="text" size="5" class="property-selector" id="property-PHPUnitStandard.Testing.FileNameSuffix-suffix" name="suffix" value="Test.php" default="Test.php"><div class="property-description"><label for="property-PHPUnitStandard.Testing.FileNameSuffix-suffix">The suffix all PHPUnit test case files should have.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.NoInterfaces" name="PHPUnitStandard.Testing.NoInterfaces"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.NoInterfaces">NoInterfaces</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.NoInterfaces">
+No Interfaces may be defined in test cases
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.NoOutputFunctions" name="PHPUnitStandard.Testing.NoOutputFunctions"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.NoOutputFunctions">NoOutputFunctions</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+class FooTest {
+    public function testBar() {
+        $this-&gt;expectedOutputString('string(3) "foo"');
+        var_dump("foo"); // No! Use assertions for compairing!
+    }
+
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.NoOutputFunctions">
+Tests may not contain output functions
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.NoOutputStatements" name="PHPUnitStandard.Testing.NoOutputStatements"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.NoOutputStatements">NoOutputStatements</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+class FooTest {
+    public function testBar() {
+        $this-&gt;expectedOutputString('foo');
+        echo "foo"; // No! Use assertions for compairing!
+    }
+
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.NoOutputStatements">
+Tests may not contain output statements
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.NoPrivateMethods" name="PHPUnitStandard.Testing.NoPrivateMethods"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.NoPrivateMethods">NoPrivateMethods</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.NoPrivateMethods">
+Tests may not have private helper methods. See: http://elblinkin.info/2011/11/an-example-avoid-private-functions-in-unit-tests/
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.NoReflection" name="PHPUnitStandard.Testing.NoReflection"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.NoReflection">NoReflection</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+class FooTest extends PHPUnit_Framework_TestCase {
+    public function testPrivateMethod() {
+        $method = new ReflectionMethod( // No! Testing private methods is not allowed!
+          'Foo',
+          'doSomethingPrivate'
+        );
+        $method-&gt;setAccessible(TRUE);
+
+        $x = new Foo();
+        $this-&gt;assertEquals(
+          'blah',
+          $x-&gt;doSomethingPrivate();
+        );
+    }
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.NoReflection">
+Tests may not use reflection functionality.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.ProvenTestCase" name="PHPUnitStandard.Testing.ProvenTestCase"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.ProvenTestCase">ProvenTestCase</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.ProvenTestCase">
+Only the default set of PHPUnit test case classes may be used when extending.
+
+You can't have your own base classes or you need to extend the test and whitelist them.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.TestOrProviderFunctionsOnly" name="PHPUnitStandard.Testing.TestOrProviderFunctionsOnly"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.TestOrProviderFunctionsOnly">TestOrProviderFunctionsOnly</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.TestOrProviderFunctionsOnly">
+Test cases may only consist of test and data provider functions. No helper methods are allowed. See: http://elblinkin.info/2011/11/an-example-avoid-private-functions-in-unit-tests/
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.TestOrProviderIsPublic" name="PHPUnitStandard.Testing.TestOrProviderIsPublic"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.TestOrProviderIsPublic">TestOrProviderIsPublic</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+protected function testImportantBehavior() {
+    // Will not get executed because it is not public
+}
+
+/**
+ * @dataProvider provideDataForTest
+ */
+public function testSomething($a, $b) {
+
+}
+
+protected function provideDataForTest() {
+    // Test will fail as there is no executable data provider method
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.TestOrProviderIsPublic">
+Test cases and data providers have to be public. This allows you to find tests that wouldn't get executed by mistake.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.UnusedProvider" name="PHPUnitStandard.Testing.UnusedProvider"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.UnusedProvider">UnusedProvider</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.UnusedProvider">
+Data providers must be used at least once. This allows you to find unused code.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PHPUnitStandard.Testing.ValidFunctionName" name="PHPUnitStandard.Testing.ValidFunctionName"><div class="rule-name"><label for="phpcs-PHPUnitStandard.Testing.ValidFunctionName">ValidFunctionName</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PHPUnitStandard.Testing.ValidFunctionName">
+Test functions may only start with "test" or "provider" and contain one underscore at most and have to be camelCaps.
+    </label></div>
+</div>
+</div>
+<h2>PSR1 - Classes</h2><p class="ruleset-description">
+PSR1 class rules
+  </p><div class="rule-section" name="PSR1.Classes.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PSR1.Classes.ClassDeclaration" name="PSR1.Classes.ClassDeclaration"><div class="rule-name"><label for="phpcs-PSR1.Classes.ClassDeclaration">ClassDeclaration</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+class Foo {
+
+}
+class Bar {
+
+}
+// Allowed:
+
+// Foo.php
+namespace \my\vendor;
+class Foo {
+
+}
+
+// Bar.php
+namespace \my\vendor;
+class Bar {
+
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PSR1.Classes.ClassDeclaration">
+      Each class must be in a file by itself and must be in a namespace of at least one level depth.
+    </label></div>
+</div></div>
+<h2>PSR1 - Files</h2><p class="ruleset-description">
+PSR1 file rules
+  </p><div class="rule-section" name="PSR1.Files.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PSR1.Files.SideEffects" name="PSR1.Files.SideEffects"><div class="rule-name"><label for="phpcs-PSR1.Files.SideEffects">SideEffects</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+
+if (!defined(FOO)) {
+  die(1);
+}
+
+class Foo {
+
+  // ...
+
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PSR1.Files.SideEffects">
+      Ensures a file declare new symbols and causes no other side effects, or executes logic with side effects, but not both.
+    </label></div>
+</div></div>
+<h2>PSR2 - Classes</h2><p class="ruleset-description">
+PSR2 class rules
+  </p><div class="rule-section" name="PSR2.Classes.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PSR2.Classes.ClassDeclaration" name="PSR2.Classes.ClassDeclaration"><div class="rule-name"><label for="phpcs-PSR2.Classes.ClassDeclaration">ClassDeclaration</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+        
+- 1 space between keywords
+- 1 space after class name
+- The keyword must be on the same line as the class name
+- Only one interface may be specified per line in a multi-line implements declaration
+- The closing braces for interface methods must go on the next line after the body
+- Closing brace must be on a line by itself
+        
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PSR2.Classes.ClassDeclaration">
+Check that the class declaration adheres to all PSR2 rules
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PSR2.Classes.PropertyDeclaration" name="PSR2.Classes.PropertyDeclaration"><div class="rule-name"><label for="phpcs-PSR2.Classes.PropertyDeclaration">PropertyDeclaration</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+- Property names should not be prefixed with an underscore to indicate visibility
+- The var keyword must not be used to declare a property
+- There must not be more than one property declared per statement
+- Visibility must be declared on all properties
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PSR2.Classes.PropertyDeclaration">
+Check that the property declaration adheres to all PSR2 rules
+    </label></div>
+</div>
+</div>
+<h2>PSR2 - ControlStructures</h2><p class="ruleset-description">
+PSR2 control structures rules
+  </p><div class="rule-section" name="PSR2.ControlStructures.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PSR2.ControlStructures.ControlStructureSpacing" name="PSR2.ControlStructures.ControlStructureSpacing"><div class="rule-name"><label for="phpcs-PSR2.ControlStructures.ControlStructureSpacing">ControlStructureSpacing</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+- 0 spaces after opening bracket
+- 0 spaces before closing bracket
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PSR2.ControlStructures.ControlStructureSpacing">
+Checks that control structures have PSR2 style spacing around brackets
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PSR2.ControlStructures.ElseIfDeclaration" name="PSR2.ControlStructures.ElseIfDeclaration"><div class="rule-name"><label for="phpcs-PSR2.ControlStructures.ElseIfDeclaration">ElseIfDeclaration</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+if ($x) {
+    // ...
+} else if ($y) {
+    // ...
+}
+// Allowed
+if ($x) {
+    // ...
+} elseif ($y) {
+    // ...
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PSR2.ControlStructures.ElseIfDeclaration">
+Verifies that there are no else if statements. Elseif should be used instead
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PSR2.ControlStructures.SwitchDeclaration" name="PSR2.ControlStructures.SwitchDeclaration"><div class="rule-name"><label for="phpcs-PSR2.ControlStructures.SwitchDeclaration">SwitchDeclaration</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+- Keywords must be lowercase
+- Keywords must be indented $indent spaces from SWITCH keyword
+- CASE keyword must be followed by a single space
+- There must be no space before the colon in a case statement
+- Statements must not be defined using curly braces
+- Terminating statement must be indented to the same level as the CASE body
+- There must be a comment when fall-through is intentional in a non-empty case body
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PSR2.ControlStructures.SwitchDeclaration">
+Ensures that switch statements are defined according to PSR2
+    </label></div>
+<div class="property">indent:
+            <input type="text" size="5" class="property-selector" id="property-PSR2.ControlStructures.SwitchDeclaration-indent" name="indent" value="4" default="4"><div class="property-description"><label for="property-PSR2.ControlStructures.SwitchDeclaration-indent">The number of spaces code should be indented</label></div>
+</div>
+</div>
+</div>
+<h2>PSR2 - Files</h2><p class="ruleset-description">
+PSR2 file rules
+  </p><div class="rule-section" name="PSR2.Files.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PSR2.Files.EndFileNewline" name="PSR2.Files.EndFileNewline"><div class="rule-name"><label for="phpcs-PSR2.Files.EndFileNewline">EndFileNewline</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+// ---------
+&lt;?php
+  //...
+?&gt;EOL
+
+// Allowed
+// -------
+&lt;?php
+  //...
+&gt;?\n
+EOL
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PSR2.Files.EndFileNewline">
+Ensures the file ends with a newline character
+    </label></div>
+</div></div>
+<h2>PSR2 - Methods</h2><p class="ruleset-description">
+PSR2 method rules
+  </p><div class="rule-section" name="PSR2.Methods.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PSR2.Methods.MethodDeclaration" name="PSR2.Methods.MethodDeclaration"><div class="rule-name"><label for="phpcs-PSR2.Methods.MethodDeclaration">MethodDeclaration</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+- Method name should not be prefixed with an underscore to indicate visibility
+- The static declaration must come after the visibility declaration
+- The final declaration must precede the visibility declaration
+- The abstract declaration must precede the visibility declaration
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PSR2.Methods.MethodDeclaration">
+Check that the method declaration adheres to all PSR2 rules
+    </label></div>
+</div></div>
+<h2>PSR2 - Namespaces</h2><p class="ruleset-description">
+PSR2 method rules
+  </p><div class="rule-section" name="PSR2.Namespaces.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PSR2.Namespaces.NamespaceDeclaration" name="PSR2.Namespaces.NamespaceDeclaration"><div class="rule-name"><label for="phpcs-PSR2.Namespaces.NamespaceDeclaration">NamespaceDeclaration</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+&lt;?php
+namespace foo\bar;
+class x {
+}
+// Allowed
+&lt;?php
+namespace foo\bar;
+
+class x {
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PSR2.Namespaces.NamespaceDeclaration">
+There must be one blank line after the namespace declaration
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-PSR2.Namespaces.UseDeclaration" name="PSR2.Namespaces.UseDeclaration"><div class="rule-name"><label for="phpcs-PSR2.Namespaces.UseDeclaration">UseDeclaration</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+- There must be one USE keyword per declaration
+- USE declarations must go after the first namespace declaration
+- There must be one blank line after the last USE statement
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="PSR2.Namespaces.UseDeclaration">
+Ensures USE blocks are declared according to PSR2
+    </label></div>
+</div>
+</div>
+<h2>Squiz - Files</h2><p class="ruleset-description">
+Squiz coding standard releated to files
+  </p><div class="rule-section" name="Squiz.Files.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.Files.FileExtension" name="Squiz.Files.FileExtension"><div class="rule-name"><label for="phpcs-Squiz.Files.FileExtension">FileExtension</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.Files.FileExtension">
+Enforces class and interfaces to be in ".inc" files while everything else should go into ".php" files.
+    </label></div>
+</div></div>
+<h2>Squiz - PHP</h2><p class="ruleset-description">
+Squiz coding standard related to PHP usage
+  </p><div class="rule-section" name="Squiz.PHP.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.CommentedOutCode" name="Squiz.PHP.CommentedOutCode"><div class="rule-name"><label for="phpcs-Squiz.PHP.CommentedOutCode">CommentedOutCode</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.CommentedOutCode">
+Try to ensure that there is no commented out code
+    </label></div>
+<div class="property">maxPercentage:
+            <input type="text" size="5" class="property-selector" id="property-Squiz.PHP.CommentedOutCode-maxPercentage" name="maxPercentage" value="35" default="35"><div class="property-description"><label for="property-Squiz.PHP.CommentedOutCode-maxPercentage">If a comment is more than $value percent code, a warning will be shown.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.DisallowComparisonAssignment" name="Squiz.PHP.DisallowComparisonAssignment"><div class="rule-name"><label for="phpcs-Squiz.PHP.DisallowComparisonAssignment">DisallowComparisonAssignment</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+$var = !$foo;
+$var = ($foo || $bar);
+$var = ($foo === TRUE);
+$var = ($foo === TRUE
+        || $bar === FALSE);
+$var = (!$foo);
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.DisallowComparisonAssignment">
+Ensures that the value of a comparison is not assigned to a variable
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.DisallowInlineIf" name="Squiz.PHP.DisallowInlineIf"><div class="rule-name"><label for="phpcs-Squiz.PHP.DisallowInlineIf">DisallowInlineIf</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+$x = $y ? 1 : 2;
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.DisallowInlineIf">
+Ensures no inline if statements are used
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.DisallowMultipleAssignments" name="Squiz.PHP.DisallowMultipleAssignments"><div class="rule-name"><label for="phpcs-Squiz.PHP.DisallowMultipleAssignments">DisallowMultipleAssignments</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+      // Forbidden
+$x = $y = 4;
+if($x = 5) {}
+// Allowed
+$x = 4;
+$y = $x;
+if($x == 5) {}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.DisallowMultipleAssignments">
+Ensures that there is only one value assignment on a line, and that it is the first thing on the line.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.DisallowObEndFlush" name="Squiz.PHP.DisallowObEndFlush"><div class="rule-name"><label for="phpcs-Squiz.PHP.DisallowObEndFlush">DisallowObEndFlush</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+echo "foo";
+ob_end_flush();
+// Allowed
+$output = ob_get_contents();
+ob_end_clean();
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.DisallowObEndFlush">
+Ensures that the ob_end_flush function is not used
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.DisallowSizeFunctionsInLoops" name="Squiz.PHP.DisallowSizeFunctionsInLoops"><div class="rule-name"><label for="phpcs-Squiz.PHP.DisallowSizeFunctionsInLoops">DisallowSizeFunctionsInLoops</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+for($i = 0; $i &lt; count($i); ++$i) {
+
+}
+// Allowed
+$amountOfElements = count($i);
+for($i = 0; $i &lt; $amountOfElements; ++$i) {
+
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.DisallowSizeFunctionsInLoops">
+Ensures no size-based functions are used in loop conditions to avoid unneccarry function calls
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.DiscouragedFunctions" name="Squiz.PHP.DiscouragedFunctions"><div class="rule-name"><label for="phpcs-Squiz.PHP.DiscouragedFunctions">DiscouragedFunctions</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.DiscouragedFunctions">
+Ensures that there are no `error_log` and `print_r` function calls. The Sniff can be extended used to disallow any function
+    </label></div>
+<div class="property">error:
+            <input type="checkbox" class="property-selector" id="property-Squiz.PHP.DiscouragedFunctions-error" name="error" value="false" default="false"><div class="property-description"><label for="property-Squiz.PHP.DiscouragedFunctions-error">If true, an error will be thrown; otherwise a warning.</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.EmbeddedPhp" name="Squiz.PHP.EmbeddedPhp"><div class="rule-name"><label for="phpcs-Squiz.PHP.EmbeddedPhp">EmbeddedPhp</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+&lt;?php echo "hi"; ?&gt;
+// Allowed
+&lt;?php
+echo "hi";
+?&gt;
+// Also forbidden
+&lt;?php
+
+echo "hi";
+?&gt;
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.EmbeddedPhp">
+        Ensures an style for the indentation of embedded PHP code segments.
+
+        - No empty embedded tags
+        - No blank lines after the opening tag of the embedded code
+        - No blank lines before the closing tag of the embedded code
+        - Opening tag must be on a new line by its self
+        - Closing tag must be on a line by itself
+        - Indenting inside the php tags
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.Eval" name="Squiz.PHP.Eval"><div class="rule-name"><label for="phpcs-Squiz.PHP.Eval">Eval</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.Eval">
+Warns about usage for the eval() function
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.ForbiddenFunctions" name="Squiz.PHP.ForbiddenFunctions"><div class="rule-name"><label for="phpcs-Squiz.PHP.ForbiddenFunctions">ForbiddenFunctions</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden functions
+sizeof
+delete
+print
+is_null
+create_function
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.ForbiddenFunctions">
+Discourages the use of alias functions that are kept in PHP for compatibility with older versions. Can be subclassed to forbid the use of any function and suggest alternatives.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.GlobalKeyword" name="Squiz.PHP.GlobalKeyword"><div class="rule-name"><label for="phpcs-Squiz.PHP.GlobalKeyword">GlobalKeyword</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+function bar() {
+    global $foo;
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.GlobalKeyword">
+Ensures that the "global" keyword isn't used.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.Heredoc" name="Squiz.PHP.Heredoc"><div class="rule-name"><label for="phpcs-Squiz.PHP.Heredoc">Heredoc</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+$x = &lt;&lt;&lt;BAR
+    asdf
+    jkl;
+    BAR;
+// Allowed
+$x = 'asdf' . PHP_EOL . 'jkl;'
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.Heredoc">
+Ensures that no Heredoc statements are used.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.InnerFunctions" name="Squiz.PHP.InnerFunctions"><div class="rule-name"><label for="phpcs-Squiz.PHP.InnerFunctions">InnerFunctions</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+function bar() {
+    function foo() {
+
+    }
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.InnerFunctions">
+Ensures that there are no function definitions inside of functions. Closure are ok.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.LowercasePHPFunctions" name="Squiz.PHP.LowercasePHPFunctions"><div class="rule-name"><label for="phpcs-Squiz.PHP.LowercasePHPFunctions">LowercasePHPFunctions</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+      // Forbidden
+      Array_Map(...);
+      array_Map(...);
+      array_maP(...);
+      Array_map(...);
+      // Allowed
+      array_map(...);
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.LowercasePHPFunctions">
+Ensures all calls to builtin PHP functions are lowercase.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.PHP.NonExecutableCode" name="Squiz.PHP.NonExecutableCode"><div class="rule-name"><label for="phpcs-Squiz.PHP.NonExecutableCode">NonExecutableCode</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+      // Forbidden
+      function foo() {
+          echo "Hallo";
+          return;
+          echo "World"; // Dead code
+      }
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.PHP.NonExecutableCode">
+Warns about code that can never been executed. This happens when a function returns before the code, or a break ends execution of a statement etc.
+    </label></div>
+</div>
+</div>
+<h2>Squiz - Scope</h2><p class="ruleset-description">
+Squiz coding standard related to scoping
+  </p><div class="rule-section" name="Squiz.Scope.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.Scope.MemberVarScope" name="Squiz.Scope.MemberVarScope"><div class="rule-name"><label for="phpcs-Squiz.Scope.MemberVarScope">MemberVarScope</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+class foo {
+    var $x = 1;
+}
+// Allowed
+class foo {
+    public $a = 1;
+    protected $b = 2;
+    private $c = 3;
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.Scope.MemberVarScope">
+Ensures that class members have scope modifiers
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.Scope.MethodScope" name="Squiz.Scope.MethodScope"><div class="rule-name"><label for="phpcs-Squiz.Scope.MethodScope">MethodScope</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+class foo {
+    function bar() {
+    }
+}
+// Allowed
+class foo {
+    public function bar() {
+    }
+    protected function baz() {
+    }
+    private fuction bak() {
+    }
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.Scope.MethodScope">
+Ensures that methods have scope modifiers
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.Scope.StaticThisUsage" name="Squiz.Scope.StaticThisUsage"><div class="rule-name"><label for="phpcs-Squiz.Scope.StaticThisUsage">StaticThisUsage</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+class foo {
+    public static function bar() {
+        $this-&gt;isNotWorking();
+    }
+}
+// Allowed
+class foo {
+    public function bar() {
+        $this-&gt;isWorking();
+    }
+    public static function baz() {
+        self::isAlsoWorking();
+    }
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.Scope.StaticThisUsage">
+Ensures that $this is not used in static methods to avoid runtime errors
+    </label></div>
+</div>
+</div>
+<h2>Squiz - WhiteSpace</h2><p class="ruleset-description">
+Squiz coding standard sniffs related whitespace usage for structuring source files.
+The sniffs are general and can be widely used.
+  </p><div class="rule-section" name="Squiz.WhiteSpace.xml">
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.CastSpacing" name="Squiz.WhiteSpace.CastSpacing"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.CastSpacing">CastSpacing</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+$x = ( array)"foo";
+$x = (array )"foo";
+// Allowed
+$x = (array)"foo";
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.CastSpacing">
+Ensure cast statements dont contain whitespace.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.ControlStructureSpacing" name="Squiz.WhiteSpace.ControlStructureSpacing"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.ControlStructureSpacing">ControlStructureSpacing</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// No spaces after opening bracket and no spaces before closing bracket
+// No blank lines at the start or the end of a control structure
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.ControlStructureSpacing">
+Ensures that control structures have a certain style of spacing around brackets.
+For other spacing styles there is the possibility of extending PHP_CodeSniffer_Standards_AbstractPatternSniff.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.FunctionClosingBraceSpace" name="Squiz.WhiteSpace.FunctionClosingBraceSpace"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.FunctionClosingBraceSpace">FunctionClosingBraceSpace</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.FunctionClosingBraceSpace">
+Checks that there is one empty line before the closing brace of a function but zero before the closing the brace of nested functions.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.FunctionOpeningBraceSpace" name="Squiz.WhiteSpace.FunctionOpeningBraceSpace"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.FunctionOpeningBraceSpace">FunctionOpeningBraceSpace</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.FunctionOpeningBraceSpace">
+Checks that there are no blank lines after a functions opening brace and that opening braces are on the new line.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.FunctionSpacing" name="Squiz.WhiteSpace.FunctionSpacing"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.FunctionSpacing">FunctionSpacing</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+class foo {
+
+
+    public function bar() {
+
+    }
+
+
+    public function baz() {
+
+    }
+    
+    
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.FunctionSpacing">
+Checks the separation between methods in a class or interface. Methods are expected to have two blank lines between them.
+    </label></div>
+<div class="property">spacing:
+            <input type="text" size="5" class="property-selector" id="property-Squiz.WhiteSpace.FunctionSpacing-spacing" name="spacing" value="2" default="2"><div class="property-description"><label for="property-Squiz.WhiteSpace.FunctionSpacing-spacing">The number of blank lines between functions</label></div>
+</div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.LanguageConstructSpacing" name="Squiz.WhiteSpace.LanguageConstructSpacing"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.LanguageConstructSpacing">LanguageConstructSpacing</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+echo"hi";
+echo   "hi";
+$x = new   StdClass();
+// Allowed
+echo "hi";
+$x = new StdClass();
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.LanguageConstructSpacing">
+Ensures all language constructs (without brackets) contain a single space between themselves and their content.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.LogicalOperatorSpacing" name="Squiz.WhiteSpace.LogicalOperatorSpacing"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.LogicalOperatorSpacing">LogicalOperatorSpacing</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+if($x&amp;&amp; $y) {}
+if($x &amp;&amp;$y) {}
+if($x &amp;&amp;   $y) {}
+if($x   &amp;&amp; $y) {}
+// Allowed
+if($x &amp;&amp; $y) {}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.LogicalOperatorSpacing">
+Ensures that there is one space before and after a logical operator.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.MemberVarSpacing" name="Squiz.WhiteSpace.MemberVarSpacing"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.MemberVarSpacing">MemberVarSpacing</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+class foo {
+    private $foo;
+    private $bar;
+}
+// Allowed
+class foo {
+    private $foo;
+
+    private $bar;
+}
+// Also allowed
+class foo {
+    private $foo;
+
+    /**
+     * @var string
+     */
+    private $bar;
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.MemberVarSpacing">
+Ensures that there is one blank lines between each member declaration
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.ObjectOperatorSpacing" name="Squiz.WhiteSpace.ObjectOperatorSpacing"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.ObjectOperatorSpacing">ObjectOperatorSpacing</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+$x = new StdClass();
+$x -&gt; foo = 1;
+// Allowed
+$x = new StdClass();
+$x-&gt;foo = 1;
+echo "foo";
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.ObjectOperatorSpacing">
+Ensures there is no whitespace before a ObjectOperator ( -&gt; )
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.OperatorSpacing" name="Squiz.WhiteSpace.OperatorSpacing"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.OperatorSpacing">OperatorSpacing</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+$x = $a&amp;$b;
+$x=$y;
+$x=&amp; $y;
+// Allowed
+$x = $a &amp; $b;
+$x = $y;
+$x =&amp; $y;
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.OperatorSpacing">
+Ensures that operators have one space surrounding them.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.PropertyLabelSpacing" name="Squiz.WhiteSpace.PropertyLabelSpacing"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.PropertyLabelSpacing">PropertyLabelSpacing</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+x = {
+    a:  'x',
+    b : 1,
+    c :  2,
+    }
+// Allowed
+x = {
+    a: 'x',
+    b:  1,
+    c: 2,
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.PropertyLabelSpacing">
+Javascript: Ensures that the colon in a property or label definition has a single space after it and no space before it.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.ScopeClosingBrace" name="Squiz.WhiteSpace.ScopeClosingBrace"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.ScopeClosingBrace">ScopeClosingBrace</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+function foo() {
+   }
+function foo() {
+    echo "bar"; }
+// Allowed
+function foo() {
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.ScopeClosingBrace">
+Ensures that the closing braces of scopes are on a new line and indented correctly.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.ScopeKeywordSpacing" name="Squiz.WhiteSpace.ScopeKeywordSpacing"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.ScopeKeywordSpacing">ScopeKeywordSpacing</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+public    function
+protected  function
+// Allowed
+public function
+protected function
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.ScopeKeywordSpacing">
+Ensure there is a single space after scope keywords.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.SemicolonSpacing" name="Squiz.WhiteSpace.SemicolonSpacing"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.SemicolonSpacing">SemicolonSpacing</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Forbidden
+$x = 1  ;
+echo "foo" ;
+// Allowed
+$x = 1;
+echo "foo";
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.SemicolonSpacing">
+Ensures that there is no whitespace before a semicolon.
+    </label></div>
+</div>
+<div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Squiz.WhiteSpace.SuperfluousWhitespace" name="Squiz.WhiteSpace.SuperfluousWhitespace"><div class="rule-name"><label for="phpcs-Squiz.WhiteSpace.SuperfluousWhitespace">SuperfluousWhitespace</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+Checks that no whitespace proceeds the first content of the file, exists after the last content of the file, resides after content on any line, or are two empty lines in functions.
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Squiz.WhiteSpace.SuperfluousWhitespace">
+Checks that no whitespace proceeds the first content of the file, exists after the last content of the file, resides after content on any line, or are two empty lines in functions.
+    </label></div>
+<div class="property">ignoreBlankLines:
+            <input type="checkbox" class="property-selector" id="property-Squiz.WhiteSpace.SuperfluousWhitespace-ignoreBlankLines" name="ignoreBlankLines" value="false" default="false"><div class="property-description"><label for="property-Squiz.WhiteSpace.SuperfluousWhitespace-ignoreBlankLines">If TRUE, whitespace rules are not checked for blank lines</label></div>
+</div>
+</div>
+</div>
+<h2>Zend - Debug</h2><p class="ruleset-description">
+Zend Studio (The IDE) related sniffs
+  </p><div class="rule-section" name="Zend.Debug.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Zend.Debug.CodeAnalyzer" name="Zend.Debug.CodeAnalyzer"><div class="rule-name"><label for="phpcs-Zend.Debug.CodeAnalyzer">CodeAnalyzer</label></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Zend.Debug.CodeAnalyzer">
+Runs the Zend Code Analyzer (from Zend Studio) on the file. No clue what that does but there should be docs for that.
+    </label></div>
+</div></div>
+<h2>Zend - Files</h2><p class="ruleset-description">
+Sniffs related to files
+  </p><div class="rule-section" name="Zend.Files.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Zend.Files.ClosingTag" name="Zend.Files.ClosingTag"><div class="rule-name"><label for="phpcs-Zend.Files.ClosingTag">ClosingTag</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Valid
+&lt;html&gt;...
+&lt;?php
+echo "hi!";
+?&gt;
+...&lt;/html&gt;
+
+// Invalid
+&lt;?php
+
+class Foo {
+
+}
+?&gt; // End of file here
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Zend.Files.ClosingTag">
+Files must not have closing tags to avoid whitespace issues
+    </label></div>
+</div></div>
+<h2>Zend - NamingConventions</h2><p class="ruleset-description">
+Zend Framework variable naming conventions
+  </p><div class="rule-section" name="Zend.NamingConventions.xml"><div class="rule">
+<div class="rule-header">
+<input class="rule-selector" type="checkbox" id="phpcs-Zend.NamingConventions.ValidVariableName" name="Zend.NamingConventions.ValidVariableName"><div class="rule-name"><label for="phpcs-Zend.NamingConventions.ValidVariableName">ValidVariableName</label></div>
+<div class="rule-example"><span>
+                Example
+                <span><pre>
+      
+// Valid
+$varName  = 'hello';
+$varname  = 'hello';
+
+class MyClass
+{
+    $varName  = 'hello';
+    // This is ok as ZF uses it to denote private vars
+    $_varName = 'hello';
+}
+
+// Invalid
+$var_name = 'hello';
+
+class MyClass
+{
+    $var_name = 'hello';
+}
+
+
+// Discouraged
+$varname2 = 'hello';
+
+class MyClass
+{
+    $varName2 = 'hello';
+}
+      
+    </pre></span></span></div>
+<div style="clear: both"></div>
+</div>
+<div class="rule-description"><label for="Zend.NamingConventions.ValidVariableName">
+Variables have to be camel case and should not contain numbers
+    </label></div>
+</div></div>
+        </div>
+    </div>
+    <div id="sidebar">
+        <div id="phpmd-xml-container" class='xmloutput-container'>
+            <p>If you already have an <strong>phpmd.xml</strong> just paste it in.</p>
+            <div id='phpmd-xml-error' class='xml-error' style='display: none;'></div>
+            <textarea spellcheck="false" id='phpmd-xml' class='xmloutput'>Your XML will go here</textarea>
+            <p>You can also edit this box directly.</p>
+        </div>
+        <div id="phpcs-xml-container" class='xmloutput-container'>
+            <p>If you already have an <strong>phpcs.xml</strong> just paste it in.</p>
+            <div id='phpcs-xml-error' class='xml-error' style='display: none;'></div>
+            <textarea spellcheck="false" id='phpcs-xml' class='xmloutput'>Your XML will go here</textarea>
+            <p>You can also edit this box directly.</p>
+        </div>
+    </div>
+    <div id="footer">
+        <p>If you want to reach me: I'm <a href="https://twitter.com/__edorian">@__edorian</a> over on Twitter or just 'edorian' on freenodeIRC.</p>
+        <p>If you have an issue with the generator, a feature request or want to help out in any way check out <a href="https://github.com/edorian/php-coding-standard-generator">the GitHub page of this project.</a>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        md = new pcsg.Phpmd("resources/phpmd/", "rulesets.json", $("#phpmd-container"), $("#phpmd-xml-error"));
+        generate = function() { 
+            md.methods.generateXmlInto($("#phpmd-xml"));
+        };
+        $('#phpmd-container .rule').click(generate);
+        $('#phpmd-container .property-selector').change(generate); 
+        $('#phpmd-container .property-selector').keyup(generate); 
+        $('#phpmd-ruleset-name').keyup(generate);
+        $('#phpmd-ruleset-description').keyup(generate);
+
+        $("#phpmd-xml").change(function() {
+            md.xmlUpateHandler($(this).val(), $("#phpmd-container"));
+        });
+        $("#phpmd-xml").keyup(function() {
+            md.xmlUpateHandler($(this).val(), $("#phpmd-container"));
+        });
+
+        cs = new pcsg.Phpcs("resources/phpcs/", "rulesets.json", $("#phpcs-container"), $("#phpcs-xml-error"));
+        generate = function() { 
+            cs.methods.generateXmlInto($("#phpcs-xml"));
+        };
+        $('#phpcs-container .rule').click(generate);
+        $('#phpcs-container .property-selector').change(generate); 
+        $('#phpcs-container .property-selector').keyup(generate); 
+        $('#phpcs-ruleset-name').keyup(generate);
+        $('#phpcs-ruleset-description').keyup(generate);
+
+        $("#phpcs-xml").change(function() {
+            cs.xmlUpateHandler($(this).val(), $("#phpcs-container"));
+        });
+        $("#phpcs-xml").keyup(function() {
+            cs.xmlUpateHandler($(this).val(), $("#phpcs-container"));
+        });
+
+        $('#phpcs-activate').click(function() {
+            document.location.hash = 'phpcs';
+            $('#phpmd-container').hide();
+            $('#phpmd-xml-container').hide();
+            $('#phpcs-container').show();
+            $('#phpcs-xml-container').show();
+            $('#phpcs-activate').addClass('active');
+            $('#phpmd-activate').removeClass('active');
+        });
+        $('#phpmd-activate').click(function() {
+            document.location.hash = 'phpmd';
+            $('#phpcs-container').hide();
+            $('#phpcs-xml-container').hide();
+            $('#phpmd-container').show();
+            $('#phpmd-xml-container').show();
+            $('#phpmd-activate').addClass('active');
+            $('#phpcs-activate').removeClass('active');
+        });
+        hash = document.location.hash;
+        if(hash.length > 0) {
+            hash = hash.substring(1);
+        }
+        if(hash == 'phpcs') {
+            $('#phpcs-activate').click();
+        } else {
+            $('#phpmd-activate').click();
+        }
+    });
+</script>
+
+<!-- Github ribbon -->
+<a href="https://github.com/edorian/php-coding-standard-generator"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+<!-- /Github ribbon -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28040153-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  
+</body>
+</html>
